@@ -21,6 +21,8 @@ services:
         value: ".onrender.com"
       - key: CSRF_TRUSTED_ORIGINS
         value: ""
+      - key: REMINDER_SECRET
+        generateValue: true
 
 databases:
   - name: immutrack-db
