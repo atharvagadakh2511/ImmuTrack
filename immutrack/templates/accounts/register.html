@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Guardian Registration — ImmuTrack{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center my-4">
+  <div class="col-md-7 col-lg-6">
+    <div class="card-saas p-4 p-md-5">
+      <div class="text-center mb-4">
+        <div class="navbar-brand-icon mx-auto mb-3" style="width: 50px; height: 50px; font-size: 1.5rem; background: linear-gradient(135deg, var(--secondary-blue), #3B82F6);">
+          <i class="bi bi-person-plus-fill"></i>
+        </div>
+        <h3 class="fw-bold text-navy mb-1">Create Guardian Account</h3>
+        <p class="text-muted small mb-0">Monitor immunization milestones and receive timely health notifications</p>
+      </div>
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="row g-3 mb-3">
+          <div class="col-sm-6">
+            <label class="form-label">First Name</label>
+            {{ form.first_name }}
+            {% if form.first_name.errors %}<div class="text-danger small mt-1">{{ form.first_name.errors.0 }}</div>{% endif %}
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label">Last Name</label>
+            {{ form.last_name }}
+            {% if form.last_name.errors %}<div class="text-danger small mt-1">{{ form.last_name.errors.0 }}</div>{% endif %}
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          {{ form.username }}
+          {% if form.username.errors %}<div class="text-danger small mt-1">{{ form.username.errors.0 }}</div>{% endif %}
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          {{ form.email }}
+          {% if form.email.errors %}<div class="text-danger small mt-1">{{ form.email.errors.0 }}</div>{% endif %}
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Phone Number (SMS Notifications)</label>
+          {{ form.phone_number }}
+          {% if form.phone_number.errors %}<div class="text-danger small mt-1">{{ form.phone_number.errors.0 }}</div>{% endif %}
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6">
+            <label class="form-label">Password</label>
+            {{ form.password }}
+            {% if form.password.errors %}<div class="text-danger small mt-1">{{ form.password.errors.0 }}</div>{% endif %}
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label">Confirm Password</label>
+            {{ form.confirm_password }}
+            {% if form.confirm_password.errors %}<div class="text-danger small mt-1">{{ form.confirm_password.errors.0 }}</div>{% endif %}
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-saas-secondary w-100 py-2.5">
+          <i class="bi bi-shield-check"></i> Complete Secure Registration
+        </button>
+      </form>
+
+      <div class="mt-4 pt-3 text-center border-top small text-muted">
+        Already registered? 
+        <a href="{% url 'accounts:login' %}" class="fw-bold text-secondary-blue text-decoration-none ms-1">
+          Sign In Here <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

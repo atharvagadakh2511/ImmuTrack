@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block title %}{{ child.full_name }} — Immunization Schedule{% endblock %}
+
+{% block content %}
+<!-- Child Header Profile Banner -->
+<div class="card-saas p-4 mb-4">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <div class="navbar-brand-icon" style="width: 54px; height: 54px; font-size: 1.6rem; border-radius: 14px;">
+        <i class="bi bi-person-heart"></i>
+      </div>
+      <div>
+        <div class="d-flex align-items-center gap-2">
+          <h2 class="fw-bold text-navy mb-0">{{ child.full_name }}</h2>
+          <span class="badge bg-light text-navy border px-2.5 py-1">{{ child.get_gender_display }}</span>
+          <span class="badge bg-teal-subtle text-primary-teal border border-teal-subtle px-2.5 py-1 fw-bold">{{ child.blood_group|default:"Blood: N/A" }}</span>
+        </div>
+        <p class="text-muted small mt-1 mb-0">
+          <strong>DOB:</strong> {{ child.date_of_birth|date:"d M Y" }} &bull;
+          <strong>Guardian:</strong> {{ child.guardian.username }} ({{ child.get_guardian_relationship_display }}) &bull;
+          <strong>Facility:</strong> {{ child.assigned_clinic.name|default:"General Health Post" }}
+        </p>
+      </div>
+    </div>
+    <div class="d-flex gap-2">
+      <a href="{% url 'analytics:download_certificate' child.id %}" class="btn btn-saas-secondary">
+        <i class="bi bi-file-earmark-pdf-fill"></i> Download PDF Passport
+      </a>
+    </div>
+  </div>
+
+  <!-- Progress Bar Component -->
+  <div class="mt-4 pt-3 border-top">
+    <div class="d-flex justify-content-between align-items-center small mb-2">
+      <span class="fw-semibold text-navy">National Immunization Programme Schedule Adherence</span>
+      <span class="fw-bold text-primary-teal">{{ completed_count }} of {{ total_count }} Completed ({{ progress_pct }}%)</span>
+    </div>
+    <div class="progress-modern">
+      <div class="progress-bar-teal" style="width: {{ progress_pct }}%; height: 100%;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- UIP Timeline & Administration Table -->
+<div class="card-saas">
+  <div class="p-3.5 px-4 border-bottom d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+    <div>
+      <h5 class="fw-bold text-navy mb-0">MoHFW UIP Dosing Roadmap</h5>
+      <span class="text-muted small">Standard mandatory doses, due timelines, and clinical administration logs</span>
+    </div>
+    <span class="badge bg-light text-muted border px-2.5 py-1 fw-semibold small">Government UIP Schedule</span>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table-saas">
+      <thead>
+        <tr>
+          <th>Vaccine & Antigen</th>
+          <th>Target Pathogen</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Administration Verification</th>
+          <th class="text-end">Clinical Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dose in doses %}
+          <tr>
+            <td>
+              <div class="fw-bold text-navy">{{ dose.recommended_dose.vaccine.name }}</div>
+              <div class="text-muted small">{{ dose.recommended_dose.dose_label }}</div>
+            </td>
+            <td>
+              <span class="text-slate small">{{ dose.recommended_dose.vaccine.target_disease }}</span>
+            </td>
+            <td>
+              <span class="fw-semibold text-navy small">{{ dose.due_date|date:"d M Y" }}</span>
+            </td>
+            <td>
+              {% if dose.status == 'COMPLETED' %}
+                <span class="badge-status-completed"><i class="bi bi-check-circle-fill"></i> Completed</span>
+              {% elif dose.status == 'OVERDUE' %}
+                <span class="badge-status-overdue"><i class="bi bi-exclamation-octagon-fill"></i> Overdue</span>
+              {% elif dose.status == 'DUE_TODAY' %}
+                <span class="badge-status-due"><i class="bi bi-alarm-fill"></i> Due Today</span>
+              {% else %}
+                <span class="badge-status-scheduled"><i class="bi bi-clock"></i> Scheduled</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if dose.administration_record %}
+                <div class="fw-bold text-navy small">{{ dose.administration_record.administered_date|date:"d M Y" }}</div>
+                <div class="text-muted" style="font-size: 0.76rem;">
+                  Lot #{{ dose.administration_record.batch_number }} &bull; {{ dose.administration_record.facility.name }}
+                </div>
+              {% else %}
+                <span class="text-muted small italic">Not Administered</span>
+              {% endif %}
+            </td>
+            <td class="text-end">
+              {% if user.profile.is_health_worker or user.profile.is_admin %}
+                {% if dose.status != 'COMPLETED' %}
+                  <a href="{% url 'vaccination:record_dose' dose.id %}" class="btn btn-saas-primary btn-sm">
+                    <i class="bi bi-pencil-square"></i> Record Dose
+                  </a>
+                {% else %}
+                  <span class="badge-status-completed small"><i class="bi bi-shield-check"></i> Verified</span>
+                {% endif %}
+              {% else %}
+                {% if dose.status != 'COMPLETED' %}
+                  <span class="text-muted small">Awaiting Clinic Visit</span>
+                {% else %}
+                  <span class="text-success small fw-semibold"><i class="bi bi-check2-circle"></i> Protected</span>
+                {% endif %}
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

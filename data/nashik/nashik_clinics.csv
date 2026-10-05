@@ -1,0 +1,11 @@
+registration_code,name,address,contact_phone,contact_email,worker_username,worker_first_name,worker_last_name,worker_email
+PHC-NSK-01,Panchavati Urban Primary Health Centre,"Panchavati, Nashik, Maharashtra 422003",+91-253-2362453,phc-nsk-01@example.org,nurse_nsk_01,Sunita,Patil,nurse_nsk_01@example.org
+PHC-NSK-02,Nashik Road Urban Primary Health Centre,"Nashik Road, Nashik, Maharashtra 422101",+91-253-2467501,phc-nsk-02@example.org,nurse_nsk_02,Rupali,Jadhav,nurse_nsk_02@example.org
+PHC-NSK-03,CIDCO New Nashik Urban Health Centre,"CIDCO, Nashik, Maharashtra 422008",+91-253-2563462,phc-nsk-03@example.org,nurse_nsk_03,Kavita,Pawar,nurse_nsk_03@example.org
+PHC-NSK-04,Satpur MIDC Urban Primary Health Centre,"Satpur, Nashik, Maharashtra 422007",+91-253-2798777,phc-nsk-04@example.org,nurse_nsk_04,Swati,Shinde,nurse_nsk_04@example.org
+PHC-NSK-05,Ambad Urban Primary Health Centre,"Ambad, Nashik, Maharashtra 422010",+91-253-2568342,phc-nsk-05@example.org,nurse_nsk_05,Vandana,Kale,nurse_nsk_05@example.org
+PHC-NSK-06,Gangapur Road Maternal & Child Health Clinic,"Gangapur Road, Nashik, Maharashtra 422013",+91-253-2639318,phc-nsk-06@example.org,nurse_nsk_06,Madhuri,More,nurse_nsk_06@example.org
+PHC-NSK-07,Deolali Camp Urban Primary Health Centre,"Deolali Camp, Nashik, Maharashtra 422401",+91-253-2750887,phc-nsk-07@example.org,nurse_nsk_07,Shital,Gaikwad,nurse_nsk_07@example.org
+PHC-NSK-08,Indira Nagar Urban Primary Health Centre,"Indira Nagar, Nashik, Maharashtra 422009",+91-253-2799620,phc-nsk-08@example.org,nurse_nsk_08,Archana,Chavan,nurse_nsk_08@example.org
+PHC-NSK-09,Old Nashik Community Health Centre,"Old Nashik, Nashik, Maharashtra 422001",+91-253-2353811,phc-nsk-09@example.org,nurse_nsk_09,Manisha,Sonawane,nurse_nsk_09@example.org
+PHC-NSK-10,Adgaon Urban Primary Health Centre,"Adgaon, Nashik, Maharashtra 422003",+91-253-2763533,phc-nsk-10@example.org,nurse_nsk_10,Jyoti,Wagh,nurse_nsk_10@example.org

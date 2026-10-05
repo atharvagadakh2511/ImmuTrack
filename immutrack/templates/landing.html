@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block title %}Universal Child Immunization Platform{% endblock %}
+
+{% block content %}
+<!-- SaaS Hero Section -->
+<section class="hero-saas">
+  <div class="row align-items-center position-relative" style="z-index: 2;">
+    <div class="col-lg-7">
+      <div class="hero-badge">
+        <i class="bi bi-patch-check-fill text-warning"></i> MoHFW UIP Standard Aligned Architecture
+      </div>
+      <h1 class="display-4 fw-extrabold text-white mb-3" style="letter-spacing: -0.03em; font-weight: 800; line-height: 1.15;">
+        Every Child Protected.<br>Every Vaccine On Time.
+      </h1>
+      <p class="lead text-white-50 mb-4" style="font-size: 1.15rem; font-weight: 400; max-width: 580px;">
+        Next-generation immunization lifecycle platform equipped with algorithmic reminder engines, real-time clinical verification, and predictive defaulter surveillance.
+      </p>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="{% url 'accounts:register' %}" class="btn btn-saas-secondary btn-lg px-4 shadow">
+          <i class="bi bi-shield-lock-fill"></i> Register as Guardian
+        </a>
+        <a href="{% url 'accounts:login' %}" class="btn btn-outline-light btn-lg px-4" style="border-radius: var(--radius-md); font-weight: 600;">
+          <i class="bi bi-box-arrow-in-right"></i> Clinical Staff Portal
+        </a>
+      </div>
+      
+      <div class="d-flex align-items-center gap-4 mt-4 pt-3 border-top border-white border-opacity-10 text-white-50 small">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Zero Dose Defaulter Prediction
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Tamper-Proof Audit Records
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Instant Digital Passports
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-5 mt-5 mt-lg-0 text-center">
+      <div class="p-4 bg-white rounded-4 shadow-xl text-dark text-start border border-light position-relative">
+        <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2.5 py-1 fw-bold small">
+              <i class="bi bi-broadcast"></i> Live Portal Monitor
+            </span>
+          </div>
+          <span class="text-muted small fw-semibold">UIP v2026.1</span>
+        </div>
+        
+        <div class="mb-3">
+          <div class="d-flex justify-content-between text-muted small fw-semibold mb-1">
+            <span>Universal Schedule Completion</span>
+            <span class="text-navy fw-bold">94.8%</span>
+          </div>
+          <div class="progress-modern">
+            <div class="progress-bar-teal" style="width: 94.8%; height: 100%;"></div>
+          </div>
+        </div>
+        
+        <div class="p-3 rounded-3 mb-3" style="background: var(--bg-slate); border: 1px solid var(--border-light);">
+          <div class="d-flex align-items-center gap-3">
+            <div class="metric-icon-box metric-icon-teal mb-0" style="width: 44px; height: 44px; font-size: 1.2rem;">
+              <i class="bi bi-capsule"></i>
+            </div>
+            <div>
+              <div class="fw-bold text-navy small">BCG & OPV-0 Birth Dose</div>
+              <div class="text-muted" style="font-size: 0.78rem;">Administered within 24h of birth</div>
+            </div>
+            <span class="ms-auto badge-status-completed small">Verified</span>
+          </div>
+        </div>
+
+        <div class="p-3 rounded-3" style="background: var(--bg-slate); border: 1px solid var(--border-light);">
+          <div class="d-flex align-items-center gap-3">
+            <div class="metric-icon-box metric-icon-blue mb-0" style="width: 44px; height: 44px; font-size: 1.2rem;">
+              <i class="bi bi-bell-fill"></i>
+            </div>
+            <div>
+              <div class="fw-bold text-navy small">Automated Reminder Dispatch</div>
+              <div class="text-muted" style="font-size: 0.78rem;">T-7d SMS & Portal Notification</div>
+            </div>
+            <span class="ms-auto badge-status-scheduled small">Queued</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Showcase Cards -->
+<section class="py-4 mb-5">
+  <div class="text-center mb-5">
+    <span class="text-primary-teal fw-bold text-uppercase small letter-spacing-1">End-to-End Immunization Architecture</span>
+    <h2 class="display-6 fw-bold text-navy mt-1">Built For Health Workers, Parents & Public Health</h2>
+    <p class="text-muted mx-auto" style="max-width: 650px;">
+      Connecting frontline ASHA and ANM healthcare teams with families through streamlined scheduling, digital record keeping, and predictive analytics.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Feature 1 -->
+    <div class="col-md-4">
+      <div class="card-metric h-100 p-4 border rounded-4 bg-white shadow-sm">
+        <div class="metric-icon-box metric-icon-teal">
+          <i class="bi bi-calendar2-week-fill"></i>
+        </div>
+        <h4 class="fw-bold text-navy fs-5 mb-2">Automated UIP Timelines</h4>
+        <p class="text-muted small mb-0">
+          Instant calculation of 18+ vaccine due dates and offset intervals upon child registration based on national health ministry schedules.
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="col-md-4">
+      <div class="card-metric h-100 p-4 border rounded-4 bg-white shadow-sm">
+        <div class="metric-icon-box metric-icon-blue">
+          <i class="bi bi-cpu-fill"></i>
+        </div>
+        <h4 class="fw-bold text-navy fs-5 mb-2">Predictive Defaulter AI</h4>
+        <p class="text-muted small mb-0">
+          Machine learning algorithms analyze temporal adherence patterns to identify high-risk defaulters before doses become permanently missed.
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="col-md-4">
+      <div class="card-metric h-100 p-4 border rounded-4 bg-white shadow-sm">
+        <div class="metric-icon-box metric-icon-green">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+        </div>
+        <h4 class="fw-bold text-navy fs-5 mb-2">Verified Immunization Passports</h4>
+        <p class="text-muted small mb-0">
+          Clinically authenticated, printable PDF vaccination certificates complete with batch numbers, administration facilities, and verifications.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to action bar -->
+<section class="p-5 rounded-4 border bg-white shadow-sm mb-5">
+  <div class="row align-items-center">
+    <div class="col-lg-8">
+      <h3 class="fw-bold text-navy mb-2">Ready to safeguard your child's immunization journey?</h3>
+      <p class="text-muted mb-0">Register your family in less than 2 minutes and monitor upcoming vaccines from anywhere.</p>
+    </div>
+    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+      <a href="{% url 'accounts:register' %}" class="btn btn-saas-primary btn-lg px-4 shadow">
+        Create Parent Account <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

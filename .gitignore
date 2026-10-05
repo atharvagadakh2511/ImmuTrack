@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+*.sqlite3
+db.sqlite3-journal
+.env
+venv/
+env/
+.idea/
+.vscode/
+media/
+ml_models/*.joblib
+*.log

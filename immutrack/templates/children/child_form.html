@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }} — ImmuTrack{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center my-4">
+  <div class="col-lg-8">
+    <div class="card-saas p-4 p-md-5">
+      <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom">
+        <div class="navbar-brand-icon" style="width: 48px; height: 48px; font-size: 1.4rem;">
+          <i class="bi bi-heart-pulse-fill"></i>
+        </div>
+        <div>
+          <h3 class="fw-bold text-navy mb-0">{{ title }}</h3>
+          <p class="text-muted small mb-0">Demographic details initialize the 18+ Universal Immunization Programme (UIP) timeline.</p>
+        </div>
+      </div>
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            {{ form.first_name }}
+            {% if form.first_name.errors %}<div class="text-danger small mt-1">{{ form.first_name.errors.0 }}</div>{% endif %}
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            {{ form.last_name }}
+            {% if form.last_name.errors %}<div class="text-danger small mt-1">{{ form.last_name.errors.0 }}</div>{% endif %}
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Date of Birth</label>
+            {{ form.date_of_birth }}
+            {% if form.date_of_birth.errors %}<div class="text-danger small mt-1">{{ form.date_of_birth.errors.0 }}</div>{% endif %}
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Gender</label>
+            {{ form.gender }}
+            {% if form.gender.errors %}<div class="text-danger small mt-1">{{ form.gender.errors.0 }}</div>{% endif %}
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Guardian Relationship</label>
+            {{ form.guardian_relationship }}
+            {% if form.guardian_relationship.errors %}<div class="text-danger small mt-1">{{ form.guardian_relationship.errors.0 }}</div>{% endif %}
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Blood Group</label>
+            {{ form.blood_group }}
+            {% if form.blood_group.errors %}<div class="text-danger small mt-1">{{ form.blood_group.errors.0 }}</div>{% endif %}
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Assigned Primary Health Centre / Clinic</label>
+          {{ form.assigned_clinic }}
+          <div class="form-text small">Select the health sub-centre or clinic nearest to your residence.</div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label">Known Allergies / Medical Precautions</label>
+          {{ form.allergies }}
+          <div class="form-text small">Specify any drug allergies, egg allergies, or neonatal conditions.</div>
+        </div>
+
+        <div class="d-flex gap-3">
+          <button type="submit" class="btn btn-saas-primary flex-grow-1 py-2.5">
+            <i class="bi bi-shield-plus"></i> Initialize Immunization Timeline
+          </button>
+          <a href="{% url 'children:parent_dashboard' %}" class="btn btn-saas-outline py-2.5 px-4">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

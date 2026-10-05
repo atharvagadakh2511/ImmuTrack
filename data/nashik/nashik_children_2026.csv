@@ -1,0 +1,501 @@
+child_ref,first_name,last_name,date_of_birth,gender,blood_group,allergies,guardian_relationship,guardian_username,guardian_first_name,guardian_last_name,guardian_email,guardian_phone,clinic_code,locality,pincode,registration_date,adherence_profile
+NSK-2026-0001,Pranjal,Borse,2026-09-09,F,O+,None known,FATHER,nsk_parent_0001,Rahul,Borse,nsk_parent_0001@example.com,+91-9724862807,PHC-NSK-08,Indira Nagar,422009,2026-09-18,GOOD
+NSK-2026-0002,Ishaan,Mali,2026-07-08,M,O+,None known,FATHER,nsk_parent_0002,Kiran,Mali,nsk_parent_0002@example.com,+91-9084416889,PHC-NSK-03,CIDCO,422008,2026-07-13,GOOD
+NSK-2026-0003,Aditya,Wagh,2026-09-03,M,A+,None known,MOTHER,nsk_parent_0003,Kavita,Wagh,nsk_parent_0003@example.com,+91-7022973827,PHC-NSK-10,Adgaon,422003,2026-09-04,GOOD
+NSK-2026-0004,Sana,Momin,2026-09-09,F,O+,None known,FATHER,nsk_parent_0004,Faisal,Momin,nsk_parent_0004@example.com,+91-9990280510,PHC-NSK-02,Nashik Road,422101,2026-09-11,AVERAGE
+NSK-2026-0005,Anaya,Deshmukh,2026-03-04,F,O-,None known,MOTHER,nsk_parent_0005,Shital,Deshmukh,nsk_parent_0005@example.com,+91-9930654844,PHC-NSK-06,Gangapur Road,422013,2026-03-11,GOOD
+NSK-2026-0006,Sana,Sayyed,2026-06-29,F,A+,None known,GUARDIAN,nsk_parent_0006,Rukhsar,Sayyed,nsk_parent_0006@example.com,+91-9015101730,PHC-NSK-01,Panchavati,422003,2026-07-04,AVERAGE
+NSK-2026-0007,Tanvi,Sharma,2026-05-05,F,B+,None known,MOTHER,nsk_parent_0007,Shital,Sharma,nsk_parent_0007@example.com,+91-8030246318,PHC-NSK-01,Panchavati,422003,2026-05-12,GOOD
+NSK-2026-0008,Myra,Nikam,2026-09-13,F,O+,None known,MOTHER,nsk_parent_0008,Madhuri,Nikam,nsk_parent_0008@example.com,+91-7071194403,PHC-NSK-06,Gangapur Road,422013,2026-09-14,GOOD
+NSK-2026-0009,Yash,Joshi,2026-06-29,M,AB+,None known,FATHER,nsk_parent_0009,Santosh,Joshi,nsk_parent_0009@example.com,+91-8830720337,PHC-NSK-09,Old Nashik,422001,2026-07-05,GOOD
+NSK-2026-0010,Tanmay,Pagar,2026-09-03,M,O+,None known,MOTHER,nsk_parent_0010,Shital,Pagar,nsk_parent_0010@example.com,+91-9314927865,PHC-NSK-03,CIDCO,422008,2026-09-07,AVERAGE
+NSK-2026-0011,Anushka,Bagul,2026-09-08,F,A+,None known,GUARDIAN,nsk_parent_0011,Ajay,Bagul,nsk_parent_0011@example.com,+91-9785436113,PHC-NSK-10,Adgaon,422003,2026-09-13,GOOD
+NSK-2026-0012,Tejas,Bhosale,2026-03-11,M,A+,None known,MOTHER,nsk_parent_0012,Vandana,Bhosale,nsk_parent_0012@example.com,+91-7097359092,PHC-NSK-08,Indira Nagar,422009,2026-03-19,GOOD
+NSK-2026-0013,Sana,Khan,2026-05-20,F,O+,None known,FATHER,nsk_parent_0013,Nadeem,Khan,nsk_parent_0013@example.com,+91-9985114513,PHC-NSK-01,Panchavati,422003,2026-05-25,GOOD
+NSK-2026-0014,Sakshi,Dhole,2026-09-26,F,B-,None known,GUARDIAN,nsk_parent_0014,Priya,Dhole,nsk_parent_0014@example.com,+91-9914878080,PHC-NSK-03,CIDCO,422008,2026-09-30,GOOD
+NSK-2026-0015,Zayan,Khan,2026-05-13,M,AB+,None known,MOTHER,nsk_parent_0015,Shaheen,Khan,nsk_parent_0015@example.com,+91-9983477995,PHC-NSK-06,Gangapur Road,422013,2026-05-14,POOR
+NSK-2026-0016,Kabir,Kasar,2026-01-06,M,O+,None known,MOTHER,nsk_parent_0016,Pallavi,Kasar,nsk_parent_0016@example.com,+91-7589176114,PHC-NSK-02,Nashik Road,422101,2026-01-06,GOOD
+NSK-2026-0017,Sai,Gholap,2026-01-07,F,O+,None known,MOTHER,nsk_parent_0017,Archana,Gholap,nsk_parent_0017@example.com,+91-7042749614,PHC-NSK-07,Deolali Camp,422401,2026-01-13,GOOD
+NSK-2026-0018,Sara,Bagul,2026-05-10,F,O+,None known,MOTHER,nsk_parent_0018,Smita,Bagul,nsk_parent_0018@example.com,+91-7548941552,PHC-NSK-05,Ambad,422010,2026-05-10,GOOD
+NSK-2026-0019,Om,Borse,2026-03-26,M,O+,None known,MOTHER,nsk_parent_0019,Vandana,Borse,nsk_parent_0019@example.com,+91-7587059121,PHC-NSK-06,Gangapur Road,422013,2026-04-04,GOOD
+NSK-2026-0020,Gauri,More,2026-04-23,F,O+,None known,MOTHER,nsk_parent_0020,Neha,More,nsk_parent_0020@example.com,+91-7575578208,PHC-NSK-08,Indira Nagar,422009,2026-04-23,GOOD
+NSK-2026-0021,Sahil,Nikam,2026-02-16,M,A+,None known,FATHER,nsk_parent_0021,Ajay,Nikam,nsk_parent_0021@example.com,+91-9880004769,PHC-NSK-04,Satpur,422007,2026-02-17,AVERAGE
+NSK-2026-0022,Shreyas,Bagul,2026-02-19,M,A-,None known,MOTHER,nsk_parent_0022,Neha,Bagul,nsk_parent_0022@example.com,+91-9724109447,PHC-NSK-04,Satpur,422007,2026-02-25,GOOD
+NSK-2026-0023,Sakshi,Dhole,2026-03-31,F,O+,None known,FATHER,nsk_parent_0023,Ajay,Dhole,nsk_parent_0023@example.com,+91-9951624168,PHC-NSK-08,Indira Nagar,422009,2026-03-31,GOOD
+NSK-2026-0024,Dev,Shinde,2026-07-28,M,B+,None known,MOTHER,nsk_parent_0024,Komal,Shinde,nsk_parent_0024@example.com,+91-9339222193,PHC-NSK-03,CIDCO,422008,2026-08-05,GOOD
+NSK-2026-0025,Chinmay,Mahale,2026-06-06,M,B+,None known,MOTHER,nsk_parent_0025,Priya,Mahale,nsk_parent_0025@example.com,+91-7048503818,PHC-NSK-03,CIDCO,422008,2026-06-08,POOR
+NSK-2026-0026,Pranav,Patil,2026-07-24,M,B+,None known,MOTHER,nsk_parent_0026,Smita,Patil,nsk_parent_0026@example.com,+91-8871682740,PHC-NSK-04,Satpur,422007,2026-08-02,AVERAGE
+NSK-2026-0027,Riya,Patil,2026-08-06,F,B+,None known,FATHER,nsk_parent_0027,Rajesh,Patil,nsk_parent_0027@example.com,+91-9351941310,PHC-NSK-10,Adgaon,422003,2026-08-15,GOOD
+NSK-2026-0028,Prathamesh,Shirsath,2026-09-27,M,A-,None known,MOTHER,nsk_parent_0028,Kavita,Shirsath,nsk_parent_0028@example.com,+91-9046656998,PHC-NSK-04,Satpur,422007,2026-09-30,POOR
+NSK-2026-0029,Shlok,Jagtap,2026-07-26,M,B+,None known,MOTHER,nsk_parent_0029,Swati,Jagtap,nsk_parent_0029@example.com,+91-9867337768,PHC-NSK-04,Satpur,422007,2026-07-29,GOOD
+NSK-2026-0030,Kunal,Gupta,2026-02-05,M,A+,None known,FATHER,nsk_parent_0030,Santosh,Gupta,nsk_parent_0030@example.com,+91-9015236943,PHC-NSK-06,Gangapur Road,422013,2026-02-05,GOOD
+NSK-2026-0031,Avni,Shinde,2026-05-10,F,A-,None known,MOTHER,nsk_parent_0031,Pooja,Shinde,nsk_parent_0031@example.com,+91-9095172920,PHC-NSK-09,Old Nashik,422001,2026-05-10,AVERAGE
+NSK-2026-0032,Ovi,Borse,2026-02-06,F,B+,None known,MOTHER,nsk_parent_0032,Priya,Borse,nsk_parent_0032@example.com,+91-9992821969,PHC-NSK-08,Indira Nagar,422009,2026-02-15,AVERAGE
+NSK-2026-0033,Hrithik,Sharma,2026-02-07,M,O-,None known,FATHER,nsk_parent_0033,Mahesh,Sharma,nsk_parent_0033@example.com,+91-9997304266,PHC-NSK-09,Old Nashik,422001,2026-02-12,GOOD
+NSK-2026-0034,Ruchika,Sonawane,2026-04-10,F,B+,None known,MOTHER,nsk_parent_0034,Komal,Sonawane,nsk_parent_0034@example.com,+91-8069481985,PHC-NSK-01,Panchavati,422003,2026-04-16,POOR
+NSK-2026-0035,Tanmay,Borse,2026-05-29,M,O+,None known,MOTHER,nsk_parent_0035,Sunita,Borse,nsk_parent_0035@example.com,+91-9328281511,PHC-NSK-03,CIDCO,422008,2026-05-30,AVERAGE
+NSK-2026-0036,Ayush,Joshi,2026-02-17,M,AB+,None known,MOTHER,nsk_parent_0036,Madhuri,Joshi,nsk_parent_0036@example.com,+91-8838331411,PHC-NSK-02,Nashik Road,422101,2026-02-18,POOR
+NSK-2026-0037,Ojas,Londhe,2026-07-13,M,A+,None known,MOTHER,nsk_parent_0037,Deepali,Londhe,nsk_parent_0037@example.com,+91-9767615075,PHC-NSK-06,Gangapur Road,422013,2026-07-22,POOR
+NSK-2026-0038,Nishant,Deshmukh,2026-06-26,M,A-,None known,MOTHER,nsk_parent_0038,Komal,Deshmukh,nsk_parent_0038@example.com,+91-9076498872,PHC-NSK-02,Nashik Road,422101,2026-07-01,GOOD
+NSK-2026-0039,Yash,Ahire,2026-06-30,M,B+,None known,MOTHER,nsk_parent_0039,Jyoti,Ahire,nsk_parent_0039@example.com,+91-7594233725,PHC-NSK-03,CIDCO,422008,2026-06-30,POOR
+NSK-2026-0040,Samiksha,Mali,2026-05-08,F,O-,None known,FATHER,nsk_parent_0040,Prashant,Mali,nsk_parent_0040@example.com,+91-9781028210,PHC-NSK-01,Panchavati,422003,2026-05-11,AVERAGE
+NSK-2026-0041,Mrunal,Khairnar,2026-07-23,F,A-,None known,FATHER,nsk_parent_0041,Kiran,Khairnar,nsk_parent_0041@example.com,+91-7036000374,PHC-NSK-07,Deolali Camp,422401,2026-07-24,GOOD
+NSK-2026-0042,Diya,Ahire,2026-09-26,F,O+,None known,FATHER,nsk_parent_0042,Mahesh,Ahire,nsk_parent_0042@example.com,+91-7014302047,PHC-NSK-07,Deolali Camp,422401,2026-09-26,GOOD
+NSK-2026-0043,Raj,Nikam,2026-08-21,M,O+,None known,MOTHER,nsk_parent_0043,Archana,Nikam,nsk_parent_0043@example.com,+91-7060740034,PHC-NSK-02,Nashik Road,422101,2026-08-21,GOOD
+NSK-2026-0044,Aaliyah,Sayyed,2026-09-25,F,A+,None known,MOTHER,nsk_parent_0044,Shaheen,Sayyed,nsk_parent_0044@example.com,+91-7214889452,PHC-NSK-01,Panchavati,422003,2026-10-01,GOOD
+NSK-2026-0045,Advait,Aher,2026-08-28,M,A+,None known,MOTHER,nsk_parent_0045,Rupali,Aher,nsk_parent_0045@example.com,+91-7553449106,PHC-NSK-01,Panchavati,422003,2026-08-30,POOR
+NSK-2026-0046,Rayyan,Ansari,2026-04-21,M,B+,None known,MOTHER,nsk_parent_0046,Shabana,Ansari,nsk_parent_0046@example.com,+91-9320093083,PHC-NSK-03,CIDCO,422008,2026-04-29,AVERAGE
+NSK-2026-0047,Samiksha,Shinde,2026-09-20,F,O+,None known,FATHER,nsk_parent_0047,Ganesh,Shinde,nsk_parent_0047@example.com,+91-9928381280,PHC-NSK-02,Nashik Road,422101,2026-09-24,GOOD
+NSK-2026-0048,Zoya,Momin,2026-03-14,F,B-,Eczema / skin allergy,MOTHER,nsk_parent_0048,Rehana,Momin,nsk_parent_0048@example.com,+91-9746259874,PHC-NSK-09,Old Nashik,422001,2026-03-15,GOOD
+NSK-2026-0049,Aarav,Kothawade,2026-06-01,M,O-,Cow's milk protein,MOTHER,nsk_parent_0049,Priya,Kothawade,nsk_parent_0049@example.com,+91-7212599620,PHC-NSK-03,CIDCO,422008,2026-06-05,GOOD
+NSK-2026-0050,Tejas,Thakur,2026-05-04,M,O+,None known,MOTHER,nsk_parent_0050,Sneha,Thakur,nsk_parent_0050@example.com,+91-8061723378,PHC-NSK-08,Indira Nagar,422009,2026-05-08,GOOD
+NSK-2026-0051,Aarohi,Gavit,2026-04-18,F,A+,None known,MOTHER,nsk_parent_0051,Komal,Gavit,nsk_parent_0051@example.com,+91-9848236546,PHC-NSK-03,CIDCO,422008,2026-04-22,GOOD
+NSK-2026-0052,Prisha,Jagtap,2026-03-31,F,O+,None known,MOTHER,nsk_parent_0052,Neha,Jagtap,nsk_parent_0052@example.com,+91-8048425384,PHC-NSK-03,CIDCO,422008,2026-04-02,GOOD
+NSK-2026-0053,Rayyan,Pathan,2026-03-26,M,A+,None known,MOTHER,nsk_parent_0053,Samina,Pathan,nsk_parent_0053@example.com,+91-9360990662,PHC-NSK-06,Gangapur Road,422013,2026-04-04,AVERAGE
+NSK-2026-0054,Ovi,Joshi,2026-05-14,F,B-,None known,GUARDIAN,nsk_parent_0054,Santosh,Joshi,nsk_parent_0054@example.com,+91-9776481660,PHC-NSK-07,Deolali Camp,422401,2026-05-23,AVERAGE
+NSK-2026-0055,Gauri,Ahire,2026-06-19,F,B+,None known,MOTHER,nsk_parent_0055,Madhuri,Ahire,nsk_parent_0055@example.com,+91-8868261004,PHC-NSK-04,Satpur,422007,2026-06-27,AVERAGE
+NSK-2026-0056,Mayur,Bhalerao,2026-04-07,M,O+,None known,FATHER,nsk_parent_0056,Vijay,Bhalerao,nsk_parent_0056@example.com,+91-9832032499,PHC-NSK-02,Nashik Road,422101,2026-04-13,AVERAGE
+NSK-2026-0057,Isha,Jagtap,2026-06-30,F,O+,None known,MOTHER,nsk_parent_0057,Sunita,Jagtap,nsk_parent_0057@example.com,+91-8836064065,PHC-NSK-02,Nashik Road,422101,2026-07-07,GOOD
+NSK-2026-0058,Shlok,Deshmukh,2026-06-09,M,A+,None known,GUARDIAN,nsk_parent_0058,Sunita,Deshmukh,nsk_parent_0058@example.com,+91-9014926594,PHC-NSK-02,Nashik Road,422101,2026-06-10,GOOD
+NSK-2026-0059,Tanmay,Bagul,2026-01-24,M,A+,None known,MOTHER,nsk_parent_0059,Rupali,Bagul,nsk_parent_0059@example.com,+91-7576890159,PHC-NSK-07,Deolali Camp,422401,2026-01-26,AVERAGE
+NSK-2026-0060,Arham,Pathan,2026-08-19,M,B+,None known,MOTHER,nsk_parent_0060,Rehana,Pathan,nsk_parent_0060@example.com,+91-7584106310,PHC-NSK-01,Panchavati,422003,2026-08-23,GOOD
+NSK-2026-0061,Shlok,Deshmukh,2026-03-18,M,B+,None known,FATHER,nsk_parent_0061,Yogesh,Deshmukh,nsk_parent_0061@example.com,+91-7272839367,PHC-NSK-04,Satpur,422007,2026-03-22,POOR
+NSK-2026-0062,Inaya,Momin,2026-01-04,F,A+,None known,FATHER,nsk_parent_0062,Irfan,Momin,nsk_parent_0062@example.com,+91-9885275571,PHC-NSK-03,CIDCO,422008,2026-01-10,GOOD
+NSK-2026-0063,Siddharth,Pawar,2026-01-22,M,O+,None known,MOTHER,nsk_parent_0063,Vandana,Pawar,nsk_parent_0063@example.com,+91-7088825282,PHC-NSK-10,Adgaon,422003,2026-01-23,AVERAGE
+NSK-2026-0064,Samiksha,Thakur,2026-09-22,F,AB-,None known,FATHER,nsk_parent_0064,Amit,Thakur,nsk_parent_0064@example.com,+91-9049595520,PHC-NSK-07,Deolali Camp,422401,2026-09-25,AVERAGE
+NSK-2026-0065,Siya,Deshmukh,2026-09-17,F,O+,None known,FATHER,nsk_parent_0065,Ajay,Deshmukh,nsk_parent_0065@example.com,+91-7080955195,PHC-NSK-10,Adgaon,422003,2026-09-24,GOOD
+NSK-2026-0066,Aditi,Shirsath,2026-04-21,F,B+,None known,MOTHER,nsk_parent_0066,Shital,Shirsath,nsk_parent_0066@example.com,+91-8898792578,PHC-NSK-02,Nashik Road,422101,2026-04-21,GOOD
+NSK-2026-0067,Myra,Yadav,2026-03-02,F,A+,None known,MOTHER,nsk_parent_0067,Neha,Yadav,nsk_parent_0067@example.com,+91-7048329189,PHC-NSK-04,Satpur,422007,2026-03-06,GOOD
+NSK-2026-0068,Siya,Joshi,2026-03-03,F,AB+,None known,MOTHER,nsk_parent_0068,Pallavi,Joshi,nsk_parent_0068@example.com,+91-9765598139,PHC-NSK-06,Gangapur Road,422013,2026-03-06,AVERAGE
+NSK-2026-0069,Tejas,Nikam,2026-05-31,M,B+,None known,MOTHER,nsk_parent_0069,Rupali,Nikam,nsk_parent_0069@example.com,+91-9398907463,PHC-NSK-05,Ambad,422010,2026-06-10,POOR
+NSK-2026-0070,Advait,Pagar,2026-03-09,M,AB+,None known,FATHER,nsk_parent_0070,Nitin,Pagar,nsk_parent_0070@example.com,+91-9720457473,PHC-NSK-08,Indira Nagar,422009,2026-03-14,POOR
+NSK-2026-0071,Dev,Aher,2026-09-30,M,A+,None known,MOTHER,nsk_parent_0071,Madhuri,Aher,nsk_parent_0071@example.com,+91-8848401968,PHC-NSK-09,Old Nashik,422001,2026-10-05,AVERAGE
+NSK-2026-0072,Yash,Shirsath,2026-08-16,M,B-,None known,MOTHER,nsk_parent_0072,Rashmi,Shirsath,nsk_parent_0072@example.com,+91-7080849543,PHC-NSK-10,Adgaon,422003,2026-08-21,GOOD
+NSK-2026-0073,Hiba,Ansari,2026-05-19,F,B+,None known,MOTHER,nsk_parent_0073,Shabana,Ansari,nsk_parent_0073@example.com,+91-9341745614,PHC-NSK-08,Indira Nagar,422009,2026-05-22,GOOD
+NSK-2026-0074,Swara,Gaikwad,2026-02-02,F,A-,None known,MOTHER,nsk_parent_0074,Jyoti,Gaikwad,nsk_parent_0074@example.com,+91-9010025755,PHC-NSK-09,Old Nashik,422001,2026-02-02,GOOD
+NSK-2026-0075,Sarthak,Sharma,2026-02-22,M,B+,Penicillin (family history),MOTHER,nsk_parent_0075,Kavita,Sharma,nsk_parent_0075@example.com,+91-9958136852,PHC-NSK-07,Deolali Camp,422401,2026-03-01,GOOD
+NSK-2026-0076,Rutuja,Raut,2026-01-18,F,A+,None known,MOTHER,nsk_parent_0076,Archana,Raut,nsk_parent_0076@example.com,+91-7589724945,PHC-NSK-04,Satpur,422007,2026-01-24,GOOD
+NSK-2026-0077,Vedant,Kadam,2026-01-17,M,B+,None known,FATHER,nsk_parent_0077,Ganesh,Kadam,nsk_parent_0077@example.com,+91-9325662361,PHC-NSK-08,Indira Nagar,422009,2026-01-24,GOOD
+NSK-2026-0078,Raj,Dhamale,2026-05-10,M,O+,None known,MOTHER,nsk_parent_0078,Pallavi,Dhamale,nsk_parent_0078@example.com,+91-9998933396,PHC-NSK-05,Ambad,422010,2026-05-11,POOR
+NSK-2026-0079,Ruchika,Gupta,2026-03-30,F,A+,None known,MOTHER,nsk_parent_0079,Shital,Gupta,nsk_parent_0079@example.com,+91-9789297591,PHC-NSK-03,CIDCO,422008,2026-04-02,GOOD
+NSK-2026-0080,Ayan,Shaikh,2026-08-23,M,A+,Egg allergy,MOTHER,nsk_parent_0080,Nasreen,Shaikh,nsk_parent_0080@example.com,+91-9391059431,PHC-NSK-07,Deolali Camp,422401,2026-08-25,AVERAGE
+NSK-2026-0081,Riya,Gaikwad,2026-04-29,F,A+,None known,FATHER,nsk_parent_0081,Santosh,Gaikwad,nsk_parent_0081@example.com,+91-9989049661,PHC-NSK-07,Deolali Camp,422401,2026-05-08,GOOD
+NSK-2026-0082,Om,Dhole,2026-06-26,M,B-,None known,FATHER,nsk_parent_0082,Rajesh,Dhole,nsk_parent_0082@example.com,+91-8833265436,PHC-NSK-09,Old Nashik,422001,2026-06-27,GOOD
+NSK-2026-0083,Swayam,Kadam,2026-03-14,M,B+,None known,MOTHER,nsk_parent_0083,Pooja,Kadam,nsk_parent_0083@example.com,+91-9033189006,PHC-NSK-09,Old Nashik,422001,2026-03-15,GOOD
+NSK-2026-0084,Shravani,Khairnar,2026-08-11,F,A+,None known,FATHER,nsk_parent_0084,Santosh,Khairnar,nsk_parent_0084@example.com,+91-9985826902,PHC-NSK-04,Satpur,422007,2026-08-12,GOOD
+NSK-2026-0085,Nishant,Kale,2026-01-01,M,A+,None known,MOTHER,nsk_parent_0085,Sneha,Kale,nsk_parent_0085@example.com,+91-7295761639,PHC-NSK-06,Gangapur Road,422013,2026-01-02,GOOD
+NSK-2026-0086,Sakshi,Bagul,2026-03-07,F,A+,None known,MOTHER,nsk_parent_0086,Pooja,Bagul,nsk_parent_0086@example.com,+91-8057322375,PHC-NSK-10,Adgaon,422003,2026-03-15,AVERAGE
+NSK-2026-0087,Sairaj,Gholap,2026-08-01,M,A+,Dust allergy,FATHER,nsk_parent_0087,Anil,Gholap,nsk_parent_0087@example.com,+91-9314318051,PHC-NSK-08,Indira Nagar,422009,2026-08-06,AVERAGE
+NSK-2026-0088,Diya,Sonawane,2026-03-23,F,A+,None known,MOTHER,nsk_parent_0088,Sneha,Sonawane,nsk_parent_0088@example.com,+91-8086107824,PHC-NSK-08,Indira Nagar,422009,2026-03-24,GOOD
+NSK-2026-0089,Sara,Ahire,2026-07-16,F,A+,None known,MOTHER,nsk_parent_0089,Shital,Ahire,nsk_parent_0089@example.com,+91-7067773816,PHC-NSK-01,Panchavati,422003,2026-07-25,GOOD
+NSK-2026-0090,Advait,Pagar,2026-03-19,M,A-,None known,MOTHER,nsk_parent_0090,Swati,Pagar,nsk_parent_0090@example.com,+91-9393388638,PHC-NSK-09,Old Nashik,422001,2026-03-26,POOR
+NSK-2026-0091,Darshan,Patil,2026-04-20,M,B+,None known,MOTHER,nsk_parent_0091,Sneha,Patil,nsk_parent_0091@example.com,+91-9098212638,PHC-NSK-06,Gangapur Road,422013,2026-04-26,GOOD
+NSK-2026-0092,Sakshi,Jadhav,2026-05-10,F,B+,None known,MOTHER,nsk_parent_0092,Priya,Jadhav,nsk_parent_0092@example.com,+91-7288776512,PHC-NSK-05,Ambad,422010,2026-05-20,GOOD
+NSK-2026-0093,Ruchika,Bagul,2026-02-03,F,A+,None known,MOTHER,nsk_parent_0093,Kavita,Bagul,nsk_parent_0093@example.com,+91-9869568616,PHC-NSK-06,Gangapur Road,422013,2026-02-06,POOR
+NSK-2026-0094,Sairaj,Raut,2026-07-30,M,O+,None known,MOTHER,nsk_parent_0094,Kavita,Raut,nsk_parent_0094@example.com,+91-7051655327,PHC-NSK-04,Satpur,422007,2026-08-01,GOOD
+NSK-2026-0095,Arman,Khan,2026-09-07,M,B+,None known,MOTHER,nsk_parent_0095,Shabana,Khan,nsk_parent_0095@example.com,+91-8064190263,PHC-NSK-01,Panchavati,422003,2026-09-17,GOOD
+NSK-2026-0096,Rutuja,Aher,2026-07-23,F,O+,None known,FATHER,nsk_parent_0096,Vijay,Aher,nsk_parent_0096@example.com,+91-9910905338,PHC-NSK-07,Deolali Camp,422401,2026-07-23,GOOD
+NSK-2026-0097,Soham,Shirsath,2026-02-07,M,B-,None known,MOTHER,nsk_parent_0097,Kavita,Shirsath,nsk_parent_0097@example.com,+91-9039779425,PHC-NSK-08,Indira Nagar,422009,2026-02-07,GOOD
+NSK-2026-0098,Inaya,Khan,2026-04-08,F,O+,None known,FATHER,nsk_parent_0098,Salman,Khan,nsk_parent_0098@example.com,+91-9320474911,PHC-NSK-05,Ambad,422010,2026-04-13,GOOD
+NSK-2026-0099,Diya,More,2026-04-16,F,A+,None known,MOTHER,nsk_parent_0099,Shital,More,nsk_parent_0099@example.com,+91-8094974053,PHC-NSK-02,Nashik Road,422101,2026-04-24,GOOD
+NSK-2026-0100,Rutuja,More,2026-02-27,F,A+,None known,MOTHER,nsk_parent_0100,Vandana,More,nsk_parent_0100@example.com,+91-9082768889,PHC-NSK-02,Nashik Road,422101,2026-03-07,GOOD
+NSK-2026-0101,Rayyan,Momin,2026-08-17,M,AB+,None known,MOTHER,nsk_parent_0101,Shabana,Momin,nsk_parent_0101@example.com,+91-8862373626,PHC-NSK-09,Old Nashik,422001,2026-08-20,POOR
+NSK-2026-0102,Noor,Sayyed,2026-03-15,F,O+,None known,MOTHER,nsk_parent_0102,Rehana,Sayyed,nsk_parent_0102@example.com,+91-9911500908,PHC-NSK-03,CIDCO,422008,2026-03-23,GOOD
+NSK-2026-0103,Sakshi,Jagtap,2026-05-25,F,O+,None known,MOTHER,nsk_parent_0103,Swati,Jagtap,nsk_parent_0103@example.com,+91-8842171356,PHC-NSK-05,Ambad,422010,2026-06-02,GOOD
+NSK-2026-0104,Kunal,Kadam,2026-04-03,M,A+,None known,FATHER,nsk_parent_0104,Sachin,Kadam,nsk_parent_0104@example.com,+91-7069943512,PHC-NSK-03,CIDCO,422008,2026-04-07,AVERAGE
+NSK-2026-0105,Trisha,Shinde,2026-09-20,F,O+,None known,MOTHER,nsk_parent_0105,Manisha,Shinde,nsk_parent_0105@example.com,+91-8831496246,PHC-NSK-10,Adgaon,422003,2026-09-20,GOOD
+NSK-2026-0106,Ira,Ahire,2026-06-26,F,AB+,Eczema / skin allergy,MOTHER,nsk_parent_0106,Rashmi,Ahire,nsk_parent_0106@example.com,+91-9023441132,PHC-NSK-09,Old Nashik,422001,2026-06-29,POOR
+NSK-2026-0107,Yash,Gupta,2026-09-14,M,B+,None known,MOTHER,nsk_parent_0107,Deepali,Gupta,nsk_parent_0107@example.com,+91-9084488279,PHC-NSK-06,Gangapur Road,422013,2026-09-15,GOOD
+NSK-2026-0108,Harsh,Aher,2026-04-04,M,B+,None known,MOTHER,nsk_parent_0108,Vandana,Aher,nsk_parent_0108@example.com,+91-9063011088,PHC-NSK-02,Nashik Road,422101,2026-04-07,AVERAGE
+NSK-2026-0109,Saanvi,Salunke,2026-06-17,F,AB+,None known,FATHER,nsk_parent_0109,Sandeep,Salunke,nsk_parent_0109@example.com,+91-8061475809,PHC-NSK-04,Satpur,422007,2026-06-17,AVERAGE
+NSK-2026-0110,Aryan,Deshpande,2026-02-13,M,AB+,None known,MOTHER,nsk_parent_0110,Archana,Deshpande,nsk_parent_0110@example.com,+91-8848906477,PHC-NSK-09,Old Nashik,422001,2026-02-20,GOOD
+NSK-2026-0111,Aryan,Wagh,2026-06-11,M,B-,None known,MOTHER,nsk_parent_0111,Smita,Wagh,nsk_parent_0111@example.com,+91-8069941779,PHC-NSK-09,Old Nashik,422001,2026-06-18,GOOD
+NSK-2026-0112,Manasvi,Bhalerao,2026-01-29,F,B-,None known,MOTHER,nsk_parent_0112,Pooja,Bhalerao,nsk_parent_0112@example.com,+91-7582584045,PHC-NSK-06,Gangapur Road,422013,2026-02-02,POOR
+NSK-2026-0113,Anvi,Bhalerao,2026-09-11,F,B-,None known,GUARDIAN,nsk_parent_0113,Ganesh,Bhalerao,nsk_parent_0113@example.com,+91-7250520564,PHC-NSK-01,Panchavati,422003,2026-09-17,GOOD
+NSK-2026-0114,Pranjal,Thorat,2026-04-08,F,B+,None known,MOTHER,nsk_parent_0114,Rashmi,Thorat,nsk_parent_0114@example.com,+91-9844999671,PHC-NSK-01,Panchavati,422003,2026-04-10,AVERAGE
+NSK-2026-0115,Veer,Kothawade,2026-04-23,M,A+,None known,MOTHER,nsk_parent_0115,Sneha,Kothawade,nsk_parent_0115@example.com,+91-9374790739,PHC-NSK-09,Old Nashik,422001,2026-04-29,GOOD
+NSK-2026-0116,Vedant,Joshi,2026-08-25,M,A+,None known,MOTHER,nsk_parent_0116,Pallavi,Joshi,nsk_parent_0116@example.com,+91-7536111156,PHC-NSK-02,Nashik Road,422101,2026-08-25,AVERAGE
+NSK-2026-0117,Parth,Borse,2026-09-30,M,B+,None known,FATHER,nsk_parent_0117,Sunil,Borse,nsk_parent_0117@example.com,+91-9759803601,PHC-NSK-08,Indira Nagar,422009,2026-10-05,AVERAGE
+NSK-2026-0118,Kavya,Sonawane,2026-01-19,F,B+,None known,MOTHER,nsk_parent_0118,Shital,Sonawane,nsk_parent_0118@example.com,+91-9743173173,PHC-NSK-10,Adgaon,422003,2026-01-21,GOOD
+NSK-2026-0119,Aryan,Bagul,2026-01-07,M,A+,None known,MOTHER,nsk_parent_0119,Rupali,Bagul,nsk_parent_0119@example.com,+91-8810105514,PHC-NSK-07,Deolali Camp,422401,2026-01-08,AVERAGE
+NSK-2026-0120,Kabir,Kadam,2026-05-24,M,O-,None known,FATHER,nsk_parent_0120,Sunil,Kadam,nsk_parent_0120@example.com,+91-9833638485,PHC-NSK-06,Gangapur Road,422013,2026-05-30,GOOD
+NSK-2026-0121,Raj,Aher,2026-02-20,M,B+,None known,MOTHER,nsk_parent_0121,Swati,Aher,nsk_parent_0121@example.com,+91-8830569964,PHC-NSK-01,Panchavati,422003,2026-02-25,GOOD
+NSK-2026-0122,Sana,Ansari,2026-06-25,F,O+,None known,GUARDIAN,nsk_parent_0122,Shabana,Ansari,nsk_parent_0122@example.com,+91-9013072668,PHC-NSK-02,Nashik Road,422101,2026-06-26,GOOD
+NSK-2026-0123,Sakshi,Jagtap,2026-02-07,F,A+,None known,FATHER,nsk_parent_0123,Ajay,Jagtap,nsk_parent_0123@example.com,+91-9796158095,PHC-NSK-06,Gangapur Road,422013,2026-02-11,AVERAGE
+NSK-2026-0124,Mrunal,Kothawade,2026-05-19,F,O+,None known,MOTHER,nsk_parent_0124,Pallavi,Kothawade,nsk_parent_0124@example.com,+91-8877237911,PHC-NSK-02,Nashik Road,422101,2026-05-23,GOOD
+NSK-2026-0125,Rudra,Deshpande,2026-09-13,M,B+,None known,FATHER,nsk_parent_0125,Prashant,Deshpande,nsk_parent_0125@example.com,+91-9937743510,PHC-NSK-02,Nashik Road,422101,2026-09-15,POOR
+NSK-2026-0126,Hiba,Ansari,2026-04-14,F,B+,Dust allergy,MOTHER,nsk_parent_0126,Shaheen,Ansari,nsk_parent_0126@example.com,+91-9983118291,PHC-NSK-04,Satpur,422007,2026-04-17,GOOD
+NSK-2026-0127,Zayan,Momin,2026-06-06,M,O+,None known,MOTHER,nsk_parent_0127,Farzana,Momin,nsk_parent_0127@example.com,+91-8812225585,PHC-NSK-03,CIDCO,422008,2026-06-11,GOOD
+NSK-2026-0128,Swayam,Borse,2026-02-15,M,B+,None known,FATHER,nsk_parent_0128,Kiran,Borse,nsk_parent_0128@example.com,+91-9934066582,PHC-NSK-08,Indira Nagar,422009,2026-02-19,AVERAGE
+NSK-2026-0129,Harsh,Wagh,2026-03-29,M,AB+,Dust allergy,MOTHER,nsk_parent_0129,Neha,Wagh,nsk_parent_0129@example.com,+91-7539557824,PHC-NSK-05,Ambad,422010,2026-03-30,GOOD
+NSK-2026-0130,Omkar,Yadav,2026-08-19,M,AB+,Eczema / skin allergy,MOTHER,nsk_parent_0130,Priya,Yadav,nsk_parent_0130@example.com,+91-9721175839,PHC-NSK-01,Panchavati,422003,2026-08-27,GOOD
+NSK-2026-0131,Kabir,Gholap,2026-07-27,M,O+,None known,MOTHER,nsk_parent_0131,Madhuri,Gholap,nsk_parent_0131@example.com,+91-9370541528,PHC-NSK-04,Satpur,422007,2026-07-30,GOOD
+NSK-2026-0132,Sanvi,Salunke,2026-04-09,F,O+,None known,MOTHER,nsk_parent_0132,Sneha,Salunke,nsk_parent_0132@example.com,+91-9063596162,PHC-NSK-06,Gangapur Road,422013,2026-04-18,AVERAGE
+NSK-2026-0133,Hrithik,Pawar,2026-01-29,M,O+,None known,MOTHER,nsk_parent_0133,Pooja,Pawar,nsk_parent_0133@example.com,+91-8821786281,PHC-NSK-01,Panchavati,422003,2026-02-02,GOOD
+NSK-2026-0134,Pranjal,Shirsath,2026-04-04,F,O+,None known,MOTHER,nsk_parent_0134,Deepali,Shirsath,nsk_parent_0134@example.com,+91-7063364833,PHC-NSK-03,CIDCO,422008,2026-04-14,GOOD
+NSK-2026-0135,Isha,Gupta,2026-01-31,F,O+,None known,FATHER,nsk_parent_0135,Ganesh,Gupta,nsk_parent_0135@example.com,+91-8892668563,PHC-NSK-04,Satpur,422007,2026-02-10,AVERAGE
+NSK-2026-0136,Swara,Sonawane,2026-08-21,F,O+,None known,MOTHER,nsk_parent_0136,Swati,Sonawane,nsk_parent_0136@example.com,+91-7284163800,PHC-NSK-09,Old Nashik,422001,2026-08-29,GOOD
+NSK-2026-0137,Vaishnavi,Mahale,2026-07-21,F,B+,None known,MOTHER,nsk_parent_0137,Smita,Mahale,nsk_parent_0137@example.com,+91-9382181002,PHC-NSK-07,Deolali Camp,422401,2026-07-29,GOOD
+NSK-2026-0138,Swara,Mali,2026-05-19,F,B+,None known,MOTHER,nsk_parent_0138,Vandana,Mali,nsk_parent_0138@example.com,+91-8834609725,PHC-NSK-02,Nashik Road,422101,2026-05-27,AVERAGE
+NSK-2026-0139,Saanvi,Shinde,2026-03-17,F,A+,None known,MOTHER,nsk_parent_0139,Archana,Shinde,nsk_parent_0139@example.com,+91-9334056758,PHC-NSK-07,Deolali Camp,422401,2026-03-25,GOOD
+NSK-2026-0140,Dev,Salunke,2026-03-26,M,B+,None known,GUARDIAN,nsk_parent_0140,Pallavi,Salunke,nsk_parent_0140@example.com,+91-9965988959,PHC-NSK-02,Nashik Road,422101,2026-04-02,GOOD
+NSK-2026-0141,Harsh,Yadav,2026-09-13,M,AB+,None known,MOTHER,nsk_parent_0141,Smita,Yadav,nsk_parent_0141@example.com,+91-9777285456,PHC-NSK-03,CIDCO,422008,2026-09-22,GOOD
+NSK-2026-0142,Soham,Jadhav,2026-04-30,M,B+,None known,FATHER,nsk_parent_0142,Santosh,Jadhav,nsk_parent_0142@example.com,+91-7250008445,PHC-NSK-08,Indira Nagar,422009,2026-05-02,GOOD
+NSK-2026-0143,Manasvi,Khairnar,2026-02-23,F,B+,None known,MOTHER,nsk_parent_0143,Rupali,Khairnar,nsk_parent_0143@example.com,+91-7279707753,PHC-NSK-01,Panchavati,422003,2026-02-24,AVERAGE
+NSK-2026-0144,Kabir,Pagar,2026-04-04,M,A+,None known,MOTHER,nsk_parent_0144,Kavita,Pagar,nsk_parent_0144@example.com,+91-9884848958,PHC-NSK-05,Ambad,422010,2026-04-07,GOOD
+NSK-2026-0145,Anvi,Shinde,2026-01-28,F,B-,None known,FATHER,nsk_parent_0145,Vijay,Shinde,nsk_parent_0145@example.com,+91-9849201691,PHC-NSK-05,Ambad,422010,2026-02-05,POOR
+NSK-2026-0146,Sarthak,Kulkarni,2026-03-24,M,B+,None known,MOTHER,nsk_parent_0146,Madhuri,Kulkarni,nsk_parent_0146@example.com,+91-9929886756,PHC-NSK-03,CIDCO,422008,2026-04-03,GOOD
+NSK-2026-0147,Kavya,Yadav,2026-04-22,F,O+,None known,MOTHER,nsk_parent_0147,Vandana,Yadav,nsk_parent_0147@example.com,+91-9352942909,PHC-NSK-09,Old Nashik,422001,2026-05-01,AVERAGE
+NSK-2026-0148,Aryan,Bhosale,2026-03-13,M,B+,None known,FATHER,nsk_parent_0148,Amit,Bhosale,nsk_parent_0148@example.com,+91-8857789685,PHC-NSK-10,Adgaon,422003,2026-03-13,GOOD
+NSK-2026-0149,Pari,Shirsath,2026-01-10,F,A+,None known,MOTHER,nsk_parent_0149,Archana,Shirsath,nsk_parent_0149@example.com,+91-8061749656,PHC-NSK-02,Nashik Road,422101,2026-01-16,GOOD
+NSK-2026-0150,Riya,Sonawane,2026-01-26,F,O+,None known,MOTHER,nsk_parent_0150,Deepali,Sonawane,nsk_parent_0150@example.com,+91-7557971947,PHC-NSK-08,Indira Nagar,422009,2026-02-01,GOOD
+NSK-2026-0151,Yash,Bhosale,2026-08-14,M,O+,None known,FATHER,nsk_parent_0151,Sachin,Bhosale,nsk_parent_0151@example.com,+91-9891837955,PHC-NSK-05,Ambad,422010,2026-08-16,GOOD
+NSK-2026-0152,Veer,Kulkarni,2026-08-19,M,O+,None known,MOTHER,nsk_parent_0152,Deepali,Kulkarni,nsk_parent_0152@example.com,+91-7271356924,PHC-NSK-06,Gangapur Road,422013,2026-08-19,GOOD
+NSK-2026-0153,Samiksha,Pawar,2026-09-16,F,AB-,None known,MOTHER,nsk_parent_0153,Rupali,Pawar,nsk_parent_0153@example.com,+91-7014070367,PHC-NSK-01,Panchavati,422003,2026-09-19,AVERAGE
+NSK-2026-0154,Kavya,Gupta,2026-09-27,F,A+,None known,MOTHER,nsk_parent_0154,Pallavi,Gupta,nsk_parent_0154@example.com,+91-9884229547,PHC-NSK-06,Gangapur Road,422013,2026-10-05,GOOD
+NSK-2026-0155,Siya,Bhalerao,2026-01-25,F,A-,None known,FATHER,nsk_parent_0155,Amit,Bhalerao,nsk_parent_0155@example.com,+91-7015177444,PHC-NSK-06,Gangapur Road,422013,2026-01-29,GOOD
+NSK-2026-0156,Sara,Chavan,2026-04-27,F,A+,None known,MOTHER,nsk_parent_0156,Sneha,Chavan,nsk_parent_0156@example.com,+91-7580418970,PHC-NSK-06,Gangapur Road,422013,2026-05-03,AVERAGE
+NSK-2026-0157,Vaishnavi,Salunke,2026-02-14,F,AB+,None known,MOTHER,nsk_parent_0157,Pallavi,Salunke,nsk_parent_0157@example.com,+91-9057988220,PHC-NSK-04,Satpur,422007,2026-02-22,GOOD
+NSK-2026-0158,Prathamesh,Kothawade,2026-04-06,M,O+,None known,MOTHER,nsk_parent_0158,Vandana,Kothawade,nsk_parent_0158@example.com,+91-7594315889,PHC-NSK-04,Satpur,422007,2026-04-12,AVERAGE
+NSK-2026-0159,Gauri,Yadav,2026-09-25,F,A-,None known,MOTHER,nsk_parent_0159,Archana,Yadav,nsk_parent_0159@example.com,+91-9814279811,PHC-NSK-03,CIDCO,422008,2026-09-25,GOOD
+NSK-2026-0160,Atharv,Kothawade,2026-04-11,M,O+,None known,MOTHER,nsk_parent_0160,Jyoti,Kothawade,nsk_parent_0160@example.com,+91-9091163896,PHC-NSK-01,Panchavati,422003,2026-04-14,GOOD
+NSK-2026-0161,Prisha,Pawar,2026-02-07,F,O+,None known,MOTHER,nsk_parent_0161,Smita,Pawar,nsk_parent_0161@example.com,+91-9388327621,PHC-NSK-08,Indira Nagar,422009,2026-02-11,GOOD
+NSK-2026-0162,Tanmay,Ahire,2026-04-28,M,A+,None known,MOTHER,nsk_parent_0162,Manisha,Ahire,nsk_parent_0162@example.com,+91-9024217459,PHC-NSK-02,Nashik Road,422101,2026-05-02,GOOD
+NSK-2026-0163,Anushka,Sharma,2026-02-11,F,O+,None known,FATHER,nsk_parent_0163,Amit,Sharma,nsk_parent_0163@example.com,+91-9379616570,PHC-NSK-03,CIDCO,422008,2026-02-13,GOOD
+NSK-2026-0164,Ayush,Borse,2026-02-03,M,AB-,None known,MOTHER,nsk_parent_0164,Smita,Borse,nsk_parent_0164@example.com,+91-8047716262,PHC-NSK-06,Gangapur Road,422013,2026-02-03,GOOD
+NSK-2026-0165,Saanvi,Mali,2026-08-03,F,B-,None known,MOTHER,nsk_parent_0165,Deepali,Mali,nsk_parent_0165@example.com,+91-7090723195,PHC-NSK-04,Satpur,422007,2026-08-12,AVERAGE
+NSK-2026-0166,Myra,Nikam,2026-09-10,F,B+,None known,MOTHER,nsk_parent_0166,Jyoti,Nikam,nsk_parent_0166@example.com,+91-8077570711,PHC-NSK-01,Panchavati,422003,2026-09-14,GOOD
+NSK-2026-0167,Shlok,Bhalerao,2026-09-12,M,O+,Eczema / skin allergy,MOTHER,nsk_parent_0167,Sneha,Bhalerao,nsk_parent_0167@example.com,+91-9913332584,PHC-NSK-03,CIDCO,422008,2026-09-13,GOOD
+NSK-2026-0168,Noor,Sayyed,2026-04-27,F,A+,None known,MOTHER,nsk_parent_0168,Ayesha,Sayyed,nsk_parent_0168@example.com,+91-9899045586,PHC-NSK-08,Indira Nagar,422009,2026-05-06,AVERAGE
+NSK-2026-0169,Arnav,Salunke,2026-09-28,M,B+,None known,MOTHER,nsk_parent_0169,Anjali,Salunke,nsk_parent_0169@example.com,+91-9948419886,PHC-NSK-03,CIDCO,422008,2026-09-30,GOOD
+NSK-2026-0170,Pranav,Kasar,2026-05-13,M,O+,None known,MOTHER,nsk_parent_0170,Rupali,Kasar,nsk_parent_0170@example.com,+91-7222882562,PHC-NSK-07,Deolali Camp,422401,2026-05-15,GOOD
+NSK-2026-0171,Ananya,Deshpande,2026-04-16,F,A+,None known,MOTHER,nsk_parent_0171,Smita,Deshpande,nsk_parent_0171@example.com,+91-7565562514,PHC-NSK-08,Indira Nagar,422009,2026-04-23,GOOD
+NSK-2026-0172,Janhavi,Kale,2026-09-11,F,A+,None known,MOTHER,nsk_parent_0172,Archana,Kale,nsk_parent_0172@example.com,+91-7250319271,PHC-NSK-01,Panchavati,422003,2026-09-12,GOOD
+NSK-2026-0173,Ishaan,More,2026-02-21,M,B+,Egg allergy,MOTHER,nsk_parent_0173,Priya,More,nsk_parent_0173@example.com,+91-9727629772,PHC-NSK-01,Panchavati,422003,2026-03-01,AVERAGE
+NSK-2026-0174,Aadhya,Kadam,2026-05-14,F,A+,None known,MOTHER,nsk_parent_0174,Jyoti,Kadam,nsk_parent_0174@example.com,+91-7099492444,PHC-NSK-03,CIDCO,422008,2026-05-19,GOOD
+NSK-2026-0175,Atharv,Gavit,2026-02-21,M,O+,None known,FATHER,nsk_parent_0175,Nitin,Gavit,nsk_parent_0175@example.com,+91-9028647432,PHC-NSK-07,Deolali Camp,422401,2026-02-27,GOOD
+NSK-2026-0176,Trisha,Kothawade,2026-06-10,F,B+,None known,MOTHER,nsk_parent_0176,Sneha,Kothawade,nsk_parent_0176@example.com,+91-7244351207,PHC-NSK-08,Indira Nagar,422009,2026-06-18,GOOD
+NSK-2026-0177,Prathamesh,Kasar,2026-02-10,M,B+,None known,GUARDIAN,nsk_parent_0177,Pravin,Kasar,nsk_parent_0177@example.com,+91-9819131819,PHC-NSK-01,Panchavati,422003,2026-02-18,AVERAGE
+NSK-2026-0178,Pranjal,Londhe,2026-04-27,F,O+,None known,MOTHER,nsk_parent_0178,Sneha,Londhe,nsk_parent_0178@example.com,+91-7064099738,PHC-NSK-10,Adgaon,422003,2026-04-30,GOOD
+NSK-2026-0179,Rohan,Kulkarni,2026-05-05,M,O+,None known,MOTHER,nsk_parent_0179,Vandana,Kulkarni,nsk_parent_0179@example.com,+91-9772158556,PHC-NSK-02,Nashik Road,422101,2026-05-13,AVERAGE
+NSK-2026-0180,Siddharth,Bagul,2026-03-08,M,B+,None known,MOTHER,nsk_parent_0180,Swati,Bagul,nsk_parent_0180@example.com,+91-8029238418,PHC-NSK-02,Nashik Road,422101,2026-03-10,AVERAGE
+NSK-2026-0181,Aarav,Kale,2026-05-28,M,O+,None known,FATHER,nsk_parent_0181,Ramesh,Kale,nsk_parent_0181@example.com,+91-9382224816,PHC-NSK-10,Adgaon,422003,2026-05-29,AVERAGE
+NSK-2026-0182,Anushka,Kasar,2026-02-02,F,B+,None known,MOTHER,nsk_parent_0182,Pallavi,Kasar,nsk_parent_0182@example.com,+91-7054331847,PHC-NSK-03,CIDCO,422008,2026-02-07,GOOD
+NSK-2026-0183,Swara,Kale,2026-05-23,F,A+,None known,GUARDIAN,nsk_parent_0183,Deepali,Kale,nsk_parent_0183@example.com,+91-9979247854,PHC-NSK-09,Old Nashik,422001,2026-05-26,GOOD
+NSK-2026-0184,Samiksha,Yadav,2026-02-06,F,A-,None known,FATHER,nsk_parent_0184,Rajesh,Yadav,nsk_parent_0184@example.com,+91-9736753662,PHC-NSK-01,Panchavati,422003,2026-02-09,GOOD
+NSK-2026-0185,Harsh,Jagtap,2026-01-15,M,B+,None known,MOTHER,nsk_parent_0185,Swati,Jagtap,nsk_parent_0185@example.com,+91-9712782500,PHC-NSK-03,CIDCO,422008,2026-01-16,GOOD
+NSK-2026-0186,Ishaan,Nikam,2026-05-19,M,AB+,None known,MOTHER,nsk_parent_0186,Priya,Nikam,nsk_parent_0186@example.com,+91-9735611646,PHC-NSK-04,Satpur,422007,2026-05-27,GOOD
+NSK-2026-0187,Nidhi,Raut,2026-01-04,F,B+,None known,FATHER,nsk_parent_0187,Pravin,Raut,nsk_parent_0187@example.com,+91-9898528571,PHC-NSK-04,Satpur,422007,2026-01-05,GOOD
+NSK-2026-0188,Tanmay,Raut,2026-04-11,M,B+,None known,FATHER,nsk_parent_0188,Sunil,Raut,nsk_parent_0188@example.com,+91-9725746498,PHC-NSK-04,Satpur,422007,2026-04-19,AVERAGE
+NSK-2026-0189,Ayaan,Ansari,2026-06-15,M,A-,None known,FATHER,nsk_parent_0189,Faisal,Ansari,nsk_parent_0189@example.com,+91-9074692621,PHC-NSK-02,Nashik Road,422101,2026-06-20,GOOD
+NSK-2026-0190,Anvi,Thakur,2026-07-08,F,B+,None known,MOTHER,nsk_parent_0190,Pallavi,Thakur,nsk_parent_0190@example.com,+91-8810704183,PHC-NSK-04,Satpur,422007,2026-07-13,AVERAGE
+NSK-2026-0191,Shreyas,Wagh,2026-08-08,M,B+,None known,FATHER,nsk_parent_0191,Sandeep,Wagh,nsk_parent_0191@example.com,+91-9780951756,PHC-NSK-05,Ambad,422010,2026-08-13,GOOD
+NSK-2026-0192,Arnav,Thorat,2026-07-04,M,AB+,None known,MOTHER,nsk_parent_0192,Neha,Thorat,nsk_parent_0192@example.com,+91-9847161844,PHC-NSK-01,Panchavati,422003,2026-07-07,AVERAGE
+NSK-2026-0193,Sakshi,Kothawade,2026-06-20,F,A+,None known,FATHER,nsk_parent_0193,Sachin,Kothawade,nsk_parent_0193@example.com,+91-7594540823,PHC-NSK-03,CIDCO,422008,2026-06-23,GOOD
+NSK-2026-0194,Tejas,Pawar,2026-08-31,M,A-,None known,GUARDIAN,nsk_parent_0194,Pravin,Pawar,nsk_parent_0194@example.com,+91-8854137769,PHC-NSK-07,Deolali Camp,422401,2026-09-04,AVERAGE
+NSK-2026-0195,Yash,Gaikwad,2026-08-14,M,AB+,None known,FATHER,nsk_parent_0195,Sandeep,Gaikwad,nsk_parent_0195@example.com,+91-9048857297,PHC-NSK-09,Old Nashik,422001,2026-08-15,GOOD
+NSK-2026-0196,Tanmay,Thorat,2026-09-22,M,B+,None known,MOTHER,nsk_parent_0196,Komal,Thorat,nsk_parent_0196@example.com,+91-8853485165,PHC-NSK-05,Ambad,422010,2026-09-27,AVERAGE
+NSK-2026-0197,Sakshi,Borse,2026-09-15,F,B-,None known,MOTHER,nsk_parent_0197,Priya,Borse,nsk_parent_0197@example.com,+91-9784306114,PHC-NSK-09,Old Nashik,422001,2026-09-23,GOOD
+NSK-2026-0198,Aarohi,Kothawade,2026-09-29,F,B+,None known,MOTHER,nsk_parent_0198,Smita,Kothawade,nsk_parent_0198@example.com,+91-7058735466,PHC-NSK-10,Adgaon,422003,2026-09-30,AVERAGE
+NSK-2026-0199,Sai,Shirsath,2026-09-14,F,O+,None known,MOTHER,nsk_parent_0199,Smita,Shirsath,nsk_parent_0199@example.com,+91-9973247705,PHC-NSK-03,CIDCO,422008,2026-09-14,GOOD
+NSK-2026-0200,Aaliyah,Pathan,2026-04-30,F,B+,None known,FATHER,nsk_parent_0200,Javed,Pathan,nsk_parent_0200@example.com,+91-9352309808,PHC-NSK-04,Satpur,422007,2026-05-04,AVERAGE
+NSK-2026-0201,Soham,Gaikwad,2026-08-14,M,B+,None known,MOTHER,nsk_parent_0201,Neha,Gaikwad,nsk_parent_0201@example.com,+91-9962093517,PHC-NSK-01,Panchavati,422003,2026-08-24,GOOD
+NSK-2026-0202,Yash,More,2026-07-24,M,O+,None known,GUARDIAN,nsk_parent_0202,Shital,More,nsk_parent_0202@example.com,+91-9799046048,PHC-NSK-10,Adgaon,422003,2026-08-01,AVERAGE
+NSK-2026-0203,Swayam,Borse,2026-02-05,M,B+,None known,MOTHER,nsk_parent_0203,Kavita,Borse,nsk_parent_0203@example.com,+91-7050717180,PHC-NSK-09,Old Nashik,422001,2026-02-15,POOR
+NSK-2026-0204,Sai,Jadhav,2026-03-08,F,A-,None known,MOTHER,nsk_parent_0204,Vandana,Jadhav,nsk_parent_0204@example.com,+91-9778277738,PHC-NSK-07,Deolali Camp,422401,2026-03-18,AVERAGE
+NSK-2026-0205,Pari,Pawar,2026-09-07,F,A+,None known,MOTHER,nsk_parent_0205,Manisha,Pawar,nsk_parent_0205@example.com,+91-7573940123,PHC-NSK-04,Satpur,422007,2026-09-10,GOOD
+NSK-2026-0206,Parth,Kadam,2026-09-06,M,B+,None known,MOTHER,nsk_parent_0206,Komal,Kadam,nsk_parent_0206@example.com,+91-9896304527,PHC-NSK-01,Panchavati,422003,2026-09-14,GOOD
+NSK-2026-0207,Ayaan,Sayyed,2026-09-14,M,O+,None known,MOTHER,nsk_parent_0207,Ayesha,Sayyed,nsk_parent_0207@example.com,+91-7252336134,PHC-NSK-09,Old Nashik,422001,2026-09-21,GOOD
+NSK-2026-0208,Aarav,Borse,2026-09-21,M,B+,None known,MOTHER,nsk_parent_0208,Anjali,Borse,nsk_parent_0208@example.com,+91-9375663259,PHC-NSK-03,CIDCO,422008,2026-09-21,AVERAGE
+NSK-2026-0209,Trisha,Gupta,2026-07-14,F,B+,None known,MOTHER,nsk_parent_0209,Archana,Gupta,nsk_parent_0209@example.com,+91-9953319997,PHC-NSK-01,Panchavati,422003,2026-07-21,POOR
+NSK-2026-0210,Aryan,Pawar,2026-02-26,M,A+,None known,MOTHER,nsk_parent_0210,Manisha,Pawar,nsk_parent_0210@example.com,+91-9392540506,PHC-NSK-03,CIDCO,422008,2026-03-02,GOOD
+NSK-2026-0211,Aditya,Thorat,2026-04-22,M,B+,None known,MOTHER,nsk_parent_0211,Swati,Thorat,nsk_parent_0211@example.com,+91-7297453616,PHC-NSK-02,Nashik Road,422101,2026-04-24,GOOD
+NSK-2026-0212,Aditi,Raut,2026-09-19,F,AB+,None known,MOTHER,nsk_parent_0212,Manisha,Raut,nsk_parent_0212@example.com,+91-9395148036,PHC-NSK-09,Old Nashik,422001,2026-09-25,GOOD
+NSK-2026-0213,Mayur,Mali,2026-01-02,M,B+,None known,MOTHER,nsk_parent_0213,Pallavi,Mali,nsk_parent_0213@example.com,+91-9038910485,PHC-NSK-04,Satpur,422007,2026-01-12,AVERAGE
+NSK-2026-0214,Rutuja,Kasar,2026-06-15,F,O+,None known,FATHER,nsk_parent_0214,Dinesh,Kasar,nsk_parent_0214@example.com,+91-7530062284,PHC-NSK-02,Nashik Road,422101,2026-06-18,POOR
+NSK-2026-0215,Swayam,Sharma,2026-05-31,M,O+,None known,MOTHER,nsk_parent_0215,Madhuri,Sharma,nsk_parent_0215@example.com,+91-9787688661,PHC-NSK-10,Adgaon,422003,2026-06-08,GOOD
+NSK-2026-0216,Sahil,Mahale,2026-08-13,M,O+,None known,MOTHER,nsk_parent_0216,Priya,Mahale,nsk_parent_0216@example.com,+91-9815672864,PHC-NSK-02,Nashik Road,422101,2026-08-15,GOOD
+NSK-2026-0217,Omkar,Gupta,2026-06-06,M,B+,None known,FATHER,nsk_parent_0217,Vishal,Gupta,nsk_parent_0217@example.com,+91-9059857092,PHC-NSK-07,Deolali Camp,422401,2026-06-14,GOOD
+NSK-2026-0218,Rohan,Sonawane,2026-08-18,M,O+,None known,FATHER,nsk_parent_0218,Vijay,Sonawane,nsk_parent_0218@example.com,+91-8094426648,PHC-NSK-04,Satpur,422007,2026-08-21,GOOD
+NSK-2026-0219,Anushka,Kothawade,2026-01-05,F,A+,None known,MOTHER,nsk_parent_0219,Pallavi,Kothawade,nsk_parent_0219@example.com,+91-9929107866,PHC-NSK-09,Old Nashik,422001,2026-01-12,GOOD
+NSK-2026-0220,Siya,Kulkarni,2026-04-10,F,B+,Eczema / skin allergy,MOTHER,nsk_parent_0220,Shital,Kulkarni,nsk_parent_0220@example.com,+91-9872140394,PHC-NSK-01,Panchavati,422003,2026-04-10,GOOD
+NSK-2026-0221,Ira,Bhosale,2026-02-06,F,O-,None known,MOTHER,nsk_parent_0221,Manisha,Bhosale,nsk_parent_0221@example.com,+91-7084077554,PHC-NSK-09,Old Nashik,422001,2026-02-09,POOR
+NSK-2026-0222,Aditi,Yadav,2026-07-16,F,A+,None known,FATHER,nsk_parent_0222,Ganesh,Yadav,nsk_parent_0222@example.com,+91-8829245040,PHC-NSK-02,Nashik Road,422101,2026-07-18,GOOD
+NSK-2026-0223,Aarav,Shinde,2026-03-03,M,O+,None known,FATHER,nsk_parent_0223,Vijay,Shinde,nsk_parent_0223@example.com,+91-7560240078,PHC-NSK-01,Panchavati,422003,2026-03-11,GOOD
+NSK-2026-0224,Ananya,Nikam,2026-02-24,F,AB+,None known,MOTHER,nsk_parent_0224,Deepali,Nikam,nsk_parent_0224@example.com,+91-9333588092,PHC-NSK-01,Panchavati,422003,2026-02-24,GOOD
+NSK-2026-0225,Vedant,Sonawane,2026-08-17,M,A+,None known,FATHER,nsk_parent_0225,Prashant,Sonawane,nsk_parent_0225@example.com,+91-7025795085,PHC-NSK-05,Ambad,422010,2026-08-20,AVERAGE
+NSK-2026-0226,Isha,Yadav,2026-07-20,F,A+,None known,MOTHER,nsk_parent_0226,Kavita,Yadav,nsk_parent_0226@example.com,+91-7031375074,PHC-NSK-07,Deolali Camp,422401,2026-07-25,AVERAGE
+NSK-2026-0227,Ruchika,Gholap,2026-02-13,F,O+,None known,FATHER,nsk_parent_0227,Mahesh,Gholap,nsk_parent_0227@example.com,+91-7010291020,PHC-NSK-08,Indira Nagar,422009,2026-02-18,GOOD
+NSK-2026-0228,Swara,Sharma,2026-01-04,F,O+,None known,MOTHER,nsk_parent_0228,Deepali,Sharma,nsk_parent_0228@example.com,+91-8865402102,PHC-NSK-05,Ambad,422010,2026-01-12,GOOD
+NSK-2026-0229,Ayush,Thakur,2026-04-23,M,AB+,None known,MOTHER,nsk_parent_0229,Pooja,Thakur,nsk_parent_0229@example.com,+91-7247809212,PHC-NSK-02,Nashik Road,422101,2026-04-25,AVERAGE
+NSK-2026-0230,Om,Patil,2026-08-02,M,B+,None known,MOTHER,nsk_parent_0230,Smita,Patil,nsk_parent_0230@example.com,+91-9027040043,PHC-NSK-10,Adgaon,422003,2026-08-12,GOOD
+NSK-2026-0231,Sana,Shaikh,2026-09-01,F,O+,None known,MOTHER,nsk_parent_0231,Ayesha,Shaikh,nsk_parent_0231@example.com,+91-7536217351,PHC-NSK-09,Old Nashik,422001,2026-09-10,GOOD
+NSK-2026-0232,Sairaj,Nikam,2026-09-05,M,AB+,None known,FATHER,nsk_parent_0232,Mahesh,Nikam,nsk_parent_0232@example.com,+91-8893349422,PHC-NSK-09,Old Nashik,422001,2026-09-08,AVERAGE
+NSK-2026-0233,Prathamesh,Raut,2026-09-25,M,A+,None known,MOTHER,nsk_parent_0233,Rupali,Raut,nsk_parent_0233@example.com,+91-8041903219,PHC-NSK-08,Indira Nagar,422009,2026-10-01,POOR
+NSK-2026-0234,Shravani,Patil,2026-08-18,F,O+,None known,MOTHER,nsk_parent_0234,Rashmi,Patil,nsk_parent_0234@example.com,+91-8875484823,PHC-NSK-05,Ambad,422010,2026-08-18,POOR
+NSK-2026-0235,Nidhi,Sonawane,2026-03-20,F,O+,None known,FATHER,nsk_parent_0235,Vishal,Sonawane,nsk_parent_0235@example.com,+91-9919865084,PHC-NSK-03,CIDCO,422008,2026-03-28,POOR
+NSK-2026-0236,Isha,Khairnar,2026-03-24,F,A+,None known,MOTHER,nsk_parent_0236,Rupali,Khairnar,nsk_parent_0236@example.com,+91-7251697804,PHC-NSK-09,Old Nashik,422001,2026-03-28,GOOD
+NSK-2026-0237,Saanvi,Sonawane,2026-01-12,F,B+,None known,MOTHER,nsk_parent_0237,Manisha,Sonawane,nsk_parent_0237@example.com,+91-9973712076,PHC-NSK-03,CIDCO,422008,2026-01-14,GOOD
+NSK-2026-0238,Kunal,Dhamale,2026-06-30,M,O+,None known,FATHER,nsk_parent_0238,Ajay,Dhamale,nsk_parent_0238@example.com,+91-7537160211,PHC-NSK-01,Panchavati,422003,2026-07-03,GOOD
+NSK-2026-0239,Darshan,Kulkarni,2026-07-12,M,O+,Eczema / skin allergy,FATHER,nsk_parent_0239,Ganesh,Kulkarni,nsk_parent_0239@example.com,+91-8084739540,PHC-NSK-02,Nashik Road,422101,2026-07-17,AVERAGE
+NSK-2026-0240,Sakshi,Bhalerao,2026-08-11,F,A+,None known,MOTHER,nsk_parent_0240,Kavita,Bhalerao,nsk_parent_0240@example.com,+91-7299809590,PHC-NSK-02,Nashik Road,422101,2026-08-12,GOOD
+NSK-2026-0241,Dev,More,2026-01-26,M,O+,None known,GUARDIAN,nsk_parent_0241,Rupali,More,nsk_parent_0241@example.com,+91-9931801638,PHC-NSK-09,Old Nashik,422001,2026-01-27,GOOD
+NSK-2026-0242,Zoya,Sayyed,2026-08-23,F,B+,None known,MOTHER,nsk_parent_0242,Samina,Sayyed,nsk_parent_0242@example.com,+91-9899014573,PHC-NSK-06,Gangapur Road,422013,2026-08-27,GOOD
+NSK-2026-0243,Rayyan,Shaikh,2026-06-23,M,O+,None known,MOTHER,nsk_parent_0243,Nasreen,Shaikh,nsk_parent_0243@example.com,+91-9925094224,PHC-NSK-02,Nashik Road,422101,2026-06-30,GOOD
+NSK-2026-0244,Tanmay,Londhe,2026-09-09,M,A+,None known,MOTHER,nsk_parent_0244,Pallavi,Londhe,nsk_parent_0244@example.com,+91-9325756643,PHC-NSK-03,CIDCO,422008,2026-09-19,GOOD
+NSK-2026-0245,Harsh,Gupta,2026-09-05,M,A+,None known,MOTHER,nsk_parent_0245,Vandana,Gupta,nsk_parent_0245@example.com,+91-9834701797,PHC-NSK-06,Gangapur Road,422013,2026-09-11,AVERAGE
+NSK-2026-0246,Tejas,Joshi,2026-06-21,M,B+,None known,FATHER,nsk_parent_0246,Santosh,Joshi,nsk_parent_0246@example.com,+91-9057813370,PHC-NSK-01,Panchavati,422003,2026-06-21,GOOD
+NSK-2026-0247,Samiksha,Mahale,2026-05-09,F,B+,Egg allergy,MOTHER,nsk_parent_0247,Pallavi,Mahale,nsk_parent_0247@example.com,+91-7246804514,PHC-NSK-05,Ambad,422010,2026-05-13,GOOD
+NSK-2026-0248,Soham,Raut,2026-03-16,M,O+,Cow's milk protein,FATHER,nsk_parent_0248,Pravin,Raut,nsk_parent_0248@example.com,+91-7288167354,PHC-NSK-08,Indira Nagar,422009,2026-03-21,POOR
+NSK-2026-0249,Nishant,Patil,2026-04-01,M,A+,None known,FATHER,nsk_parent_0249,Yogesh,Patil,nsk_parent_0249@example.com,+91-7590797805,PHC-NSK-01,Panchavati,422003,2026-04-01,GOOD
+NSK-2026-0250,Ishaan,Gupta,2026-01-14,M,O-,None known,FATHER,nsk_parent_0250,Yogesh,Gupta,nsk_parent_0250@example.com,+91-7533291605,PHC-NSK-06,Gangapur Road,422013,2026-01-24,GOOD
+NSK-2026-0251,Pari,Yadav,2026-05-15,F,A+,None known,FATHER,nsk_parent_0251,Prashant,Yadav,nsk_parent_0251@example.com,+91-9758788358,PHC-NSK-07,Deolali Camp,422401,2026-05-15,GOOD
+NSK-2026-0252,Riya,Kasar,2026-01-10,F,A+,None known,MOTHER,nsk_parent_0252,Rupali,Kasar,nsk_parent_0252@example.com,+91-9335001530,PHC-NSK-08,Indira Nagar,422009,2026-01-19,GOOD
+NSK-2026-0253,Aarohi,Deshmukh,2026-07-12,F,B-,None known,MOTHER,nsk_parent_0253,Kavita,Deshmukh,nsk_parent_0253@example.com,+91-9832783408,PHC-NSK-08,Indira Nagar,422009,2026-07-20,GOOD
+NSK-2026-0254,Ishaan,Khairnar,2026-04-21,M,B+,None known,MOTHER,nsk_parent_0254,Shital,Khairnar,nsk_parent_0254@example.com,+91-9822180817,PHC-NSK-02,Nashik Road,422101,2026-04-28,GOOD
+NSK-2026-0255,Saanvi,Sawant,2026-04-25,F,O-,None known,FATHER,nsk_parent_0255,Prashant,Sawant,nsk_parent_0255@example.com,+91-8078678036,PHC-NSK-07,Deolali Camp,422401,2026-04-25,AVERAGE
+NSK-2026-0256,Ovi,Dhole,2026-07-30,F,O+,None known,MOTHER,nsk_parent_0256,Rashmi,Dhole,nsk_parent_0256@example.com,+91-9795121944,PHC-NSK-02,Nashik Road,422101,2026-08-09,GOOD
+NSK-2026-0257,Raj,Jagtap,2026-03-15,M,B+,None known,MOTHER,nsk_parent_0257,Komal,Jagtap,nsk_parent_0257@example.com,+91-9738690721,PHC-NSK-04,Satpur,422007,2026-03-19,GOOD
+NSK-2026-0258,Kabir,Mahale,2026-07-11,M,A+,None known,FATHER,nsk_parent_0258,Yogesh,Mahale,nsk_parent_0258@example.com,+91-7296960557,PHC-NSK-06,Gangapur Road,422013,2026-07-15,GOOD
+NSK-2026-0259,Mayur,Sharma,2026-08-22,M,A+,None known,MOTHER,nsk_parent_0259,Neha,Sharma,nsk_parent_0259@example.com,+91-9988898555,PHC-NSK-03,CIDCO,422008,2026-08-26,GOOD
+NSK-2026-0260,Sai,Kadam,2026-02-28,F,B+,None known,MOTHER,nsk_parent_0260,Priya,Kadam,nsk_parent_0260@example.com,+91-7530565054,PHC-NSK-04,Satpur,422007,2026-03-09,AVERAGE
+NSK-2026-0261,Radhika,Gholap,2026-09-20,F,O+,None known,MOTHER,nsk_parent_0261,Deepali,Gholap,nsk_parent_0261@example.com,+91-7555121798,PHC-NSK-06,Gangapur Road,422013,2026-09-28,GOOD
+NSK-2026-0262,Ira,Deshmukh,2026-04-17,F,AB+,None known,FATHER,nsk_parent_0262,Amit,Deshmukh,nsk_parent_0262@example.com,+91-9899579372,PHC-NSK-01,Panchavati,422003,2026-04-17,GOOD
+NSK-2026-0263,Tejas,Kale,2026-03-16,M,B+,None known,MOTHER,nsk_parent_0263,Deepali,Kale,nsk_parent_0263@example.com,+91-8847141803,PHC-NSK-04,Satpur,422007,2026-03-25,GOOD
+NSK-2026-0264,Ira,Kale,2026-04-03,F,A+,None known,MOTHER,nsk_parent_0264,Deepali,Kale,nsk_parent_0264@example.com,+91-9777437618,PHC-NSK-05,Ambad,422010,2026-04-07,POOR
+NSK-2026-0265,Avni,Gavit,2026-07-11,F,A+,None known,MOTHER,nsk_parent_0265,Sunita,Gavit,nsk_parent_0265@example.com,+91-9766689023,PHC-NSK-02,Nashik Road,422101,2026-07-14,AVERAGE
+NSK-2026-0266,Nidhi,Pawar,2026-08-23,F,A+,None known,FATHER,nsk_parent_0266,Amit,Pawar,nsk_parent_0266@example.com,+91-7518923097,PHC-NSK-04,Satpur,422007,2026-08-27,GOOD
+NSK-2026-0267,Arham,Pathan,2026-03-02,M,O+,None known,FATHER,nsk_parent_0267,Faisal,Pathan,nsk_parent_0267@example.com,+91-9759948549,PHC-NSK-04,Satpur,422007,2026-03-06,GOOD
+NSK-2026-0268,Aadhya,Kasar,2026-08-05,F,O+,None known,FATHER,nsk_parent_0268,Ramesh,Kasar,nsk_parent_0268@example.com,+91-7510875191,PHC-NSK-10,Adgaon,422003,2026-08-15,GOOD
+NSK-2026-0269,Rohan,Pawar,2026-04-29,M,B+,Cow's milk protein,MOTHER,nsk_parent_0269,Deepali,Pawar,nsk_parent_0269@example.com,+91-9026516807,PHC-NSK-07,Deolali Camp,422401,2026-05-03,GOOD
+NSK-2026-0270,Shravani,Deshmukh,2026-05-02,F,O+,Dust allergy,MOTHER,nsk_parent_0270,Swati,Deshmukh,nsk_parent_0270@example.com,+91-7562021837,PHC-NSK-03,CIDCO,422008,2026-05-03,GOOD
+NSK-2026-0271,Rohan,Kale,2026-09-25,M,A+,None known,MOTHER,nsk_parent_0271,Shital,Kale,nsk_parent_0271@example.com,+91-9018132018,PHC-NSK-02,Nashik Road,422101,2026-10-02,AVERAGE
+NSK-2026-0272,Mrunal,Thorat,2026-03-23,F,B+,None known,MOTHER,nsk_parent_0272,Sneha,Thorat,nsk_parent_0272@example.com,+91-7588997866,PHC-NSK-03,CIDCO,422008,2026-04-02,AVERAGE
+NSK-2026-0273,Hamza,Pathan,2026-08-31,M,B+,None known,FATHER,nsk_parent_0273,Irfan,Pathan,nsk_parent_0273@example.com,+91-8816538868,PHC-NSK-04,Satpur,422007,2026-09-05,GOOD
+NSK-2026-0274,Pari,More,2026-01-20,F,O+,None known,MOTHER,nsk_parent_0274,Komal,More,nsk_parent_0274@example.com,+91-9831937384,PHC-NSK-02,Nashik Road,422101,2026-01-26,GOOD
+NSK-2026-0275,Siya,Dhamale,2026-09-12,F,A+,None known,MOTHER,nsk_parent_0275,Jyoti,Dhamale,nsk_parent_0275@example.com,+91-7219509261,PHC-NSK-07,Deolali Camp,422401,2026-09-16,GOOD
+NSK-2026-0276,Sairaj,Bhalerao,2026-06-08,M,B+,Dust allergy,MOTHER,nsk_parent_0276,Neha,Bhalerao,nsk_parent_0276@example.com,+91-9934885519,PHC-NSK-04,Satpur,422007,2026-06-14,AVERAGE
+NSK-2026-0277,Noor,Ansari,2026-02-04,F,O+,None known,FATHER,nsk_parent_0277,Salman,Ansari,nsk_parent_0277@example.com,+91-9966395501,PHC-NSK-10,Adgaon,422003,2026-02-10,POOR
+NSK-2026-0278,Rudra,Salunke,2026-08-05,M,B-,None known,MOTHER,nsk_parent_0278,Smita,Salunke,nsk_parent_0278@example.com,+91-7094842478,PHC-NSK-04,Satpur,422007,2026-08-06,GOOD
+NSK-2026-0279,Nishant,Pawar,2026-01-01,M,O+,None known,MOTHER,nsk_parent_0279,Jyoti,Pawar,nsk_parent_0279@example.com,+91-9036184711,PHC-NSK-03,CIDCO,422008,2026-01-08,POOR
+NSK-2026-0280,Shreyas,Khairnar,2026-07-27,M,B+,None known,MOTHER,nsk_parent_0280,Madhuri,Khairnar,nsk_parent_0280@example.com,+91-7090713659,PHC-NSK-09,Old Nashik,422001,2026-07-29,AVERAGE
+NSK-2026-0281,Samiksha,Khairnar,2026-04-25,F,B+,None known,FATHER,nsk_parent_0281,Sunil,Khairnar,nsk_parent_0281@example.com,+91-8036796907,PHC-NSK-09,Old Nashik,422001,2026-05-04,POOR
+NSK-2026-0282,Aditya,Jagtap,2026-05-26,M,O+,Cow's milk protein,FATHER,nsk_parent_0282,Rajesh,Jagtap,nsk_parent_0282@example.com,+91-8827029649,PHC-NSK-01,Panchavati,422003,2026-06-02,AVERAGE
+NSK-2026-0283,Anvi,Jagtap,2026-07-17,F,A+,None known,MOTHER,nsk_parent_0283,Jyoti,Jagtap,nsk_parent_0283@example.com,+91-9924366961,PHC-NSK-03,CIDCO,422008,2026-07-17,GOOD
+NSK-2026-0284,Avni,Kale,2026-08-24,F,A+,None known,MOTHER,nsk_parent_0284,Rashmi,Kale,nsk_parent_0284@example.com,+91-8084437729,PHC-NSK-04,Satpur,422007,2026-08-26,GOOD
+NSK-2026-0285,Pari,Borse,2026-01-25,F,O-,None known,MOTHER,nsk_parent_0285,Jyoti,Borse,nsk_parent_0285@example.com,+91-7052615532,PHC-NSK-09,Old Nashik,422001,2026-01-25,AVERAGE
+NSK-2026-0286,Ishaan,Wagh,2026-07-13,M,B+,None known,MOTHER,nsk_parent_0286,Sunita,Wagh,nsk_parent_0286@example.com,+91-8046175981,PHC-NSK-04,Satpur,422007,2026-07-16,GOOD
+NSK-2026-0287,Nidhi,Bhosale,2026-07-07,F,B+,None known,FATHER,nsk_parent_0287,Vijay,Bhosale,nsk_parent_0287@example.com,+91-7027868585,PHC-NSK-03,CIDCO,422008,2026-07-09,GOOD
+NSK-2026-0288,Tejas,Gavit,2026-07-15,M,B+,None known,MOTHER,nsk_parent_0288,Jyoti,Gavit,nsk_parent_0288@example.com,+91-9889720324,PHC-NSK-07,Deolali Camp,422401,2026-07-21,GOOD
+NSK-2026-0289,Aarohi,Chavan,2026-02-20,F,B+,None known,MOTHER,nsk_parent_0289,Archana,Chavan,nsk_parent_0289@example.com,+91-9099307200,PHC-NSK-04,Satpur,422007,2026-02-20,AVERAGE
+NSK-2026-0290,Kiara,Raut,2026-02-05,F,AB+,None known,MOTHER,nsk_parent_0290,Rupali,Raut,nsk_parent_0290@example.com,+91-7076957685,PHC-NSK-08,Indira Nagar,422009,2026-02-06,AVERAGE
+NSK-2026-0291,Mrunal,Sharma,2026-07-20,F,O+,None known,MOTHER,nsk_parent_0291,Pallavi,Sharma,nsk_parent_0291@example.com,+91-9747853417,PHC-NSK-03,CIDCO,422008,2026-07-20,AVERAGE
+NSK-2026-0292,Ananya,Ahire,2026-05-06,F,A+,None known,GUARDIAN,nsk_parent_0292,Sachin,Ahire,nsk_parent_0292@example.com,+91-9737651589,PHC-NSK-04,Satpur,422007,2026-05-13,AVERAGE
+NSK-2026-0293,Sarthak,Yadav,2026-02-13,M,O+,None known,FATHER,nsk_parent_0293,Dinesh,Yadav,nsk_parent_0293@example.com,+91-9380430390,PHC-NSK-04,Satpur,422007,2026-02-20,GOOD
+NSK-2026-0294,Parth,Yadav,2026-04-26,M,B+,None known,MOTHER,nsk_parent_0294,Sunita,Yadav,nsk_parent_0294@example.com,+91-8084219998,PHC-NSK-05,Ambad,422010,2026-04-30,GOOD
+NSK-2026-0295,Tanvi,Mahale,2026-03-11,F,B+,None known,FATHER,nsk_parent_0295,Vishal,Mahale,nsk_parent_0295@example.com,+91-9965102899,PHC-NSK-03,CIDCO,422008,2026-03-12,GOOD
+NSK-2026-0296,Rutuja,Jadhav,2026-05-25,F,B+,None known,MOTHER,nsk_parent_0296,Shital,Jadhav,nsk_parent_0296@example.com,+91-9096107548,PHC-NSK-04,Satpur,422007,2026-05-25,POOR
+NSK-2026-0297,Rayyan,Khan,2026-06-23,M,A+,None known,FATHER,nsk_parent_0297,Imran,Khan,nsk_parent_0297@example.com,+91-9027407241,PHC-NSK-02,Nashik Road,422101,2026-07-03,GOOD
+NSK-2026-0298,Swayam,Dhamale,2026-06-04,M,B+,Dust allergy,MOTHER,nsk_parent_0298,Archana,Dhamale,nsk_parent_0298@example.com,+91-7242595056,PHC-NSK-10,Adgaon,422003,2026-06-10,GOOD
+NSK-2026-0299,Pranav,Bhosale,2026-04-28,M,O+,None known,MOTHER,nsk_parent_0299,Priya,Bhosale,nsk_parent_0299@example.com,+91-9857106861,PHC-NSK-07,Deolali Camp,422401,2026-05-02,AVERAGE
+NSK-2026-0300,Trisha,Dhamale,2026-01-28,F,A-,Cow's milk protein,MOTHER,nsk_parent_0300,Kavita,Dhamale,nsk_parent_0300@example.com,+91-7528782994,PHC-NSK-01,Panchavati,422003,2026-02-03,POOR
+NSK-2026-0301,Veer,Sharma,2026-05-03,M,A+,None known,MOTHER,nsk_parent_0301,Archana,Sharma,nsk_parent_0301@example.com,+91-9320108582,PHC-NSK-02,Nashik Road,422101,2026-05-12,GOOD
+NSK-2026-0302,Manasvi,Sonawane,2026-02-27,F,O-,None known,MOTHER,nsk_parent_0302,Vandana,Sonawane,nsk_parent_0302@example.com,+91-9729012387,PHC-NSK-09,Old Nashik,422001,2026-03-01,AVERAGE
+NSK-2026-0303,Vaishnavi,Bhosale,2026-03-07,F,AB-,None known,MOTHER,nsk_parent_0303,Manisha,Bhosale,nsk_parent_0303@example.com,+91-7591358671,PHC-NSK-07,Deolali Camp,422401,2026-03-14,GOOD
+NSK-2026-0304,Aarya,Deshpande,2026-05-20,F,A+,None known,MOTHER,nsk_parent_0304,Shital,Deshpande,nsk_parent_0304@example.com,+91-9857699046,PHC-NSK-04,Satpur,422007,2026-05-24,POOR
+NSK-2026-0305,Rutuja,Deshmukh,2026-09-21,F,AB-,None known,MOTHER,nsk_parent_0305,Sneha,Deshmukh,nsk_parent_0305@example.com,+91-7083239448,PHC-NSK-09,Old Nashik,422001,2026-09-27,AVERAGE
+NSK-2026-0306,Kavya,Joshi,2026-03-14,F,B+,None known,FATHER,nsk_parent_0306,Dinesh,Joshi,nsk_parent_0306@example.com,+91-8885823958,PHC-NSK-05,Ambad,422010,2026-03-22,AVERAGE
+NSK-2026-0307,Ayush,Pagar,2026-03-17,M,B+,None known,MOTHER,nsk_parent_0307,Anjali,Pagar,nsk_parent_0307@example.com,+91-8812395293,PHC-NSK-09,Old Nashik,422001,2026-03-24,GOOD
+NSK-2026-0308,Rudra,Sonawane,2026-07-13,M,O+,None known,MOTHER,nsk_parent_0308,Kavita,Sonawane,nsk_parent_0308@example.com,+91-9330541319,PHC-NSK-01,Panchavati,422003,2026-07-16,POOR
+NSK-2026-0309,Shreyas,Patil,2026-08-09,M,A+,None known,MOTHER,nsk_parent_0309,Pooja,Patil,nsk_parent_0309@example.com,+91-7531649306,PHC-NSK-02,Nashik Road,422101,2026-08-14,AVERAGE
+NSK-2026-0310,Advait,Joshi,2026-03-21,M,B+,None known,MOTHER,nsk_parent_0310,Rashmi,Joshi,nsk_parent_0310@example.com,+91-8817535649,PHC-NSK-02,Nashik Road,422101,2026-03-29,AVERAGE
+NSK-2026-0311,Ananya,Kothawade,2026-03-05,F,AB+,None known,MOTHER,nsk_parent_0311,Anjali,Kothawade,nsk_parent_0311@example.com,+91-9025512358,PHC-NSK-04,Satpur,422007,2026-03-14,POOR
+NSK-2026-0312,Anvi,Chavan,2026-08-30,F,A+,None known,FATHER,nsk_parent_0312,Santosh,Chavan,nsk_parent_0312@example.com,+91-8057109494,PHC-NSK-02,Nashik Road,422101,2026-09-08,GOOD
+NSK-2026-0313,Harsh,Gavit,2026-09-11,M,A+,None known,FATHER,nsk_parent_0313,Santosh,Gavit,nsk_parent_0313@example.com,+91-9085352988,PHC-NSK-08,Indira Nagar,422009,2026-09-12,POOR
+NSK-2026-0314,Shravani,Borse,2026-07-07,F,B-,None known,MOTHER,nsk_parent_0314,Pallavi,Borse,nsk_parent_0314@example.com,+91-9369844140,PHC-NSK-02,Nashik Road,422101,2026-07-15,AVERAGE
+NSK-2026-0315,Sahil,Nikam,2026-05-06,M,B+,None known,GUARDIAN,nsk_parent_0315,Anjali,Nikam,nsk_parent_0315@example.com,+91-9910620819,PHC-NSK-05,Ambad,422010,2026-05-13,AVERAGE
+NSK-2026-0316,Anushka,Gavit,2026-07-10,F,A+,None known,MOTHER,nsk_parent_0316,Priya,Gavit,nsk_parent_0316@example.com,+91-7243864379,PHC-NSK-02,Nashik Road,422101,2026-07-19,AVERAGE
+NSK-2026-0317,Inaya,Pathan,2026-05-23,F,A+,None known,MOTHER,nsk_parent_0317,Shabana,Pathan,nsk_parent_0317@example.com,+91-7088239602,PHC-NSK-01,Panchavati,422003,2026-06-01,GOOD
+NSK-2026-0318,Mrunal,Thorat,2026-09-06,F,O+,Eczema / skin allergy,MOTHER,nsk_parent_0318,Anjali,Thorat,nsk_parent_0318@example.com,+91-9711151537,PHC-NSK-05,Ambad,422010,2026-09-15,POOR
+NSK-2026-0319,Raj,Aher,2026-03-16,M,B+,None known,MOTHER,nsk_parent_0319,Rupali,Aher,nsk_parent_0319@example.com,+91-7031614813,PHC-NSK-02,Nashik Road,422101,2026-03-23,AVERAGE
+NSK-2026-0320,Ruchika,Kasar,2026-03-03,F,O+,None known,MOTHER,nsk_parent_0320,Shital,Kasar,nsk_parent_0320@example.com,+91-7256683340,PHC-NSK-10,Adgaon,422003,2026-03-07,AVERAGE
+NSK-2026-0321,Aarya,Kothawade,2026-08-27,F,B+,None known,FATHER,nsk_parent_0321,Ramesh,Kothawade,nsk_parent_0321@example.com,+91-9795691656,PHC-NSK-07,Deolali Camp,422401,2026-09-03,AVERAGE
+NSK-2026-0322,Kavya,Deshmukh,2026-05-23,F,A+,None known,MOTHER,nsk_parent_0322,Madhuri,Deshmukh,nsk_parent_0322@example.com,+91-9771849740,PHC-NSK-01,Panchavati,422003,2026-05-26,GOOD
+NSK-2026-0323,Avni,Gaikwad,2026-04-27,F,O+,None known,MOTHER,nsk_parent_0323,Sunita,Gaikwad,nsk_parent_0323@example.com,+91-9379439983,PHC-NSK-05,Ambad,422010,2026-04-30,GOOD
+NSK-2026-0324,Dev,Khairnar,2026-06-23,M,A+,None known,MOTHER,nsk_parent_0324,Archana,Khairnar,nsk_parent_0324@example.com,+91-9356750949,PHC-NSK-03,CIDCO,422008,2026-07-03,AVERAGE
+NSK-2026-0325,Parth,Gaikwad,2026-06-06,M,A+,None known,MOTHER,nsk_parent_0325,Smita,Gaikwad,nsk_parent_0325@example.com,+91-7590617304,PHC-NSK-04,Satpur,422007,2026-06-10,GOOD
+NSK-2026-0326,Sana,Ansari,2026-01-11,F,O+,Cow's milk protein,MOTHER,nsk_parent_0326,Farzana,Ansari,nsk_parent_0326@example.com,+91-8073106446,PHC-NSK-06,Gangapur Road,422013,2026-01-18,GOOD
+NSK-2026-0327,Siddharth,Gholap,2026-09-12,M,A+,None known,FATHER,nsk_parent_0327,Ganesh,Gholap,nsk_parent_0327@example.com,+91-8057446868,PHC-NSK-08,Indira Nagar,422009,2026-09-22,AVERAGE
+NSK-2026-0328,Trisha,Bhosale,2026-09-20,F,A+,None known,MOTHER,nsk_parent_0328,Madhuri,Bhosale,nsk_parent_0328@example.com,+91-9090261684,PHC-NSK-06,Gangapur Road,422013,2026-09-24,GOOD
+NSK-2026-0329,Ayush,Gholap,2026-01-20,M,AB+,None known,MOTHER,nsk_parent_0329,Pallavi,Gholap,nsk_parent_0329@example.com,+91-8016627841,PHC-NSK-03,CIDCO,422008,2026-01-30,AVERAGE
+NSK-2026-0330,Soham,Bhosale,2026-09-21,M,B+,None known,MOTHER,nsk_parent_0330,Swati,Bhosale,nsk_parent_0330@example.com,+91-9049927562,PHC-NSK-03,CIDCO,422008,2026-09-22,GOOD
+NSK-2026-0331,Advait,Pagar,2026-02-25,M,O-,None known,MOTHER,nsk_parent_0331,Shital,Pagar,nsk_parent_0331@example.com,+91-7547716810,PHC-NSK-02,Nashik Road,422101,2026-03-06,GOOD
+NSK-2026-0332,Ovi,Londhe,2026-01-20,F,B+,None known,FATHER,nsk_parent_0332,Santosh,Londhe,nsk_parent_0332@example.com,+91-8019894719,PHC-NSK-02,Nashik Road,422101,2026-01-26,GOOD
+NSK-2026-0333,Myra,Gaikwad,2026-05-21,F,O-,Egg allergy,FATHER,nsk_parent_0333,Rajesh,Gaikwad,nsk_parent_0333@example.com,+91-7014403475,PHC-NSK-08,Indira Nagar,422009,2026-05-23,AVERAGE
+NSK-2026-0334,Veer,Deshpande,2026-03-31,M,B+,None known,MOTHER,nsk_parent_0334,Shital,Deshpande,nsk_parent_0334@example.com,+91-8878059323,PHC-NSK-01,Panchavati,422003,2026-04-06,GOOD
+NSK-2026-0335,Kavya,More,2026-05-29,F,B+,None known,FATHER,nsk_parent_0335,Vijay,More,nsk_parent_0335@example.com,+91-9873449743,PHC-NSK-03,CIDCO,422008,2026-05-29,GOOD
+NSK-2026-0336,Veer,Sonawane,2026-08-08,M,A+,None known,FATHER,nsk_parent_0336,Anil,Sonawane,nsk_parent_0336@example.com,+91-8879926184,PHC-NSK-03,CIDCO,422008,2026-08-11,GOOD
+NSK-2026-0337,Aryan,Gholap,2026-05-22,M,B+,None known,FATHER,nsk_parent_0337,Ramesh,Gholap,nsk_parent_0337@example.com,+91-7221467912,PHC-NSK-10,Adgaon,422003,2026-05-29,POOR
+NSK-2026-0338,Manasvi,Yadav,2026-09-22,F,O-,None known,MOTHER,nsk_parent_0338,Rashmi,Yadav,nsk_parent_0338@example.com,+91-9821099914,PHC-NSK-05,Ambad,422010,2026-09-24,POOR
+NSK-2026-0339,Darshan,Londhe,2026-08-27,M,O+,None known,MOTHER,nsk_parent_0339,Smita,Londhe,nsk_parent_0339@example.com,+91-9058545801,PHC-NSK-03,CIDCO,422008,2026-09-06,GOOD
+NSK-2026-0340,Darshan,Nikam,2026-04-17,M,B+,None known,MOTHER,nsk_parent_0340,Priya,Nikam,nsk_parent_0340@example.com,+91-8084076858,PHC-NSK-08,Indira Nagar,422009,2026-04-24,GOOD
+NSK-2026-0341,Advait,Chavan,2026-05-22,M,B+,None known,MOTHER,nsk_parent_0341,Swati,Chavan,nsk_parent_0341@example.com,+91-9786900539,PHC-NSK-06,Gangapur Road,422013,2026-05-26,GOOD
+NSK-2026-0342,Harsh,Deshmukh,2026-01-25,M,O+,None known,MOTHER,nsk_parent_0342,Smita,Deshmukh,nsk_parent_0342@example.com,+91-7043720733,PHC-NSK-09,Old Nashik,422001,2026-02-02,GOOD
+NSK-2026-0343,Shlok,Dhole,2026-02-07,M,A+,None known,MOTHER,nsk_parent_0343,Neha,Dhole,nsk_parent_0343@example.com,+91-8814429840,PHC-NSK-03,CIDCO,422008,2026-02-07,GOOD
+NSK-2026-0344,Vaishnavi,Deshmukh,2026-08-26,F,A+,None known,FATHER,nsk_parent_0344,Amit,Deshmukh,nsk_parent_0344@example.com,+91-7021767242,PHC-NSK-07,Deolali Camp,422401,2026-08-29,POOR
+NSK-2026-0345,Aaliyah,Sayyed,2026-07-11,F,B+,None known,FATHER,nsk_parent_0345,Javed,Sayyed,nsk_parent_0345@example.com,+91-9797902956,PHC-NSK-05,Ambad,422010,2026-07-12,POOR
+NSK-2026-0346,Harsh,Gupta,2026-09-02,M,B-,None known,FATHER,nsk_parent_0346,Vishal,Gupta,nsk_parent_0346@example.com,+91-8029217622,PHC-NSK-01,Panchavati,422003,2026-09-07,POOR
+NSK-2026-0347,Prathamesh,Kadam,2026-01-15,M,O+,None known,MOTHER,nsk_parent_0347,Smita,Kadam,nsk_parent_0347@example.com,+91-8092270885,PHC-NSK-07,Deolali Camp,422401,2026-01-25,GOOD
+NSK-2026-0348,Parth,Dhole,2026-02-01,M,O+,None known,MOTHER,nsk_parent_0348,Rupali,Dhole,nsk_parent_0348@example.com,+91-9729215819,PHC-NSK-06,Gangapur Road,422013,2026-02-08,GOOD
+NSK-2026-0349,Mayur,Sharma,2026-01-17,M,B+,None known,MOTHER,nsk_parent_0349,Anjali,Sharma,nsk_parent_0349@example.com,+91-7043895215,PHC-NSK-09,Old Nashik,422001,2026-01-24,GOOD
+NSK-2026-0350,Siddharth,Khairnar,2026-07-10,M,B+,None known,MOTHER,nsk_parent_0350,Sneha,Khairnar,nsk_parent_0350@example.com,+91-9336553777,PHC-NSK-06,Gangapur Road,422013,2026-07-14,GOOD
+NSK-2026-0351,Darshan,Salunke,2026-01-22,M,A+,None known,FATHER,nsk_parent_0351,Anil,Salunke,nsk_parent_0351@example.com,+91-7046694540,PHC-NSK-02,Nashik Road,422101,2026-01-26,GOOD
+NSK-2026-0352,Sara,Shirsath,2026-08-05,F,B+,None known,MOTHER,nsk_parent_0352,Swati,Shirsath,nsk_parent_0352@example.com,+91-9877090935,PHC-NSK-04,Satpur,422007,2026-08-06,GOOD
+NSK-2026-0353,Pari,Thorat,2026-09-18,F,A+,None known,MOTHER,nsk_parent_0353,Rupali,Thorat,nsk_parent_0353@example.com,+91-8884647082,PHC-NSK-05,Ambad,422010,2026-09-24,GOOD
+NSK-2026-0354,Pranav,Jadhav,2026-07-14,M,A+,None known,MOTHER,nsk_parent_0354,Sneha,Jadhav,nsk_parent_0354@example.com,+91-7518905743,PHC-NSK-08,Indira Nagar,422009,2026-07-17,GOOD
+NSK-2026-0355,Sairaj,Sharma,2026-06-25,M,O-,None known,MOTHER,nsk_parent_0355,Komal,Sharma,nsk_parent_0355@example.com,+91-7529771703,PHC-NSK-06,Gangapur Road,422013,2026-07-03,AVERAGE
+NSK-2026-0356,Sana,Sayyed,2026-04-09,F,O-,None known,MOTHER,nsk_parent_0356,Rukhsar,Sayyed,nsk_parent_0356@example.com,+91-8862337906,PHC-NSK-02,Nashik Road,422101,2026-04-13,GOOD
+NSK-2026-0357,Hamza,Pathan,2026-02-05,M,A+,None known,MOTHER,nsk_parent_0357,Farzana,Pathan,nsk_parent_0357@example.com,+91-9015497991,PHC-NSK-03,CIDCO,422008,2026-02-07,AVERAGE
+NSK-2026-0358,Mrunal,Mahale,2026-08-13,F,B+,None known,MOTHER,nsk_parent_0358,Sunita,Mahale,nsk_parent_0358@example.com,+91-8091161625,PHC-NSK-02,Nashik Road,422101,2026-08-16,GOOD
+NSK-2026-0359,Anushka,Sonawane,2026-07-06,F,O-,None known,MOTHER,nsk_parent_0359,Smita,Sonawane,nsk_parent_0359@example.com,+91-7539451249,PHC-NSK-08,Indira Nagar,422009,2026-07-09,GOOD
+NSK-2026-0360,Myra,Jagtap,2026-02-16,F,AB+,None known,MOTHER,nsk_parent_0360,Sunita,Jagtap,nsk_parent_0360@example.com,+91-9733632673,PHC-NSK-05,Ambad,422010,2026-02-18,GOOD
+NSK-2026-0361,Advait,Jadhav,2026-09-04,M,B+,None known,MOTHER,nsk_parent_0361,Deepali,Jadhav,nsk_parent_0361@example.com,+91-7231249208,PHC-NSK-06,Gangapur Road,422013,2026-09-04,GOOD
+NSK-2026-0362,Sanvi,Dhole,2026-05-01,F,A+,None known,MOTHER,nsk_parent_0362,Pooja,Dhole,nsk_parent_0362@example.com,+91-9888653459,PHC-NSK-01,Panchavati,422003,2026-05-11,AVERAGE
+NSK-2026-0363,Sahil,Gaikwad,2026-05-30,M,O+,None known,FATHER,nsk_parent_0363,Ramesh,Gaikwad,nsk_parent_0363@example.com,+91-9796408461,PHC-NSK-08,Indira Nagar,422009,2026-06-08,GOOD
+NSK-2026-0364,Diya,Aher,2026-06-12,F,O+,Egg allergy,MOTHER,nsk_parent_0364,Kavita,Aher,nsk_parent_0364@example.com,+91-7068202410,PHC-NSK-01,Panchavati,422003,2026-06-20,GOOD
+NSK-2026-0365,Veer,Deshpande,2026-06-14,M,O+,None known,MOTHER,nsk_parent_0365,Smita,Deshpande,nsk_parent_0365@example.com,+91-8832048480,PHC-NSK-10,Adgaon,422003,2026-06-14,GOOD
+NSK-2026-0366,Sairaj,Londhe,2026-02-19,M,B+,Dust allergy,MOTHER,nsk_parent_0366,Shital,Londhe,nsk_parent_0366@example.com,+91-7289550717,PHC-NSK-03,CIDCO,422008,2026-02-20,GOOD
+NSK-2026-0367,Darshan,Joshi,2026-01-09,M,B+,None known,FATHER,nsk_parent_0367,Yogesh,Joshi,nsk_parent_0367@example.com,+91-7066744279,PHC-NSK-04,Satpur,422007,2026-01-12,POOR
+NSK-2026-0368,Swayam,Bhosale,2026-05-22,M,B+,None known,MOTHER,nsk_parent_0368,Madhuri,Bhosale,nsk_parent_0368@example.com,+91-7046795442,PHC-NSK-01,Panchavati,422003,2026-05-29,AVERAGE
+NSK-2026-0369,Sarthak,Shinde,2026-05-21,M,O+,None known,FATHER,nsk_parent_0369,Rajesh,Shinde,nsk_parent_0369@example.com,+91-7097352046,PHC-NSK-09,Old Nashik,422001,2026-05-26,GOOD
+NSK-2026-0370,Diya,Sawant,2026-01-17,F,A+,None known,FATHER,nsk_parent_0370,Ajay,Sawant,nsk_parent_0370@example.com,+91-9921069221,PHC-NSK-02,Nashik Road,422101,2026-01-27,GOOD
+NSK-2026-0371,Sahil,Dhamale,2026-02-22,M,B+,None known,MOTHER,nsk_parent_0371,Archana,Dhamale,nsk_parent_0371@example.com,+91-9381152830,PHC-NSK-05,Ambad,422010,2026-02-25,GOOD
+NSK-2026-0372,Hrithik,Kulkarni,2026-02-12,M,O+,None known,MOTHER,nsk_parent_0372,Kavita,Kulkarni,nsk_parent_0372@example.com,+91-8834406949,PHC-NSK-01,Panchavati,422003,2026-02-12,POOR
+NSK-2026-0373,Manasvi,Aher,2026-08-18,F,A+,None known,MOTHER,nsk_parent_0373,Neha,Aher,nsk_parent_0373@example.com,+91-9886610143,PHC-NSK-09,Old Nashik,422001,2026-08-21,AVERAGE
+NSK-2026-0374,Sanvi,Chavan,2026-09-29,F,B+,None known,MOTHER,nsk_parent_0374,Sneha,Chavan,nsk_parent_0374@example.com,+91-9016873379,PHC-NSK-08,Indira Nagar,422009,2026-09-29,GOOD
+NSK-2026-0375,Sairaj,Thakur,2026-07-06,M,B+,None known,MOTHER,nsk_parent_0375,Swati,Thakur,nsk_parent_0375@example.com,+91-9363582755,PHC-NSK-07,Deolali Camp,422401,2026-07-13,GOOD
+NSK-2026-0376,Aditi,Kadam,2026-03-15,F,O+,None known,MOTHER,nsk_parent_0376,Jyoti,Kadam,nsk_parent_0376@example.com,+91-9078591916,PHC-NSK-01,Panchavati,422003,2026-03-23,GOOD
+NSK-2026-0377,Hiba,Momin,2026-07-17,F,B+,None known,FATHER,nsk_parent_0377,Irfan,Momin,nsk_parent_0377@example.com,+91-7277857595,PHC-NSK-02,Nashik Road,422101,2026-07-18,GOOD
+NSK-2026-0378,Kabir,Gavit,2026-05-16,M,B+,None known,GUARDIAN,nsk_parent_0378,Dinesh,Gavit,nsk_parent_0378@example.com,+91-9321652745,PHC-NSK-03,CIDCO,422008,2026-05-26,GOOD
+NSK-2026-0379,Riya,Jagtap,2026-05-27,F,A+,None known,FATHER,nsk_parent_0379,Dinesh,Jagtap,nsk_parent_0379@example.com,+91-8019781496,PHC-NSK-09,Old Nashik,422001,2026-05-30,POOR
+NSK-2026-0380,Pranav,Gholap,2026-07-25,M,A+,None known,MOTHER,nsk_parent_0380,Swati,Gholap,nsk_parent_0380@example.com,+91-9310553875,PHC-NSK-01,Panchavati,422003,2026-07-31,GOOD
+NSK-2026-0381,Dev,Borse,2026-08-18,M,B+,None known,MOTHER,nsk_parent_0381,Pooja,Borse,nsk_parent_0381@example.com,+91-7580294318,PHC-NSK-06,Gangapur Road,422013,2026-08-28,AVERAGE
+NSK-2026-0382,Sakshi,Pawar,2026-01-11,F,B+,None known,MOTHER,nsk_parent_0382,Anjali,Pawar,nsk_parent_0382@example.com,+91-8083869069,PHC-NSK-08,Indira Nagar,422009,2026-01-16,GOOD
+NSK-2026-0383,Ovi,Yadav,2026-08-27,F,AB-,Eczema / skin allergy,MOTHER,nsk_parent_0383,Kavita,Yadav,nsk_parent_0383@example.com,+91-8036371682,PHC-NSK-05,Ambad,422010,2026-09-05,GOOD
+NSK-2026-0384,Aryan,Mahale,2026-01-19,M,A+,None known,FATHER,nsk_parent_0384,Kiran,Mahale,nsk_parent_0384@example.com,+91-7222814425,PHC-NSK-06,Gangapur Road,422013,2026-01-24,GOOD
+NSK-2026-0385,Pranav,Aher,2026-01-03,M,B+,None known,MOTHER,nsk_parent_0385,Deepali,Aher,nsk_parent_0385@example.com,+91-9082173343,PHC-NSK-03,CIDCO,422008,2026-01-10,POOR
+NSK-2026-0386,Diya,Bhosale,2026-07-10,F,B+,None known,MOTHER,nsk_parent_0386,Madhuri,Bhosale,nsk_parent_0386@example.com,+91-9849285509,PHC-NSK-06,Gangapur Road,422013,2026-07-13,AVERAGE
+NSK-2026-0387,Rudra,Bhosale,2026-02-03,M,A+,None known,MOTHER,nsk_parent_0387,Neha,Bhosale,nsk_parent_0387@example.com,+91-7593491924,PHC-NSK-07,Deolali Camp,422401,2026-02-03,POOR
+NSK-2026-0388,Ishaan,Kasar,2026-01-15,M,O-,None known,GUARDIAN,nsk_parent_0388,Shital,Kasar,nsk_parent_0388@example.com,+91-9751380191,PHC-NSK-08,Indira Nagar,422009,2026-01-17,AVERAGE
+NSK-2026-0389,Tanmay,Sawant,2026-07-30,M,O+,None known,FATHER,nsk_parent_0389,Sachin,Sawant,nsk_parent_0389@example.com,+91-7095637817,PHC-NSK-05,Ambad,422010,2026-08-01,GOOD
+NSK-2026-0390,Alina,Momin,2026-01-24,F,A+,None known,MOTHER,nsk_parent_0390,Farzana,Momin,nsk_parent_0390@example.com,+91-8810469255,PHC-NSK-03,CIDCO,422008,2026-02-01,GOOD
+NSK-2026-0391,Mayur,Patil,2026-07-28,M,B+,None known,MOTHER,nsk_parent_0391,Smita,Patil,nsk_parent_0391@example.com,+91-9050236609,PHC-NSK-09,Old Nashik,422001,2026-08-02,GOOD
+NSK-2026-0392,Aarya,Shirsath,2026-01-12,F,B+,None known,MOTHER,nsk_parent_0392,Priya,Shirsath,nsk_parent_0392@example.com,+91-8072232805,PHC-NSK-06,Gangapur Road,422013,2026-01-12,GOOD
+NSK-2026-0393,Aryan,Wagh,2026-03-14,M,O-,None known,MOTHER,nsk_parent_0393,Shital,Wagh,nsk_parent_0393@example.com,+91-8065384683,PHC-NSK-02,Nashik Road,422101,2026-03-16,GOOD
+NSK-2026-0394,Vihaan,Aher,2026-05-23,M,O-,None known,MOTHER,nsk_parent_0394,Deepali,Aher,nsk_parent_0394@example.com,+91-8841550097,PHC-NSK-07,Deolali Camp,422401,2026-06-01,AVERAGE
+NSK-2026-0395,Soham,Deshmukh,2026-08-11,M,O+,Dust allergy,MOTHER,nsk_parent_0395,Manisha,Deshmukh,nsk_parent_0395@example.com,+91-7051276664,PHC-NSK-07,Deolali Camp,422401,2026-08-14,GOOD
+NSK-2026-0396,Dev,Pagar,2026-03-30,M,B+,None known,FATHER,nsk_parent_0396,Mahesh,Pagar,nsk_parent_0396@example.com,+91-7597092904,PHC-NSK-05,Ambad,422010,2026-04-05,AVERAGE
+NSK-2026-0397,Vaishnavi,Gavit,2026-01-29,F,A+,None known,MOTHER,nsk_parent_0397,Vandana,Gavit,nsk_parent_0397@example.com,+91-9083696790,PHC-NSK-05,Ambad,422010,2026-02-08,POOR
+NSK-2026-0398,Radhika,Salunke,2026-06-19,F,B-,None known,MOTHER,nsk_parent_0398,Anjali,Salunke,nsk_parent_0398@example.com,+91-9029564472,PHC-NSK-04,Satpur,422007,2026-06-22,GOOD
+NSK-2026-0399,Dev,Kothawade,2026-09-30,M,O+,Cow's milk protein,FATHER,nsk_parent_0399,Prashant,Kothawade,nsk_parent_0399@example.com,+91-9328032236,PHC-NSK-04,Satpur,422007,2026-10-05,POOR
+NSK-2026-0400,Aryan,Borse,2026-09-26,M,A+,None known,FATHER,nsk_parent_0400,Vishal,Borse,nsk_parent_0400@example.com,+91-9743629835,PHC-NSK-02,Nashik Road,422101,2026-09-30,AVERAGE
+NSK-2026-0401,Ayan,Shaikh,2026-08-06,M,A+,None known,MOTHER,nsk_parent_0401,Ayesha,Shaikh,nsk_parent_0401@example.com,+91-7541237458,PHC-NSK-03,CIDCO,422008,2026-08-16,POOR
+NSK-2026-0402,Janhavi,Borse,2026-07-24,F,A+,None known,MOTHER,nsk_parent_0402,Rashmi,Borse,nsk_parent_0402@example.com,+91-8879486619,PHC-NSK-06,Gangapur Road,422013,2026-07-30,POOR
+NSK-2026-0403,Aarav,Nikam,2026-02-21,M,A+,None known,MOTHER,nsk_parent_0403,Sneha,Nikam,nsk_parent_0403@example.com,+91-7065633324,PHC-NSK-05,Ambad,422010,2026-02-27,GOOD
+NSK-2026-0404,Atharv,Nikam,2026-01-02,M,B-,None known,MOTHER,nsk_parent_0404,Sneha,Nikam,nsk_parent_0404@example.com,+91-9782350655,PHC-NSK-01,Panchavati,422003,2026-01-08,GOOD
+NSK-2026-0405,Kiara,Thorat,2026-09-30,F,B-,None known,MOTHER,nsk_parent_0405,Archana,Thorat,nsk_parent_0405@example.com,+91-9311092699,PHC-NSK-05,Ambad,422010,2026-10-05,GOOD
+NSK-2026-0406,Dev,Shirsath,2026-09-05,M,O+,None known,MOTHER,nsk_parent_0406,Neha,Shirsath,nsk_parent_0406@example.com,+91-9982206770,PHC-NSK-05,Ambad,422010,2026-09-13,POOR
+NSK-2026-0407,Noor,Shaikh,2026-09-02,F,B+,None known,MOTHER,nsk_parent_0407,Nasreen,Shaikh,nsk_parent_0407@example.com,+91-8040196078,PHC-NSK-07,Deolali Camp,422401,2026-09-07,POOR
+NSK-2026-0408,Atharv,Joshi,2026-02-20,M,A+,None known,FATHER,nsk_parent_0408,Vishal,Joshi,nsk_parent_0408@example.com,+91-8098721432,PHC-NSK-08,Indira Nagar,422009,2026-02-24,AVERAGE
+NSK-2026-0409,Tanvi,Mali,2026-05-20,F,O+,None known,MOTHER,nsk_parent_0409,Shital,Mali,nsk_parent_0409@example.com,+91-9711945319,PHC-NSK-08,Indira Nagar,422009,2026-05-29,GOOD
+NSK-2026-0410,Hamza,Ansari,2026-03-29,M,O+,None known,FATHER,nsk_parent_0410,Imran,Ansari,nsk_parent_0410@example.com,+91-7598653114,PHC-NSK-04,Satpur,422007,2026-04-08,AVERAGE
+NSK-2026-0411,Siddharth,Ahire,2026-08-17,M,A-,None known,MOTHER,nsk_parent_0411,Rashmi,Ahire,nsk_parent_0411@example.com,+91-8815593102,PHC-NSK-02,Nashik Road,422101,2026-08-18,GOOD
+NSK-2026-0412,Ruchika,Pagar,2026-09-23,F,A+,None known,MOTHER,nsk_parent_0412,Pallavi,Pagar,nsk_parent_0412@example.com,+91-9748275274,PHC-NSK-04,Satpur,422007,2026-09-30,GOOD
+NSK-2026-0413,Aarav,Kulkarni,2026-09-17,M,O-,None known,FATHER,nsk_parent_0413,Vijay,Kulkarni,nsk_parent_0413@example.com,+91-8837924380,PHC-NSK-01,Panchavati,422003,2026-09-26,GOOD
+NSK-2026-0414,Sairaj,Shirsath,2026-07-27,M,B+,None known,MOTHER,nsk_parent_0414,Rupali,Shirsath,nsk_parent_0414@example.com,+91-9795017498,PHC-NSK-07,Deolali Camp,422401,2026-07-27,AVERAGE
+NSK-2026-0415,Tanvi,Mahale,2026-08-09,F,O+,None known,MOTHER,nsk_parent_0415,Kavita,Mahale,nsk_parent_0415@example.com,+91-8812426531,PHC-NSK-04,Satpur,422007,2026-08-19,GOOD
+NSK-2026-0416,Pranjal,Deshmukh,2026-09-06,F,O-,None known,MOTHER,nsk_parent_0416,Neha,Deshmukh,nsk_parent_0416@example.com,+91-9773995945,PHC-NSK-01,Panchavati,422003,2026-09-16,AVERAGE
+NSK-2026-0417,Aaliyah,Sayyed,2026-01-07,F,B+,None known,MOTHER,nsk_parent_0417,Rukhsar,Sayyed,nsk_parent_0417@example.com,+91-9755275429,PHC-NSK-01,Panchavati,422003,2026-01-07,GOOD
+NSK-2026-0418,Dev,Borse,2026-02-05,M,O+,None known,MOTHER,nsk_parent_0418,Rupali,Borse,nsk_parent_0418@example.com,+91-9083150382,PHC-NSK-02,Nashik Road,422101,2026-02-15,GOOD
+NSK-2026-0419,Nishant,Yadav,2026-03-31,M,O+,None known,MOTHER,nsk_parent_0419,Madhuri,Yadav,nsk_parent_0419@example.com,+91-7226165235,PHC-NSK-01,Panchavati,422003,2026-04-02,AVERAGE
+NSK-2026-0420,Sahil,Jagtap,2026-02-12,M,AB+,None known,MOTHER,nsk_parent_0420,Swati,Jagtap,nsk_parent_0420@example.com,+91-7268517094,PHC-NSK-02,Nashik Road,422101,2026-02-16,POOR
+NSK-2026-0421,Siddharth,Gupta,2026-03-21,M,A+,None known,MOTHER,nsk_parent_0421,Komal,Gupta,nsk_parent_0421@example.com,+91-9335880127,PHC-NSK-07,Deolali Camp,422401,2026-03-28,GOOD
+NSK-2026-0422,Pranav,Bagul,2026-08-10,M,AB+,None known,MOTHER,nsk_parent_0422,Rashmi,Bagul,nsk_parent_0422@example.com,+91-9916180291,PHC-NSK-05,Ambad,422010,2026-08-17,GOOD
+NSK-2026-0423,Mrunal,Sawant,2026-09-12,F,AB-,None known,FATHER,nsk_parent_0423,Ajay,Sawant,nsk_parent_0423@example.com,+91-7590665677,PHC-NSK-04,Satpur,422007,2026-09-19,GOOD
+NSK-2026-0424,Nidhi,Aher,2026-05-26,F,B+,None known,MOTHER,nsk_parent_0424,Archana,Aher,nsk_parent_0424@example.com,+91-7289420103,PHC-NSK-05,Ambad,422010,2026-05-31,GOOD
+NSK-2026-0425,Arman,Ansari,2026-03-18,M,AB+,None known,FATHER,nsk_parent_0425,Imran,Ansari,nsk_parent_0425@example.com,+91-7527227621,PHC-NSK-05,Ambad,422010,2026-03-18,GOOD
+NSK-2026-0426,Anvi,Dhamale,2026-03-14,F,A+,None known,MOTHER,nsk_parent_0426,Neha,Dhamale,nsk_parent_0426@example.com,+91-9920041832,PHC-NSK-02,Nashik Road,422101,2026-03-20,GOOD
+NSK-2026-0427,Ovi,Chavan,2026-01-28,F,A+,None known,FATHER,nsk_parent_0427,Ramesh,Chavan,nsk_parent_0427@example.com,+91-8047482345,PHC-NSK-10,Adgaon,422003,2026-02-02,AVERAGE
+NSK-2026-0428,Hrithik,Deshpande,2026-06-12,M,O+,Penicillin (family history),GUARDIAN,nsk_parent_0428,Yogesh,Deshpande,nsk_parent_0428@example.com,+91-9350075345,PHC-NSK-01,Panchavati,422003,2026-06-18,GOOD
+NSK-2026-0429,Aadhya,Nikam,2026-01-08,F,B+,None known,FATHER,nsk_parent_0429,Rajesh,Nikam,nsk_parent_0429@example.com,+91-9985131626,PHC-NSK-01,Panchavati,422003,2026-01-11,GOOD
+NSK-2026-0430,Aadhya,Gavit,2026-04-08,F,O+,None known,MOTHER,nsk_parent_0430,Rupali,Gavit,nsk_parent_0430@example.com,+91-9064746791,PHC-NSK-02,Nashik Road,422101,2026-04-12,AVERAGE
+NSK-2026-0431,Anaya,Kale,2026-05-10,F,O-,None known,MOTHER,nsk_parent_0431,Rupali,Kale,nsk_parent_0431@example.com,+91-7051578500,PHC-NSK-06,Gangapur Road,422013,2026-05-16,AVERAGE
+NSK-2026-0432,Janhavi,Dhamale,2026-06-03,F,O+,None known,MOTHER,nsk_parent_0432,Rupali,Dhamale,nsk_parent_0432@example.com,+91-9957316609,PHC-NSK-07,Deolali Camp,422401,2026-06-10,GOOD
+NSK-2026-0433,Sana,Pathan,2026-09-28,F,A+,None known,FATHER,nsk_parent_0433,Irfan,Pathan,nsk_parent_0433@example.com,+91-9326025696,PHC-NSK-07,Deolali Camp,422401,2026-09-28,POOR
+NSK-2026-0434,Tanvi,Bhosale,2026-06-18,F,A+,None known,MOTHER,nsk_parent_0434,Sunita,Bhosale,nsk_parent_0434@example.com,+91-9916342709,PHC-NSK-01,Panchavati,422003,2026-06-19,POOR
+NSK-2026-0435,Mrunal,Dhamale,2026-07-17,F,B+,None known,FATHER,nsk_parent_0435,Dinesh,Dhamale,nsk_parent_0435@example.com,+91-9043469704,PHC-NSK-05,Ambad,422010,2026-07-20,AVERAGE
+NSK-2026-0436,Vihaan,Bhosale,2026-03-03,M,B+,None known,MOTHER,nsk_parent_0436,Sunita,Bhosale,nsk_parent_0436@example.com,+91-9726291722,PHC-NSK-08,Indira Nagar,422009,2026-03-09,GOOD
+NSK-2026-0437,Aarav,Pagar,2026-01-05,M,B-,Dust allergy,MOTHER,nsk_parent_0437,Deepali,Pagar,nsk_parent_0437@example.com,+91-9937017382,PHC-NSK-03,CIDCO,422008,2026-01-06,AVERAGE
+NSK-2026-0438,Raj,Pagar,2026-03-10,M,B+,None known,FATHER,nsk_parent_0438,Anil,Pagar,nsk_parent_0438@example.com,+91-9335909259,PHC-NSK-05,Ambad,422010,2026-03-11,GOOD
+NSK-2026-0439,Vihaan,Salunke,2026-02-17,M,O+,None known,MOTHER,nsk_parent_0439,Pallavi,Salunke,nsk_parent_0439@example.com,+91-8863476929,PHC-NSK-02,Nashik Road,422101,2026-02-26,GOOD
+NSK-2026-0440,Yash,Thorat,2026-03-23,M,B-,None known,MOTHER,nsk_parent_0440,Sunita,Thorat,nsk_parent_0440@example.com,+91-7015566676,PHC-NSK-04,Satpur,422007,2026-03-23,GOOD
+NSK-2026-0441,Om,Raut,2026-02-03,M,O+,Egg allergy,MOTHER,nsk_parent_0441,Priya,Raut,nsk_parent_0441@example.com,+91-7590833202,PHC-NSK-04,Satpur,422007,2026-02-08,GOOD
+NSK-2026-0442,Anaya,Ahire,2026-04-22,F,B+,None known,MOTHER,nsk_parent_0442,Pallavi,Ahire,nsk_parent_0442@example.com,+91-9985115404,PHC-NSK-06,Gangapur Road,422013,2026-05-01,AVERAGE
+NSK-2026-0443,Sakshi,Gavit,2026-02-17,F,A+,None known,MOTHER,nsk_parent_0443,Rashmi,Gavit,nsk_parent_0443@example.com,+91-9876533266,PHC-NSK-02,Nashik Road,422101,2026-02-17,GOOD
+NSK-2026-0444,Sahil,Pagar,2026-02-28,M,O+,None known,MOTHER,nsk_parent_0444,Sneha,Pagar,nsk_parent_0444@example.com,+91-9094123455,PHC-NSK-05,Ambad,422010,2026-03-03,GOOD
+NSK-2026-0445,Aaliyah,Khan,2026-03-10,F,O+,None known,FATHER,nsk_parent_0445,Nadeem,Khan,nsk_parent_0445@example.com,+91-9792387510,PHC-NSK-04,Satpur,422007,2026-03-19,GOOD
+NSK-2026-0446,Aarya,Kale,2026-08-19,F,B+,None known,MOTHER,nsk_parent_0446,Sneha,Kale,nsk_parent_0446@example.com,+91-9742782341,PHC-NSK-02,Nashik Road,422101,2026-08-19,AVERAGE
+NSK-2026-0447,Ovi,Shinde,2026-02-19,F,O+,None known,MOTHER,nsk_parent_0447,Sneha,Shinde,nsk_parent_0447@example.com,+91-8866851699,PHC-NSK-04,Satpur,422007,2026-02-23,AVERAGE
+NSK-2026-0448,Ayush,Nikam,2026-07-07,M,O+,None known,GUARDIAN,nsk_parent_0448,Anjali,Nikam,nsk_parent_0448@example.com,+91-9755737838,PHC-NSK-10,Adgaon,422003,2026-07-15,POOR
+NSK-2026-0449,Kabir,Chavan,2026-08-20,M,O+,None known,MOTHER,nsk_parent_0449,Vandana,Chavan,nsk_parent_0449@example.com,+91-7044399266,PHC-NSK-02,Nashik Road,422101,2026-08-28,AVERAGE
+NSK-2026-0450,Ira,Mahale,2026-08-05,F,A+,None known,MOTHER,nsk_parent_0450,Jyoti,Mahale,nsk_parent_0450@example.com,+91-8062281269,PHC-NSK-07,Deolali Camp,422401,2026-08-07,GOOD
+NSK-2026-0451,Siddharth,Raut,2026-03-13,M,O+,None known,MOTHER,nsk_parent_0451,Anjali,Raut,nsk_parent_0451@example.com,+91-9743903420,PHC-NSK-05,Ambad,422010,2026-03-22,GOOD
+NSK-2026-0452,Vaishnavi,Jadhav,2026-01-12,F,B-,None known,MOTHER,nsk_parent_0452,Pooja,Jadhav,nsk_parent_0452@example.com,+91-9816245841,PHC-NSK-07,Deolali Camp,422401,2026-01-15,GOOD
+NSK-2026-0453,Shlok,Gholap,2026-08-03,M,B+,None known,MOTHER,nsk_parent_0453,Jyoti,Gholap,nsk_parent_0453@example.com,+91-8827708425,PHC-NSK-03,CIDCO,422008,2026-08-12,GOOD
+NSK-2026-0454,Soham,Jadhav,2026-01-08,M,B+,None known,MOTHER,nsk_parent_0454,Anjali,Jadhav,nsk_parent_0454@example.com,+91-9963921987,PHC-NSK-04,Satpur,422007,2026-01-16,GOOD
+NSK-2026-0455,Arnav,Shirsath,2026-02-22,M,O+,None known,FATHER,nsk_parent_0455,Sunil,Shirsath,nsk_parent_0455@example.com,+91-9081064720,PHC-NSK-09,Old Nashik,422001,2026-02-23,GOOD
+NSK-2026-0456,Kiara,Bhosale,2026-05-08,F,A+,None known,GUARDIAN,nsk_parent_0456,Pooja,Bhosale,nsk_parent_0456@example.com,+91-7521421562,PHC-NSK-07,Deolali Camp,422401,2026-05-12,GOOD
+NSK-2026-0457,Sara,Kulkarni,2026-03-09,F,B+,None known,MOTHER,nsk_parent_0457,Kavita,Kulkarni,nsk_parent_0457@example.com,+91-7037091495,PHC-NSK-10,Adgaon,422003,2026-03-16,AVERAGE
+NSK-2026-0458,Mehek,Pathan,2026-05-31,F,B+,None known,MOTHER,nsk_parent_0458,Shabana,Pathan,nsk_parent_0458@example.com,+91-7092285390,PHC-NSK-03,CIDCO,422008,2026-06-09,AVERAGE
+NSK-2026-0459,Hrithik,Pawar,2026-04-17,M,O+,None known,MOTHER,nsk_parent_0459,Pooja,Pawar,nsk_parent_0459@example.com,+91-9399121969,PHC-NSK-03,CIDCO,422008,2026-04-20,GOOD
+NSK-2026-0460,Siddharth,Kasar,2026-07-01,M,A+,None known,MOTHER,nsk_parent_0460,Archana,Kasar,nsk_parent_0460@example.com,+91-7093178462,PHC-NSK-04,Satpur,422007,2026-07-11,GOOD
+NSK-2026-0461,Noor,Shaikh,2026-07-09,F,AB-,None known,MOTHER,nsk_parent_0461,Farzana,Shaikh,nsk_parent_0461@example.com,+91-9718898395,PHC-NSK-03,CIDCO,422008,2026-07-18,GOOD
+NSK-2026-0462,Dev,Sharma,2026-09-18,M,A+,None known,MOTHER,nsk_parent_0462,Rashmi,Sharma,nsk_parent_0462@example.com,+91-9384535115,PHC-NSK-10,Adgaon,422003,2026-09-18,AVERAGE
+NSK-2026-0463,Tejas,Kulkarni,2026-06-03,M,A+,None known,MOTHER,nsk_parent_0463,Kavita,Kulkarni,nsk_parent_0463@example.com,+91-8886639669,PHC-NSK-02,Nashik Road,422101,2026-06-06,GOOD
+NSK-2026-0464,Raj,Gholap,2026-01-18,M,A+,None known,FATHER,nsk_parent_0464,Ganesh,Gholap,nsk_parent_0464@example.com,+91-7518922054,PHC-NSK-01,Panchavati,422003,2026-01-19,GOOD
+NSK-2026-0465,Arham,Shaikh,2026-01-09,M,A+,None known,MOTHER,nsk_parent_0465,Samina,Shaikh,nsk_parent_0465@example.com,+91-8066318518,PHC-NSK-08,Indira Nagar,422009,2026-01-14,GOOD
+NSK-2026-0466,Kabir,Kadam,2026-01-28,M,O+,None known,FATHER,nsk_parent_0466,Amit,Kadam,nsk_parent_0466@example.com,+91-7017061796,PHC-NSK-03,CIDCO,422008,2026-02-06,AVERAGE
+NSK-2026-0467,Aditya,Wagh,2026-02-10,M,O+,None known,GUARDIAN,nsk_parent_0467,Anjali,Wagh,nsk_parent_0467@example.com,+91-8875804640,PHC-NSK-01,Panchavati,422003,2026-02-11,GOOD
+NSK-2026-0468,Kiara,Pawar,2026-05-04,F,B+,None known,MOTHER,nsk_parent_0468,Anjali,Pawar,nsk_parent_0468@example.com,+91-7593466357,PHC-NSK-01,Panchavati,422003,2026-05-14,GOOD
+NSK-2026-0469,Atharv,Borse,2026-01-29,M,O+,None known,MOTHER,nsk_parent_0469,Deepali,Borse,nsk_parent_0469@example.com,+91-9799183312,PHC-NSK-04,Satpur,422007,2026-01-31,GOOD
+NSK-2026-0470,Shreyas,Sonawane,2026-07-12,M,B+,None known,MOTHER,nsk_parent_0470,Jyoti,Sonawane,nsk_parent_0470@example.com,+91-9361341868,PHC-NSK-04,Satpur,422007,2026-07-18,GOOD
+NSK-2026-0471,Sarthak,Jagtap,2026-07-31,M,B+,Dust allergy,MOTHER,nsk_parent_0471,Rashmi,Jagtap,nsk_parent_0471@example.com,+91-9997795211,PHC-NSK-01,Panchavati,422003,2026-08-04,POOR
+NSK-2026-0472,Kunal,Gholap,2026-09-09,M,B+,None known,MOTHER,nsk_parent_0472,Shital,Gholap,nsk_parent_0472@example.com,+91-8049672909,PHC-NSK-02,Nashik Road,422101,2026-09-19,GOOD
+NSK-2026-0473,Radhika,Deshmukh,2026-02-14,F,O+,None known,MOTHER,nsk_parent_0473,Pallavi,Deshmukh,nsk_parent_0473@example.com,+91-9983573674,PHC-NSK-07,Deolali Camp,422401,2026-02-17,GOOD
+NSK-2026-0474,Nishant,Deshmukh,2026-09-28,M,A+,None known,MOTHER,nsk_parent_0474,Manisha,Deshmukh,nsk_parent_0474@example.com,+91-9080674265,PHC-NSK-06,Gangapur Road,422013,2026-10-02,GOOD
+NSK-2026-0475,Kavya,Borse,2026-01-21,F,B-,Egg allergy,MOTHER,nsk_parent_0475,Madhuri,Borse,nsk_parent_0475@example.com,+91-7299372716,PHC-NSK-06,Gangapur Road,422013,2026-01-26,GOOD
+NSK-2026-0476,Janhavi,Kulkarni,2026-05-18,F,O+,None known,MOTHER,nsk_parent_0476,Pallavi,Kulkarni,nsk_parent_0476@example.com,+91-9315485489,PHC-NSK-09,Old Nashik,422001,2026-05-26,GOOD
+NSK-2026-0477,Atharv,Gaikwad,2026-07-12,M,B+,None known,MOTHER,nsk_parent_0477,Deepali,Gaikwad,nsk_parent_0477@example.com,+91-7296100001,PHC-NSK-06,Gangapur Road,422013,2026-07-22,POOR
+NSK-2026-0478,Zoya,Momin,2026-05-03,F,B+,None known,MOTHER,nsk_parent_0478,Ayesha,Momin,nsk_parent_0478@example.com,+91-9854542417,PHC-NSK-05,Ambad,422010,2026-05-06,GOOD
+NSK-2026-0479,Nishant,Kulkarni,2026-06-28,M,O+,None known,MOTHER,nsk_parent_0479,Rashmi,Kulkarni,nsk_parent_0479@example.com,+91-8049286745,PHC-NSK-09,Old Nashik,422001,2026-07-06,POOR
+NSK-2026-0480,Arham,Sayyed,2026-06-21,M,B+,Dust allergy,MOTHER,nsk_parent_0480,Farzana,Sayyed,nsk_parent_0480@example.com,+91-9090375100,PHC-NSK-06,Gangapur Road,422013,2026-06-30,AVERAGE
+NSK-2026-0481,Sai,Pagar,2026-07-27,F,AB+,None known,MOTHER,nsk_parent_0481,Priya,Pagar,nsk_parent_0481@example.com,+91-9011378185,PHC-NSK-02,Nashik Road,422101,2026-07-27,POOR
+NSK-2026-0482,Chinmay,More,2026-02-13,M,A+,None known,MOTHER,nsk_parent_0482,Neha,More,nsk_parent_0482@example.com,+91-9986165966,PHC-NSK-09,Old Nashik,422001,2026-02-22,AVERAGE
+NSK-2026-0483,Advait,Wagh,2026-06-25,M,A-,None known,MOTHER,nsk_parent_0483,Pooja,Wagh,nsk_parent_0483@example.com,+91-8847062476,PHC-NSK-03,CIDCO,422008,2026-07-04,GOOD
+NSK-2026-0484,Sanvi,Kasar,2026-02-04,F,AB+,Dust allergy,FATHER,nsk_parent_0484,Amit,Kasar,nsk_parent_0484@example.com,+91-9939991964,PHC-NSK-01,Panchavati,422003,2026-02-07,AVERAGE
+NSK-2026-0485,Shravani,Pawar,2026-08-30,F,O-,None known,MOTHER,nsk_parent_0485,Rupali,Pawar,nsk_parent_0485@example.com,+91-7585737507,PHC-NSK-08,Indira Nagar,422009,2026-09-01,GOOD
+NSK-2026-0486,Inaya,Khan,2026-03-18,F,O+,None known,FATHER,nsk_parent_0486,Faisal,Khan,nsk_parent_0486@example.com,+91-7075476423,PHC-NSK-09,Old Nashik,422001,2026-03-27,POOR
+NSK-2026-0487,Parth,Gaikwad,2026-06-22,M,AB+,None known,FATHER,nsk_parent_0487,Yogesh,Gaikwad,nsk_parent_0487@example.com,+91-9383914471,PHC-NSK-06,Gangapur Road,422013,2026-06-28,AVERAGE
+NSK-2026-0488,Nishant,Mahale,2026-08-20,M,B+,None known,FATHER,nsk_parent_0488,Pravin,Mahale,nsk_parent_0488@example.com,+91-9320849900,PHC-NSK-02,Nashik Road,422101,2026-08-21,AVERAGE
+NSK-2026-0489,Sairaj,Kasar,2026-09-16,M,B-,None known,MOTHER,nsk_parent_0489,Sneha,Kasar,nsk_parent_0489@example.com,+91-9766711835,PHC-NSK-06,Gangapur Road,422013,2026-09-20,GOOD
+NSK-2026-0490,Chinmay,More,2026-07-01,M,B+,None known,MOTHER,nsk_parent_0490,Pallavi,More,nsk_parent_0490@example.com,+91-7523805263,PHC-NSK-01,Panchavati,422003,2026-07-03,GOOD
+NSK-2026-0491,Sanvi,Salunke,2026-03-29,F,O+,None known,MOTHER,nsk_parent_0491,Manisha,Salunke,nsk_parent_0491@example.com,+91-8068404587,PHC-NSK-01,Panchavati,422003,2026-04-05,GOOD
+NSK-2026-0492,Saanvi,Gupta,2026-01-26,F,A+,Egg allergy,MOTHER,nsk_parent_0492,Komal,Gupta,nsk_parent_0492@example.com,+91-9377257136,PHC-NSK-04,Satpur,422007,2026-01-30,AVERAGE
+NSK-2026-0493,Aadhya,More,2026-09-21,F,O+,None known,MOTHER,nsk_parent_0493,Pooja,More,nsk_parent_0493@example.com,+91-8841809443,PHC-NSK-08,Indira Nagar,422009,2026-09-23,GOOD
+NSK-2026-0494,Ira,Kale,2026-04-15,F,A+,None known,MOTHER,nsk_parent_0494,Manisha,Kale,nsk_parent_0494@example.com,+91-9721074760,PHC-NSK-07,Deolali Camp,422401,2026-04-20,GOOD
+NSK-2026-0495,Omkar,Borse,2026-03-17,M,O-,None known,FATHER,nsk_parent_0495,Kiran,Borse,nsk_parent_0495@example.com,+91-9731411977,PHC-NSK-04,Satpur,422007,2026-03-18,GOOD
+NSK-2026-0496,Prathamesh,Bagul,2026-08-15,M,O+,None known,MOTHER,nsk_parent_0496,Komal,Bagul,nsk_parent_0496@example.com,+91-8090707590,PHC-NSK-05,Ambad,422010,2026-08-19,AVERAGE
+NSK-2026-0497,Arnav,Londhe,2026-09-23,M,B+,None known,MOTHER,nsk_parent_0497,Pallavi,Londhe,nsk_parent_0497@example.com,+91-7510305267,PHC-NSK-07,Deolali Camp,422401,2026-09-30,POOR
+NSK-2026-0498,Ayaan,Momin,2026-09-21,M,A+,None known,FATHER,nsk_parent_0498,Salman,Momin,nsk_parent_0498@example.com,+91-7572490721,PHC-NSK-03,CIDCO,422008,2026-09-30,GOOD
+NSK-2026-0499,Arnav,Borse,2026-03-10,M,O+,None known,MOTHER,nsk_parent_0499,Anjali,Borse,nsk_parent_0499@example.com,+91-9981911489,PHC-NSK-02,Nashik Road,422101,2026-03-10,GOOD
+NSK-2026-0500,Vaishnavi,Aher,2026-06-16,F,O+,None known,MOTHER,nsk_parent_0500,Sneha,Aher,nsk_parent_0500@example.com,+91-9923146235,PHC-NSK-09,Old Nashik,422001,2026-06-26,GOOD

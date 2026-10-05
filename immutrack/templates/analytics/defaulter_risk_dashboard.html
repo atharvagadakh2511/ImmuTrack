@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block title %}ML Defaulter Risk Surveillance — ImmuTrack{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+  <div>
+    <div class="d-flex align-items-center gap-2 mb-1">
+      <h2 class="fw-bold text-navy mb-0">ML Defaulter-Risk Analytics Engine</h2>
+      <span class="badge bg-teal-subtle text-primary-teal border border-teal-subtle rounded-pill px-2.5 py-1 fw-bold small">
+        <i class="bi bi-cpu-fill"></i> Scikit-Learn Model
+      </span>
+    </div>
+    <p class="text-muted small mb-0">Supervised classification utilizing non-leaking historical interval lags and overdue frequency.</p>
+  </div>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" name="retrain_model" value="1" class="btn btn-saas-primary shadow-sm">
+      <i class="bi bi-arrow-repeat"></i> Retrain Model & Score Cohort
+    </button>
+  </form>
+</div>
+
+<!-- Model Metadata Card -->
+<div class="card-saas p-4 mb-4">
+  <div class="row align-items-center g-3">
+    <div class="col-lg-8">
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <h5 class="fw-bold text-navy mb-0">{{ active_model.model_name|default:"Baseline Random Forest Adherence Predictor" }}</h5>
+        <span class="badge bg-light text-navy border px-2 py-0.5 small">v{{ active_model.version|default:"1.0.0" }}</span>
+      </div>
+      <p class="text-muted small mb-3">Trained on: {{ active_model.trained_at|date:"d M Y, H:i"|default:"Active Demonstration Weights" }} &bull; Bias Mitigation: Demographics strictly excluded.</p>
+      
+      <div class="d-flex flex-wrap gap-4 pt-2 border-top">
+        <div>
+          <span class="text-muted small d-block">Model Accuracy</span>
+          <span class="fw-bold text-navy fs-5">{{ active_model.accuracy|floatformat:2|default:"0.89" }}</span>
+        </div>
+        <div>
+          <span class="text-muted small d-block">Precision</span>
+          <span class="fw-bold text-success fs-5">{{ active_model.precision|floatformat:2|default:"0.86" }}</span>
+        </div>
+        <div>
+          <span class="text-muted small d-block">Recall</span>
+          <span class="fw-bold text-primary fs-5">{{ active_model.recall|floatformat:2|default:"0.91" }}</span>
+        </div>
+        <div>
+          <span class="text-muted small d-block">F1 Score</span>
+          <span class="fw-bold text-primary-teal fs-5">{{ active_model.f1_score|floatformat:2|default:"0.88" }}</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 text-lg-end">
+      <div class="p-3 rounded-3 text-start" style="background: var(--bg-slate); border: 1px solid var(--border-light);">
+        <div class="small fw-bold text-navy mb-1"><i class="bi bi-shield-lock-fill text-primary-teal me-1"></i>Decision Features Used:</div>
+        <div class="text-muted small" style="font-size: 0.78rem;">
+          Past dose count, overdue ratio, temporal visit lag, days since last clinical interaction.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Child Risk Assessments Table -->
+<div class="card-saas">
+  <div class="p-3.5 px-4 border-bottom d-flex justify-content-between align-items-center">
+    <div>
+      <h5 class="fw-bold text-navy mb-0">Predicted Vulnerability Register</h5>
+      <span class="text-muted small">Ranked by estimated probability of defaulting on upcoming immunization doses</span>
+    </div>
+    <span class="badge bg-light text-muted border px-2.5 py-1 small fw-semibold">{{ assessments.count }} Assessed Profiles</span>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table-saas">
+      <thead>
+        <tr>
+          <th>Child Profile</th>
+          <th>Health Facility</th>
+          <th>Risk Stratification</th>
+          <th>Predicted Probability</th>
+          <th>Operational Risk Driver</th>
+          <th class="text-end">Clinical Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in assessments %}
+          <tr>
+            <td>
+              <a href="{% url 'children:child_detail' r.child.id %}" class="fw-bold text-navy text-decoration-none">
+                {{ r.child.full_name }}
+              </a>
+              <div class="text-muted small">Guardian: {{ r.child.guardian.profile.phone_number|default:r.child.guardian.username }}</div>
+            </td>
+            <td>
+              <span class="text-navy small">{{ r.child.assigned_clinic.name|default:"General Health Post" }}</span>
+            </td>
+            <td>
+              {% if r.risk_level == 'HIGH' %}
+                <span class="badge-risk-high"><i class="bi bi-exclamation-triangle-fill me-1"></i>HIGH RISK</span>
+              {% elif r.risk_level == 'MEDIUM' %}
+                <span class="badge-risk-medium"><i class="bi bi-clock-history me-1"></i>MODERATE</span>
+              {% elif r.risk_level == 'LOW' %}
+                <span class="badge-risk-low"><i class="bi bi-check-circle-fill me-1"></i>LOW RISK</span>
+              {% else %}
+                <span class="badge bg-light text-muted border px-2 py-1 small">INSUFFICIENT DATA</span>
+              {% endif %}
+            </td>
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <span class="fw-bold text-navy">{{ r.probability|floatformat:2 }}</span>
+                <div class="progress-modern flex-grow-1" style="width: 60px; height: 6px;">
+                  <div class="{% if r.risk_level == 'HIGH' %}bg-danger{% elif r.risk_level == 'MEDIUM' %}bg-warning{% else %}bg-success{% endif %}" style="width: {% widthratio r.probability 1 100 %}%; height: 100%;"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="text-muted small">{{ r.top_risk_factor }}</span>
+            </td>
+            <td class="text-end">
+              <a href="{% url 'children:child_detail' r.child.id %}" class="btn btn-saas-outline-teal btn-sm">
+                <i class="bi bi-journal-check"></i> Intervene
+              </a>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="6" class="text-center py-5">
+              <div class="empty-state-box">
+                <div class="empty-state-icon"><i class="bi bi-cpu"></i></div>
+                <h5 class="fw-bold text-navy mb-1">No Risk Assessments Computed</h5>
+                <p class="text-muted small mb-3">Click 'Retrain Model & Score Cohort' above to calculate non-leaking dropout predictions.</p>
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

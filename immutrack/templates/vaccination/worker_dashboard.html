@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %}Clinical Workspace — ImmuTrack{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+  <div>
+    <div class="d-flex align-items-center gap-2 mb-1">
+      <h2 class="fw-bold text-navy mb-0">Clinic Vaccination Workspace</h2>
+      <span class="badge-status-due small"><i class="bi bi-geo-alt-fill"></i> Primary Health Care</span>
+    </div>
+    <p class="text-muted small mb-0">Designated Facility: <strong>{{ clinic.name|default:"All Health Centres (Administrative Master View)" }}</strong></p>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="{% url 'analytics:export_clinic_csv' %}" class="btn btn-saas-outline">
+      <i class="bi bi-file-earmark-spreadsheet-fill text-success"></i> Export Immunization Register
+    </a>
+  </div>
+</div>
+
+<!-- Modern Search Component -->
+<div class="card-saas p-3 mb-4">
+  <form method="get" class="d-flex gap-2 align-items-center">
+    <div class="input-group">
+      <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+      <input type="text" name="q" value="{{ query }}" class="form-control border-start-0" placeholder="Search child by first name, last name, guardian username or email...">
+    </div>
+    <button type="submit" class="btn btn-saas-primary px-4 text-nowrap">
+      Search Records
+    </button>
+    {% if query %}
+      <a href="{% url 'vaccination:worker_dashboard' %}" class="btn btn-saas-outline text-nowrap">Clear</a>
+    {% endif %}
+  </form>
+</div>
+
+<div class="row g-4">
+  <!-- Urgent & Overdue Queue -->
+  <div class="col-lg-6">
+    <div class="card-saas h-100">
+      <div class="p-3.5 px-4 border-bottom d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <div class="navbar-brand-icon" style="width: 32px; height: 32px; font-size: 1rem; background: var(--accent-rose-light); color: var(--accent-rose);">
+            <i class="bi bi-exclamation-octagon-fill"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-navy mb-0">Overdue Immunization Queue</h5>
+            <span class="text-muted small">Immediate clinical follow-up required</span>
+          </div>
+        </div>
+        <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill px-2.5 py-1 fw-bold small">
+          {{ overdue_doses.count }} Attention Needed
+        </span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table-saas">
+          <thead>
+            <tr>
+              <th>Child Profile</th>
+              <th>Due Antigen</th>
+              <th>Due Date</th>
+              <th class="text-end">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for d in overdue_doses %}
+              <tr>
+                <td>
+                  <a href="{% url 'children:child_detail' d.child.id %}" class="fw-bold text-navy text-decoration-none">
+                    {{ d.child.full_name }}
+                  </a>
+                  <div class="text-muted small">Guardian: {{ d.child.guardian.profile.phone_number|default:d.child.guardian.username }}</div>
+                </td>
+                <td>
+                  <span class="badge bg-light text-navy border px-2 py-1 small fw-semibold">{{ d.recommended_dose.vaccine.code }}</span>
+                </td>
+                <td>
+                  <span class="text-danger fw-semibold small">{{ d.due_date|date:"d M Y" }}</span>
+                </td>
+                <td class="text-end">
+                  <a href="{% url 'vaccination:record_dose' d.id %}" class="btn btn-saas-primary btn-sm">
+                    <i class="bi bi-eyedropper"></i> Administer
+                  </a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="4" class="text-center py-4 text-muted">
+                  <i class="bi bi-check-circle text-success fs-4 d-block mb-1"></i>
+                  No overdue vaccine doses for this facility.
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registered Children Directory -->
+  <div class="col-lg-6">
+    <div class="card-saas h-100">
+      <div class="p-3.5 px-4 border-bottom d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <div class="navbar-brand-icon" style="width: 32px; height: 32px; font-size: 1rem; background: var(--secondary-blue-light); color: var(--secondary-blue);">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-navy mb-0">Active Registered Cohort</h5>
+            <span class="text-muted small">Infants and children under clinic jurisdiction</span>
+          </div>
+        </div>
+        <span class="badge bg-light text-navy border px-2.5 py-1 small fw-semibold">{{ children.count }} Patients</span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table-saas">
+          <thead>
+            <tr>
+              <th>Child Name</th>
+              <th>Date of Birth</th>
+              <th>Contact Phone</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in children %}
+              <tr>
+                <td>
+                  <a href="{% url 'children:child_detail' c.id %}" class="fw-bold text-navy text-decoration-none">
+                    {{ c.full_name }}
+                  </a>
+                  <div class="text-muted small">{{ c.get_gender_display }} &bull; {{ c.blood_group|default:"-" }}</div>
+                </td>
+                <td>
+                  <span class="text-navy small">{{ c.date_of_birth|date:"d M Y" }}</span>
+                </td>
+                <td>
+                  <span class="text-muted small">{{ c.guardian.profile.phone_number|default:c.guardian.email }}</span>
+                </td>
+                <td class="text-end">
+                  <a href="{% url 'children:child_detail' c.id %}" class="btn btn-saas-outline-teal btn-sm">
+                    <i class="bi bi-journal-medical"></i> View Roadmap
+                  </a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="4" class="text-center py-4 text-muted">
+                  No matching child records found in this facility query.
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

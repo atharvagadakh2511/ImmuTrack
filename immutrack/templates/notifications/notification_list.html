@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Reminder Center — ImmuTrack{% endblock %}
+
+{% block content %}
+<div class="card-saas">
+  <div class="p-3.5 px-4 border-bottom d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <div class="navbar-brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem; background: var(--secondary-blue-light); color: var(--secondary-blue);">
+        <i class="bi bi-bell-fill"></i>
+      </div>
+      <div>
+        <h4 class="fw-bold text-navy mb-0">Automated Immunization Reminders & Alerts</h4>
+        <span class="text-muted small">System dispatches, scheduled milestone notifications, and SMS/Email logs</span>
+      </div>
+    </div>
+    <span class="badge bg-light text-navy border px-2.5 py-1 small fw-semibold">{{ notifications.count }} Total</span>
+  </div>
+
+  <div>
+    {% if notifications %}
+      <div class="list-group list-group-flush">
+        {% for n in notifications %}
+          <div class="list-group-item p-3.5 px-4 border-0 border-bottom">
+            <div class="d-flex w-100 justify-content-between align-items-start mb-1">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-teal-subtle text-primary-teal border border-teal-subtle px-2 py-0.5 small">
+                  {{ n.get_channel_display }}
+                </span>
+                <h6 class="mb-0 fw-bold text-navy">{{ n.subject }}</h6>
+              </div>
+              <small class="text-muted">{{ n.created_at|date:"d M Y, H:i" }}</small>
+            </div>
+            <p class="mb-2 text-slate small" style="white-space: pre-line; line-height: 1.5;">{{ n.message }}</p>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge-status-completed small"><i class="bi bi-check2-all"></i> Delivered</span>
+              <span class="text-muted small">&bull; Scheduled Date: {{ n.scheduled_for|date:"d M Y" }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state-box py-5">
+        <div class="empty-state-icon"><i class="bi bi-bell-slash"></i></div>
+        <h5 class="fw-bold text-navy mb-1">No Alerts or Reminders Yet</h5>
+        <p class="text-muted small mb-0">Reminders are automatically queued 3 days prior to scheduled child immunization due dates.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
