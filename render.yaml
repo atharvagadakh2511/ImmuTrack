@@ -22,7 +22,7 @@ services:
       - key: CSRF_TRUSTED_ORIGINS
         value: ""
       - key: REMINDER_SECRET
-        generateValue: true
+        sync: false
 
 databases:
   - name: immutrack-db
