@@ -1,0 +1,19 @@
+name: Send Vaccination Reminders
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+      timezone: 'Asia/Kolkata'
+
+  workflow_dispatch:
+
+jobs:
+  send-reminders:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger vaccination reminders
+        run: |
+          curl --fail-with-body -X POST \
+            -H "Authorization: Bearer ${{ secrets.REMINDER_SECRET }}" \
+            https://immutrack-nashik.onrender.com/notifications/run-reminders/
