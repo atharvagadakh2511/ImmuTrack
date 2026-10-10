@@ -6,6 +6,31 @@ pip install -r requirements.txt
 
 # Prepare the production database.
 python manage.py migrate --noinput
+python manage.py shell <<'PY'
+import os
+from django.contrib.auth.models import User
+from accounts.models import Role
+
+username = os.environ.get("INITIAL_ADMIN_USERNAME")
+password = os.environ.get("INITIAL_ADMIN_PASSWORD")
+email = os.environ.get("INITIAL_ADMIN_EMAIL", "")
+
+if username and password:
+    user, _ = User.objects.get_or_create(
+        username=username,
+        defaults={"email": email}
+    )
+    user.email = email
+    user.is_staff = True
+    user.is_superuser = True
+    user.set_password(password)
+    user.save()
+    user.profile.role = Role.ADMIN
+    user.profile.save()
+    print("Initial administrator configured.")
+else:
+    print("Admin creation skipped: environment variables not configured.")
+PY
 
 # Seed the India UIP reference schedule. This command is idempotent.
 python manage.py seed_immunization_data
