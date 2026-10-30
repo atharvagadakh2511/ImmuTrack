@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 set -o errexit
 
@@ -6,6 +7,8 @@ pip install -r requirements.txt
 
 # Prepare the production database.
 python manage.py migrate --noinput
+
+# Configure initial administrator.
 python manage.py shell <<'PY'
 import os
 from django.contrib.auth.models import User
@@ -32,14 +35,16 @@ else:
     print("Admin creation skipped: environment variables not configured.")
 PY
 
-# Seed the India UIP reference schedule. This command is idempotent.
+# Seed the India UIP reference schedule.
 python manage.py seed_immunization_data
 
-# Import the bundled synthetic Nashik dataset if it has not already been imported.
-# The command is safe to run again because it uses get_or_create/update logic.
+# Import the bundled synthetic Nashik dataset.
 python manage.py import_nashik_dataset --skip-ml
 
-# Train and persist the ML model into the deploy image, then refresh risk scores.
+# Import Maharashtra hospitals and vaccination centres.
+python manage.py import_facilities
+
+# Train and persist the ML model.
 python manage.py shell <<'PY'
 from analytics.ml.pipeline import DefaulterRiskPipeline
 from analytics.models import ChildRiskAssessment, MLModelMetadata
