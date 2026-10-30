@@ -208,12 +208,9 @@ def chatbot(request):
         )
 
         response = client.models.generate_content(
-            model="gemini-3.8-flash",
+            model="gemini-3.5-flash-lite",
             contents=message,
             config=types.GenerateContentConfig(
-                thinking_config=types.ThinkingConfig(
-                    thinking_level="low"
-                ),
                 system_instruction="""
                 You are ImmuTrack AI, a helpful vaccination assistant
                 for users in Nashik, India.
