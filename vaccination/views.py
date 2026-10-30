@@ -233,7 +233,7 @@ def chatbot(request):
         })
 
     except Exception:
-         logger.exception("ImmuTrack Gemini chatbot error")
+        logger.exception("ImmuTrack Gemini chatbot error")
 
         return JsonResponse(
             {
@@ -244,3 +244,4 @@ def chatbot(request):
             },
             status=500
         )
+
