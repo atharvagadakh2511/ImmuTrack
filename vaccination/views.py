@@ -180,6 +180,7 @@ def record_dose(request, dose_id):
 # ==========================================
 
 
+
 @require_POST
 @csrf_protect
 def chatbot(request):
@@ -210,7 +211,9 @@ def chatbot(request):
             model="gemini-3.8-flash",
             contents=message,
             config=types.GenerateContentConfig(
-                max_output_tokens=300,
+                thinking_config=types.ThinkingConfig(
+                    thinking_level="low"
+                ),
                 system_instruction="""
                 You are ImmuTrack AI, a helpful vaccination assistant
                 for users in Nashik, India.
@@ -249,5 +252,6 @@ def chatbot(request):
             },
             status=500
         )
+
 
 
