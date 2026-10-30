@@ -179,6 +179,7 @@ def record_dose(request, dose_id):
 # GEMINI AI CHATBOT
 # ==========================================
 
+
 @require_POST
 @csrf_protect
 def chatbot(request):
@@ -200,12 +201,16 @@ def chatbot(request):
                 status=503
             )
 
-        client = genai.Client(api_key=api_key)
+        client = genai.Client(
+            api_key=api_key,
+            http_options=types.HttpOptions(timeout=30000)
+        )
 
         response = client.models.generate_content(
             model="gemini-3.8-flash",
             contents=message,
             config=types.GenerateContentConfig(
+                max_output_tokens=300,
                 system_instruction="""
                 You are ImmuTrack AI, a helpful vaccination assistant
                 for users in Nashik, India.
@@ -244,4 +249,5 @@ def chatbot(request):
             },
             status=500
         )
+
 
