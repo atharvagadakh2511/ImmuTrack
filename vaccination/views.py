@@ -94,3 +94,62 @@ def record_dose(request, dose_id):
         'scheduled_dose': scheduled_dose,
         'child': scheduled_dose.child,
     })
+    import os
+import json
+from openai import OpenAI
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_protect
+
+@require_POST
+@csrf_protect
+def chatbot(request):
+
+    try:
+        data = json.loads(request.body)
+        message = data.get("message", "").strip()
+
+        if not message or len(message) > 2000:
+            return JsonResponse(
+                {"error": "Please enter a valid question."},
+                status=400
+            )
+
+        api_key = os.environ.get("OPENAI_API_KEY")
+
+        if not api_key:
+            return JsonResponse(
+                {"error": "AI service is not configured."},
+                status=503
+            )
+
+        client = OpenAI(api_key=api_key)
+
+        response = client.responses.create(
+            model="gpt-5.5",
+            instructions="""
+            You are ImmuTrack AI, a helpful vaccination assistant
+            for users in Nashik, India.
+
+            Answer questions about vaccination and immunization
+            in simple English.
+
+            Be polite, clear and helpful.
+
+            Never invent vaccine schedules, dosages or medical facts.
+            Do not diagnose diseases or prescribe medicines.
+            For personal medical decisions, recommend consulting
+            a qualified healthcare professional.
+            """,
+            input=message
+        )
+
+        return JsonResponse({
+            "reply": response.output_text
+        })
+
+    except Exception:
+        return JsonResponse(
+            {"error": "Unable to process your question right now."},
+            status=500
+        )
