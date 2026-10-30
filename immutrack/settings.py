@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "vaccination",
     "notifications",
     "analytics",
+    "facilities",
 ]
 
 MIDDLEWARE = [
