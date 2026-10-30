@@ -1,7 +1,9 @@
 import os
 import json
 
-from openai import OpenAI
+from google import genai
+from google.genai import types
+
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_protect
@@ -12,13 +14,20 @@ from django.core.exceptions import PermissionDenied
 from django.db import transaction
 from django.db.models import Q
 
-from .models import ScheduledDose, VaccineAdministrationRecord, DoseStatus, AuditLog
+from .models import (
+    ScheduledDose,
+    VaccineAdministrationRecord,
+    DoseStatus,
+    AuditLog
+)
 from .forms import DoseAdministrationForm
 from children.models import Child
+
 
 @login_required
 def worker_dashboard(request):
     user = request.user
+
     if not (user.profile.is_health_worker or user.profile.is_admin):
         raise PermissionDenied("Health worker access required.")
 
@@ -26,6 +35,7 @@ def worker_dashboard(request):
     query = request.GET.get('q', '').strip()
 
     children_qs = Child.objects.all()
+
     if clinic and not user.profile.is_admin:
         children_qs = children_qs.filter(assigned_clinic=clinic)
 
@@ -38,38 +48,77 @@ def worker_dashboard(request):
         )
 
     # Overdue list
-    overdue_doses = ScheduledDose.objects.filter(status=DoseStatus.OVERDUE)
+    overdue_doses = ScheduledDose.objects.filter(
+        status=DoseStatus.OVERDUE
+    )
+
     if clinic and not user.profile.is_admin:
-        overdue_doses = overdue_doses.filter(child__assigned_clinic=clinic)
+        overdue_doses = overdue_doses.filter(
+            child__assigned_clinic=clinic
+        )
 
     # Today's queue
-    due_today_doses = ScheduledDose.objects.filter(status=DoseStatus.DUE_TODAY)
-    if clinic and not user.profile.is_admin:
-        due_today_doses = due_today_doses.filter(child__assigned_clinic=clinic)
+    due_today_doses = ScheduledDose.objects.filter(
+        status=DoseStatus.DUE_TODAY
+    )
 
-    return render(request, 'vaccination/worker_dashboard.html', {
-        'clinic': clinic,
-        'children': children_qs[:20],
-        'overdue_doses': overdue_doses.select_related('child', 'recommended_dose__vaccine')[:15],
-        'due_today_doses': due_today_doses.select_related('child', 'recommended_dose__vaccine')[:15],
-        'query': query,
-    })
+    if clinic and not user.profile.is_admin:
+        due_today_doses = due_today_doses.filter(
+            child__assigned_clinic=clinic
+        )
+
+    return render(
+        request,
+        'vaccination/worker_dashboard.html',
+        {
+            'clinic': clinic,
+            'children': children_qs[:20],
+            'overdue_doses': overdue_doses.select_related(
+                'child',
+                'recommended_dose__vaccine'
+            )[:15],
+            'due_today_doses': due_today_doses.select_related(
+                'child',
+                'recommended_dose__vaccine'
+            )[:15],
+            'query': query,
+        }
+    )
+
 
 @login_required
 def record_dose(request, dose_id):
     user = request.user
-    if not (user.profile.is_health_worker or user.profile.is_admin):
-        raise PermissionDenied("Only authorized health workers or admins can record doses.")
 
-    scheduled_dose = get_object_or_404(ScheduledDose, id=dose_id)
+    if not (user.profile.is_health_worker or user.profile.is_admin):
+        raise PermissionDenied(
+            "Only authorized health workers or admins can record doses."
+        )
+
+    scheduled_dose = get_object_or_404(
+        ScheduledDose,
+        id=dose_id
+    )
 
     # Check if already completed
-    if hasattr(scheduled_dose, 'administration_record') or scheduled_dose.status == DoseStatus.COMPLETED:
-        messages.warning(request, f"This dose ({scheduled_dose.recommended_dose.dose_label}) has already been administered and verified.")
-        return redirect('children:child_detail', child_id=scheduled_dose.child.id)
+    if (
+        hasattr(scheduled_dose, 'administration_record')
+        or scheduled_dose.status == DoseStatus.COMPLETED
+    ):
+        messages.warning(
+            request,
+            f"This dose ({scheduled_dose.recommended_dose.dose_label}) "
+            "has already been administered and verified."
+        )
+
+        return redirect(
+            'children:child_detail',
+            child_id=scheduled_dose.child.id
+        )
 
     if request.method == 'POST':
         form = DoseAdministrationForm(request.POST)
+
         if form.is_valid():
             with transaction.atomic():
                 admin_record = form.save(commit=False)
@@ -85,31 +134,55 @@ def record_dose(request, dose_id):
                     user=user,
                     action="DOSE_ADMINISTERED",
                     target_child=scheduled_dose.child,
-                    details=f"Administered {scheduled_dose.recommended_dose.dose_label}. Batch: {admin_record.batch_number}, Facility: {admin_record.facility.name}"
+                    details=(
+                        f"Administered "
+                        f"{scheduled_dose.recommended_dose.dose_label}. "
+                        f"Batch: {admin_record.batch_number}, "
+                        f"Facility: {admin_record.facility.name}"
+                    )
                 )
 
-                messages.success(request, f"Dose {scheduled_dose.recommended_dose.dose_label} recorded successfully!")
-                return redirect('children:child_detail', child_id=scheduled_dose.child.id)
+                messages.success(
+                    request,
+                    f"Dose {scheduled_dose.recommended_dose.dose_label} "
+                    "recorded successfully!"
+                )
+
+                return redirect(
+                    'children:child_detail',
+                    child_id=scheduled_dose.child.id
+                )
+
     else:
         # Prepopulate facility if worker is assigned
         initial = {}
+
         if user.profile.assigned_clinic:
             initial['facility'] = user.profile.assigned_clinic
+
         form = DoseAdministrationForm(initial=initial)
 
-    return render(request, 'vaccination/record_dose.html', {
-        'form': form,
-        'scheduled_dose': scheduled_dose,
-        'child': scheduled_dose.child,
-    })
-  
+    return render(
+        request,
+        'vaccination/record_dose.html',
+        {
+            'form': form,
+            'scheduled_dose': scheduled_dose,
+            'child': scheduled_dose.child,
+        }
+    )
+
+
+# ==========================================
+# GEMINI AI CHATBOT
+# ==========================================
+
 @require_POST
 @csrf_protect
 def chatbot(request):
-
     try:
         data = json.loads(request.body)
-        message = data.get("message", "").strip()
+        message = str(data.get("message", "")).strip()
 
         if not message or len(message) > 2000:
             return JsonResponse(
@@ -117,41 +190,53 @@ def chatbot(request):
                 status=400
             )
 
-        api_key = os.environ.get("OPENAI_API_KEY")
+        api_key = os.environ.get("GEMINI_API_KEY")
 
         if not api_key:
             return JsonResponse(
-                {"error": "AI service is not configured."},
+                {"error": "Gemini AI is not configured."},
                 status=503
             )
 
-        client = OpenAI(api_key=api_key)
+        client = genai.Client(api_key=api_key)
 
-        response = client.responses.create(
-            model="gpt-5.5",
-            instructions="""
-            You are ImmuTrack AI, a helpful vaccination assistant
-            for users in Nashik, India.
+        response = client.models.generate_content(
+            model="gemini-3.8-flash",
+            contents=message,
+            config=types.GenerateContentConfig(
+                system_instruction="""
+                You are ImmuTrack AI, a helpful vaccination assistant
+                for users in Nashik, India.
 
-            Answer questions about vaccination and immunization
-            in simple English.
+                Answer vaccination and immunization questions
+                in simple English.
 
-            Be polite, clear and helpful.
+                Be polite, clear and helpful.
 
-            Never invent vaccine schedules, dosages or medical facts.
-            Do not diagnose diseases or prescribe medicines.
-            For personal medical decisions, recommend consulting
-            a qualified healthcare professional.
-            """,
-            input=message
+                Never invent vaccine schedules, dosages or medical facts.
+                Do not diagnose diseases or prescribe medicines.
+
+                For personal medical decisions, recommend consulting
+                a qualified healthcare professional.
+
+                Do not ask users to share children's names, phone numbers,
+                addresses or personal medical records.
+                """
+            )
         )
 
         return JsonResponse({
-            "reply": response.output_text
+            "reply": response.text or
+            "Sorry, I could not generate an answer."
         })
 
     except Exception:
         return JsonResponse(
-            {"error": "Unable to process your question right now."},
+            {
+                "error": (
+                    "Unable to process your question right now. "
+                    "Please try again."
+                )
+            },
             status=500
         )
