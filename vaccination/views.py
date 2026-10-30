@@ -1,9 +1,17 @@
+import os
+import json
+
+from openai import OpenAI
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.exceptions import PermissionDenied
 from django.db import transaction
 from django.db.models import Q
+
 from .models import ScheduledDose, VaccineAdministrationRecord, DoseStatus, AuditLog
 from .forms import DoseAdministrationForm
 from children.models import Child
@@ -94,13 +102,7 @@ def record_dose(request, dose_id):
         'scheduled_dose': scheduled_dose,
         'child': scheduled_dose.child,
     })
-    import os
-import json
-from openai import OpenAI
-from django.http import JsonResponse
-from django.views.decorators.http import require_POST
-from django.views.decorators.csrf import csrf_protect
-
+  
 @require_POST
 @csrf_protect
 def chatbot(request):
