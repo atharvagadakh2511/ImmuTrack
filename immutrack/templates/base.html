@@ -1,75 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}ImmuTrack{% endblock %} | Smart Child Vaccination Platform</title>
-  
-  <!-- Modern Inter & Plus Jakarta Sans Webfonts -->
+
+  <!-- Modern Webfonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap 5.3 CSS -->
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
-  <!-- ImmuTrack SaaS Design System CSS -->
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/static/css/custom.css">
+
   {% block extra_head %}{% endblock %}
 </head>
+
 <body class="d-flex flex-column min-vh-100">
-  <!-- Top Global Header / Navigation Bar -->
+
+  <!-- Navigation -->
   <header class="navbar navbar-expand-lg navbar-custom sticky-top">
     <div class="container-fluid px-lg-5">
+
       <a class="navbar-brand" href="{% url 'home' %}">
         <div class="navbar-brand-icon">
           <i class="bi bi-shield-check"></i>
         </div>
+
         <div class="d-flex flex-column">
-          <span style="font-weight: 800; line-height: 1.1;">ImmuTrack</span>
-          <span style="font-size: 0.68rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;">Smart Immunization SaaS</span>
+          <span style="font-weight:800;line-height:1.1;">ImmuTrack</span>
+          <span style="font-size:0.68rem;font-weight:600;color:var(--text-muted);letter-spacing:0.05em;text-transform:uppercase;">
+            Smart Immunization SaaS
+          </span>
         </div>
       </a>
-      
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler border-0 shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navMenu"
+              aria-controls="navMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
         <i class="bi bi-list fs-2 text-dark"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-1 my-3 my-lg-0">
+
           {% if user.is_authenticated %}
+
             {% if user.profile.is_parent %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'children:parent_dashboard' %}">
                   <i class="bi bi-grid-1x2 text-primary-teal"></i> Guardian Portal
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'children:add_child' %}">
                   <i class="bi bi-person-plus text-primary-teal"></i> Register Child
                 </a>
               </li>
+
             {% elif user.profile.is_health_worker %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'vaccination:worker_dashboard' %}">
                   <i class="bi bi-hospital text-primary-teal"></i> Clinical Workspace
                 </a>
               </li>
+
             {% elif user.profile.is_admin %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'analytics:admin_dashboard' %}">
                   <i class="bi bi-bar-chart-line text-primary-teal"></i> Program Analytics
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'analytics:defaulter_risk' %}">
                   <i class="bi bi-cpu text-primary-teal"></i> ML Risk Engine
                 </a>
               </li>
             {% endif %}
-            
+
             <li class="nav-item">
               <a class="nav-link position-relative" href="{% url 'notifications:notification_center' %}">
                 <i class="bi bi-bell text-secondary-blue"></i> Alerts
@@ -77,384 +98,475 @@
             </li>
 
             <li class="nav-item dropdown ms-lg-3">
-              <a class="nav-user-badge text-decoration-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="d-inline-flex align-items-center justify-content-center bg-teal-subtle text-primary-teal rounded-circle" style="width: 28px; height: 28px; font-size: 0.85rem; font-weight: 700; background: var(--primary-teal-light);">
+              <a class="nav-user-badge text-decoration-none dropdown-toggle"
+                 href="#"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false">
+
+                <div class="d-inline-flex align-items-center justify-content-center bg-teal-subtle text-primary-teal rounded-circle"
+                     style="width:28px;height:28px;font-size:0.85rem;font-weight:700;background:var(--primary-teal-light);">
                   {{ user.first_name|default:user.username|slice:":1"|upper }}
                 </div>
+
                 <span>{{ user.get_full_name|default:user.username }}</span>
                 <span class="role-pill-badge">{{ user.profile.get_role_display|default:"User" }}</span>
               </a>
-              <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg p-2" style="border-radius: var(--radius-md); min-width: 230px;">
+
+              <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg p-2"
+                  style="border-radius:var(--radius-md);min-width:230px;">
+
                 <li class="px-3 py-2 border-bottom mb-1">
-                  <p class="mb-0 small fw-bold text-navy">{{ user.get_full_name|default:user.username }}</p>
-                  <p class="mb-0 small text-muted">{{ user.email|default:"Registered User" }}</p>
+                  <p class="mb-0 small fw-bold text-navy">
+                    {{ user.get_full_name|default:user.username }}
+                  </p>
+                  <p class="mb-0 small text-muted">
+                    {{ user.email|default:"Registered User" }}
+                  </p>
                 </li>
+
                 <li>
-                  <a class="dropdown-item py-2 rounded-2 text-danger fw-semibold d-flex align-items-center gap-2" href="{% url 'accounts:logout' %}">
+                  <a class="dropdown-item py-2 rounded-2 text-danger fw-semibold d-flex align-items-center gap-2"
+                     href="{% url 'accounts:logout' %}">
                     <i class="bi bi-box-arrow-right"></i> Sign Out
                   </a>
                 </li>
+
               </ul>
             </li>
+
           {% else %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">Sign In</a></li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'accounts:login' %}">Sign In</a>
+            </li>
+
             <li class="nav-item ms-lg-2">
               <a class="btn btn-saas-primary btn-sm px-4" href="{% url 'accounts:register' %}">
                 <i class="bi bi-arrow-right-circle"></i> Get Started
               </a>
             </li>
+
           {% endif %}
+
         </ul>
       </div>
     </div>
   </header>
 
-  <!-- Flash Messages & Toasts -->
+  <!-- Flash Messages -->
   <div class="container-fluid px-lg-5 mt-3">
     {% if messages %}
       {% for message in messages %}
-        <div class="alert-modern alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} mb-3 shadow-sm alert-dismissible fade show" role="alert">
+        <div class="alert-modern alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} mb-3 shadow-sm alert-dismissible fade show"
+             role="alert">
+
           <i class="bi bi-info-circle-fill fs-5"></i>
           <div class="flex-grow-1">{{ message }}</div>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"></button>
         </div>
       {% endfor %}
     {% endif %}
   </div>
 
-  <!-- Primary Dynamic Content Area -->
+  <!-- Main Content -->
   <main class="container-fluid px-lg-5 my-4 flex-grow-1">
     {% block content %}{% endblock %}
   </main>
 
-  <!-- SaaS Professional Healthcare Footer -->
+  <!-- Footer -->
   <footer class="footer-saas">
     <div class="container-fluid px-lg-5">
+
       <div class="row g-4 align-items-center pb-4 border-bottom border-light">
+
         <div class="col-lg-6">
           <div class="d-flex align-items-center gap-2 mb-2">
-            <div class="navbar-brand-icon" style="width: 32px; height: 32px; font-size: 1rem;">
+
+            <div class="navbar-brand-icon"
+                 style="width:32px;height:32px;font-size:1rem;">
               <i class="bi bi-shield-check"></i>
             </div>
+
             <span class="fw-bold text-navy fs-5">ImmuTrack</span>
-            <span class="badge bg-light text-muted border px-2 py-1 small">v2.4 Production</span>
+            <span class="badge bg-light text-muted border px-2 py-1 small">
+              v2.4 Production
+            </span>
           </div>
-          <p class="text-muted small mb-0" style="max-width: 540px;">
-            Intelligent Universal Immunization Programme (UIP) decision support system. Supporting proactive adherence reminders, risk modeling, and tamper-resistant clinical dose auditing.
+
+          <p class="text-muted small mb-0" style="max-width:540px;">
+            Intelligent Universal Immunization Programme (UIP) decision support system.
+            Supporting proactive adherence reminders, risk modeling, and tamper-resistant clinical dose auditing.
           </p>
         </div>
+
         <div class="col-lg-6 text-lg-end text-muted small">
           <div class="d-inline-flex align-items-center gap-3 mb-2">
-            <span class="d-flex align-items-center gap-1 text-success fw-semibold"><i class="bi bi-check-circle-fill"></i> MoHFW UIP Standard Aligned</span>
-            <span class="d-flex align-items-center gap-1"><i class="bi bi-lock-fill text-muted"></i> 256-bit Audit Trail</span>
+
+            <span class="d-flex align-items-center gap-1 text-success fw-semibold">
+              <i class="bi bi-check-circle-fill"></i> MoHFW UIP Standard Aligned
+            </span>
+
+            <span class="d-flex align-items-center gap-1">
+              <i class="bi bi-lock-fill text-muted"></i> 256-bit Audit Trail
+            </span>
           </div>
-          <p class="mb-0">Designed for final-year engineering excellence and real-world clinical deployment.</p>
+
+          <p class="mb-0">
+            Designed for final-year engineering excellence and real-world clinical deployment.
+          </p>
         </div>
+
       </div>
+
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 small text-muted">
         <p class="mb-0">© 2026 ImmuTrack Healthcare Systems. All rights reserved.</p>
-        <p class="mb-0">Clinical Disclaimer: An administrative tracking platform and does not replace certified physician diagnosis.</p>
+        <p class="mb-0">
+          Clinical Disclaimer: An administrative tracking platform and does not replace certified physician diagnosis.
+        </p>
       </div>
+
     </div>
   </footer>
 
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   {% block scripts %}{% endblock %}
-  
-<!-- =====================================
-     IMMUTRACK AI CHATBOT
-===================================== -->
 
-<style>
-  #immu-chat-button {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 62px;
-    height: 62px;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #087f8c, #1769aa);
-    color: white;
-    font-size: 25px;
-    box-shadow: 0 5px 20px rgba(0, 80, 120, .25);
-    cursor: pointer;
-    z-index: 9998;
-  }
+  <!-- =====================================
+       IMMUTRACK AI CHATBOT
+  ====================================== -->
 
-  #immu-chat-window {
-    display: none;
-    position: fixed;
-    right: 25px;
-    bottom: 100px;
-    width: 370px;
-    max-width: calc(100vw - 30px);
-    height: 490px;
-    max-height: calc(100vh - 130px);
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 8px 35px rgba(0, 0, 0, .18);
-    overflow: hidden;
-    z-index: 9999;
-    font-family: Inter, sans-serif;
-  }
-
-  #immu-chat-header {
-    background: linear-gradient(135deg, #087f8c, #1769aa);
-    color: white;
-    padding: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #immu-chat-header small {
-    display: block;
-    opacity: .85;
-    font-size: 11px;
-    margin-top: 3px;
-  }
-
-  #immu-chat-close {
-    border: 0;
-    background: transparent;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-  }
-
-  #immu-chat-messages {
-    height: calc(100% - 165px);
-    padding: 15px;
-    overflow-y: auto;
-    background: #f7fafc;
-  }
-
-  .immu-message {
-    max-width: 88%;
-    padding: 11px 13px;
-    margin-bottom: 12px;
-    border-radius: 13px;
-    font-size: 13px;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-  }
-
-  .immu-user-message {
-    background: #dceffc;
-    color: #17476a;
-    margin-left: auto;
-    border-bottom-right-radius: 3px;
-  }
-
-  .immu-bot-message {
-    background: white;
-    color: #263746;
-    border: 1px solid #e6edf2;
-    border-bottom-left-radius: 3px;
-  }
-
-  #immu-chat-form {
-    display: flex;
-    gap: 8px;
-    padding: 12px;
-    border-top: 1px solid #edf0f3;
-    background: white;
-  }
-
-  #immu-chat-input {
-    flex: 1;
-    min-width: 0;
-    border: 1px solid #dce4eb;
-    border-radius: 10px;
-    padding: 11px;
-    outline: none;
-    font-size: 13px;
-  }
-
-  #immu-chat-input:focus {
-    border-color: #087f8c;
-  }
-
-  #immu-chat-form button {
-    background: #087f8c;
-    color: white;
-    border: 0;
-    border-radius: 10px;
-    padding: 0 15px;
-    cursor: pointer;
-  }
-
-  #immu-chat-form button:disabled {
-    opacity: .5;
-    cursor: not-allowed;
-  }
-
-  #immu-chat-disclaimer {
-    font-size: 10px;
-    color: #89939d;
-    text-align: center;
-    padding: 5px;
-    background: white;
-  }
-
-  @media(max-width: 480px) {
-    #immu-chat-window {
-      right: 10px;
-      bottom: 85px;
-      width: calc(100vw - 20px);
-    }
-
+  <style>
     #immu-chat-button {
-      right: 18px;
-      bottom: 18px;
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 62px;
+      height: 62px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #087f8c, #1769aa);
+      color: white;
+      font-size: 25px;
+      box-shadow: 0 5px 20px rgba(0, 80, 120, .25);
+      cursor: pointer;
+      z-index: 9998;
     }
-  }
-</style>
 
-<!-- Floating Chat Button -->
-<button id="immu-chat-button"
-        type="button"
-        aria-label="Open ImmuTrack AI Assistant">
-  <i class="bi bi-chat-dots-fill"></i>
-</button>
+    #immu-chat-window {
+      display: none;
+      position: fixed;
+      right: 25px;
+      bottom: 100px;
+      width: 370px;
+      max-width: calc(100vw - 30px);
+      height: 490px;
+      max-height: calc(100vh - 130px);
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 35px rgba(0, 0, 0, .18);
+      overflow: hidden;
+      z-index: 9999;
+      font-family: Inter, sans-serif;
+    }
 
-<!-- Chat Window -->
-<div id="immu-chat-window">
+    #immu-chat-header {
+      background: linear-gradient(135deg, #087f8c, #1769aa);
+      color: white;
+      padding: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-  <div id="immu-chat-header">
-    <div>
-      <div class="fw-bold">
-        <i class="bi bi-shield-check"></i>
-        ImmuTrack AI Assistant
-      </div>
-      <small>Vaccination Information Support</small>
-    </div>
+    #immu-chat-header small {
+      display: block;
+      opacity: .85;
+      font-size: 11px;
+      margin-top: 3px;
+    }
 
-    <button id="immu-chat-close"
-            type="button"
-            aria-label="Close chatbot">
-      <i class="bi bi-x-lg"></i>
-    </button>
-  </div>
+    #immu-chat-close {
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
 
-  <div id="immu-chat-messages" aria-live="polite">
-    <div class="immu-message immu-bot-message">
-      Hello! Welcome to ImmuTrack.
+    #immu-chat-messages {
+      height: calc(100% - 165px);
+      padding: 15px;
+      overflow-y: auto;
+      background: #f7fafc;
+    }
 
-      I can help you understand vaccination,
-      immunization schedules and vaccine information.
+    .immu-message {
+      max-width: 88%;
+      padding: 11px 13px;
+      margin-bottom: 12px;
+      border-radius: 13px;
+      font-size: 13px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
 
-      How can I help you today?
-    </div>
-  </div>
+    .immu-user-message {
+      background: #dceffc;
+      color: #17476a;
+      margin-left: auto;
+      border-bottom-right-radius: 3px;
+    }
 
-  <div id="immu-chat-disclaimer">
-    AI-generated information. Not a substitute for medical advice.
-  </div>
+    .immu-bot-message {
+      background: white;
+      color: #263746;
+      border: 1px solid #e6edf2;
+      border-bottom-left-radius: 3px;
+    }
 
-  <form id="immu-chat-form">
-    {% csrf_token %}
+    #immu-chat-form {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid #edf0f3;
+      background: white;
+    }
 
-    <input
-      type="text"
-      id="immu-chat-input"
-      placeholder="Ask about vaccination..."
-      maxlength="2000"
-      autocomplete="off"
-      required
-    >
+    #immu-chat-input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid #dce4eb;
+      border-radius: 10px;
+      padding: 11px;
+      outline: none;
+      font-size: 13px;
+    }
 
-    <button type="submit" id="immu-chat-send"
-            aria-label="Send message">
-      <i class="bi bi-send-fill"></i>
-    </button>
-  </form>
+    #immu-chat-input:focus {
+      border-color: #087f8c;
+    }
 
-</div>
+    #immu-chat-form button {
+      background: #087f8c;
+      color: white;
+      border: 0;
+      border-radius: 10px;
+      padding: 0 15px;
+      cursor: pointer;
+    }
 
-<script>
-(function () {
-  const chatButton = document.getElementById("immu-chat-button");
-  const chatWindow = document.getElementById("immu-chat-window");
-  const closeButton = document.getElementById("immu-chat-close");
-  const chatForm = document.getElementById("immu-chat-form");
-  const chatInput = document.getElementById("immu-chat-input");
-  const chatMessages = document.getElementById("immu-chat-messages");
-  const sendButton = document.getElementById("immu-chat-send");
+    #immu-chat-form button:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
 
-  chatButton.addEventListener("click", function () {
-    chatWindow.style.display = "block";
-    chatInput.focus();
-  });
+    #immu-chat-disclaimer {
+      font-size: 10px;
+      color: #89939d;
+      text-align: center;
+      padding: 5px;
+      background: white;
+    }
 
-  closeButton.addEventListener("click", function () {
-    chatWindow.style.display = "none";
-  });
-
-  function addMessage(message, type) {
-    const div = document.createElement("div");
-
-    div.className = "immu-message " +
-      (type === "user" ? "immu-user-message" : "immu-bot-message");
-
-    div.textContent = message;
-    chatMessages.appendChild(div);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  chatForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const message = chatInput.value.trim();
-
-    if (!message) return;
-
-    addMessage(message, "user");
-    chatInput.value = "";
-    sendButton.disabled = true;
-
-    try {
-      const csrfToken = chatForm.querySelector(
-        '[name="csrfmiddlewaretoken"]'
-      ).value;
-
-      const response = await fetch("/chatbot/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-CSRFToken": csrfToken
-        },
-        body: JSON.stringify({
-          message: message
-        })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          data.error || "Unable to get a response."
-        );
+    @media(max-width: 480px) {
+      #immu-chat-window {
+        right: 10px;
+        bottom: 85px;
+        width: calc(100vw - 20px);
       }
 
-      addMessage(data.reply, "bot");
+      #immu-chat-button {
+        right: 18px;
+        bottom: 18px;
+      }
+    }
+  </style>
 
-    } catch (error) {
-      addMessage(
-        error.message || "Please try again later.",
+  <!-- Floating Chat Button -->
+  <button id="immu-chat-button"
+          type="button"
+          aria-label="Open ImmuTrack AI Assistant">
+    <i class="bi bi-chat-dots-fill"></i>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="immu-chat-window">
+
+    <div id="immu-chat-header">
+      <div>
+        <div class="fw-bold">
+          <i class="bi bi-shield-check"></i>
+          ImmuTrack AI Assistant
+        </div>
+        <small>Vaccination Information Support</small>
+      </div>
+
+      <button id="immu-chat-close"
+              type="button"
+              aria-label="Close chatbot">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div id="immu-chat-messages" aria-live="polite">
+      <div class="immu-message immu-bot-message">
+        Hello! Welcome to ImmuTrack.
+
+        I can help you understand vaccination,
+        immunization schedules and vaccine information.
+
+        How can I help you today?
+      </div>
+    </div>
+
+    <div id="immu-chat-disclaimer">
+      AI-generated information. Not a substitute for medical advice.
+    </div>
+
+    <form id="immu-chat-form">
+      {% csrf_token %}
+
+      <input
+        type="text"
+        id="immu-chat-input"
+        placeholder="Ask about vaccination..."
+        maxlength="2000"
+        autocomplete="off"
+        required
+      >
+
+      <button type="submit"
+              id="immu-chat-send"
+              aria-label="Send message">
+        <i class="bi bi-send-fill"></i>
+      </button>
+    </form>
+
+  </div>
+
+  <!-- Chatbot JavaScript -->
+  <script>
+  (function () {
+    const chatButton = document.getElementById("immu-chat-button");
+    const chatWindow = document.getElementById("immu-chat-window");
+    const closeButton = document.getElementById("immu-chat-close");
+    const chatForm = document.getElementById("immu-chat-form");
+    const chatInput = document.getElementById("immu-chat-input");
+    const chatMessages = document.getElementById("immu-chat-messages");
+    const sendButton = document.getElementById("immu-chat-send");
+
+    chatButton.addEventListener("click", function () {
+      chatWindow.style.display = "block";
+      chatInput.focus();
+    });
+
+    closeButton.addEventListener("click", function () {
+      chatWindow.style.display = "none";
+    });
+
+    function addMessage(message, type) {
+      const div = document.createElement("div");
+
+      div.className = "immu-message " +
+        (type === "user" ? "immu-user-message" : "immu-bot-message");
+
+      div.textContent = message;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      return div;
+    }
+
+    chatForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const message = chatInput.value.trim();
+
+      if (!message) return;
+
+      addMessage(message, "user");
+      chatInput.value = "";
+      sendButton.disabled = true;
+
+      const thinkingMessage = addMessage(
+        "Thinking... Please wait.",
         "bot"
       );
-    } finally {
-      sendButton.disabled = false;
-      chatInput.focus();
-    }
-  });
-})();
-</script>
+
+      try {
+        const csrfInput = chatForm.querySelector(
+          '[name="csrfmiddlewaretoken"]'
+        );
+
+        if (!csrfInput) {
+          throw new Error("Security token missing. Please refresh the page.");
+        }
+
+        const response = await fetch("/chatbot/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrfInput.value
+          },
+          body: JSON.stringify({ message: message })
+        });
+
+        const responseText = await response.text();
+        let data;
+
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          console.error("Invalid server response:", responseText);
+
+          if (response.status === 403) {
+            throw new Error("Security check failed. Refresh the page and try again.");
+          }
+
+          if (response.status === 404) {
+            throw new Error("Chatbot endpoint not found.");
+          }
+
+          throw new Error(
+            response.status >= 500
+              ? "Server error. Please try again later."
+              : "Invalid response received from the server."
+          );
+        }
+
+        if (!response.ok) {
+          throw new Error(data.error || "Unable to get a response.");
+        }
+
+        if (!data.reply) {
+          throw new Error(data.error || "The AI did not return an answer.");
+        }
+
+        thinkingMessage.textContent = data.reply;
+
+      } catch (error) {
+        console.error("ImmuTrack Chatbot Error:", error);
+
+        thinkingMessage.textContent =
+          error.message || "Unable to connect. Please try again.";
+
+      } finally {
+        sendButton.disabled = false;
+        chatInput.focus();
+      }
+    });
+
+  })();
+  </script>
 
 </body>
 </html>
