@@ -1,5 +1,7 @@
+import logging
 import os
 import json
+logger = logging.getLogger(__name__)
 
 from google import genai
 from google.genai import types
@@ -231,6 +233,8 @@ def chatbot(request):
         })
 
     except Exception:
+         logger.exception("ImmuTrack Gemini chatbot error")
+
         return JsonResponse(
             {
                 "error": (
