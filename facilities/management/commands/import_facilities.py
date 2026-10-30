@@ -13,7 +13,6 @@ class Command(BaseCommand):
     help = "Import Maharashtra hospitals and vaccination centres from CSV"
 
     def handle(self, *args, **options):
-
         csv_path = (
             Path(settings.BASE_DIR)
             / "immutrack_maharashtra_facilities_starter.csv"
@@ -38,12 +37,15 @@ class Command(BaseCommand):
             }
 
             if not required_columns.issubset(reader.fieldnames or []):
-                raise CommandError("CSV file is missing required columns.")
+                raise CommandError(
+                    "CSV file is missing required columns."
+                )
 
             with transaction.atomic():
                 for row in reader:
-
-                    facility_id = (row.get("facility_id") or "").strip()
+                    facility_id = (
+                        row.get("facility_id") or ""
+                    ).strip()
 
                     if not facility_id:
                         continue
