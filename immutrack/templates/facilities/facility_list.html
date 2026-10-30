@@ -1,0 +1,143 @@
+
+{% extends "base.html" %}
+
+{% block title %}Hospital Directory{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+
+    <div class="mb-4">
+        <h2 class="fw-bold text-dark">
+            <i class="bi bi-hospital text-primary"></i>
+            Maharashtra Hospital Directory
+        </h2>
+        <p class="text-muted">
+            Find hospitals and vaccination centres across Maharashtra.
+        </p>
+    </div>
+
+    <div class="card border-0 shadow-sm p-3 mb-4">
+        <form method="GET">
+            <div class="row g-3">
+
+                <div class="col-md-4">
+                    <input
+                        type="text"
+                        name="search"
+                        class="form-control"
+                        placeholder="Search hospital, city or district"
+                        value="{{ search }}">
+                </div>
+
+                <div class="col-md-3">
+                    <select name="district" class="form-select">
+                        <option value="">All Districts</option>
+                        {% for item in districts %}
+                        <option value="{{ item }}"
+                            {% if selected_district == item %}selected{% endif %}>
+                            {{ item }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <select name="ownership" class="form-select">
+                        <option value="">All Ownership</option>
+                        <option value="Government"
+                            {% if selected_ownership == "Government" %}selected{% endif %}>
+                            Government
+                        </option>
+                        <option value="Private"
+                            {% if selected_ownership == "Private" %}selected{% endif %}>
+                            Private
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <input
+                        type="text"
+                        name="facility_type"
+                        class="form-control"
+                        placeholder="Facility type"
+                        value="{{ selected_type }}">
+                </div>
+
+                <div class="col-md-1 d-grid">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="row g-3">
+
+        {% for facility in facilities %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+
+                <div class="card-body">
+
+                    <span class="badge bg-primary-subtle text-primary mb-2">
+                        {{ facility.ownership }}
+                    </span>
+
+                    <h5 class="fw-bold">
+                        {{ facility.facility_name }}
+                    </h5>
+
+                    <p class="text-muted mb-2">
+                        <i class="bi bi-geo-alt"></i>
+                        {{ facility.city_or_locality }},
+                        {{ facility.district }}
+                    </p>
+
+                    <p class="small mb-2">
+                        <strong>Type:</strong>
+                        {{ facility.facility_type }}
+                    </p>
+
+                    <p class="small mb-2">
+                        <strong>Vaccination service:</strong>
+                        {{ facility.vaccination_service_status }}
+                    </p>
+
+                    {% if facility.phone %}
+                    <p class="small mb-2">
+                        <i class="bi bi-telephone"></i>
+                        {{ facility.phone }}
+                    </p>
+                    {% endif %}
+
+                    {% if facility.full_address %}
+                    <p class="small text-muted mb-0">
+                        {{ facility.full_address }}
+                    </p>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info">
+                No hospitals or vaccination centres found.
+                Try changing your search filters.
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <p class="text-muted small mt-4">
+        Please contact the facility to confirm current vaccination
+        availability before visiting.
+    </p>
+
+</div>
+{% endblock %}
