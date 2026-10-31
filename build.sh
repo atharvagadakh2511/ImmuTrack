@@ -43,6 +43,8 @@ python manage.py import_nashik_dataset --skip-ml
 
 # Import Maharashtra hospitals and vaccination centres.
 python manage.py import_facilities
+# Add facilities to the child registration clinic dropdown.
+python manage.py sync_facilities_to_clinics
 
 # Train and persist the ML model.
 python manage.py shell <<'PY'
